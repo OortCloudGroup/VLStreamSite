@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0a0a">
+    <title>VLStream - Платформа видеоаналитики на базе ИИ для принятия решений | 100% открытый код</title>
+    <meta name="description" content="VLStream — это платформа агрегации и диспетчеризации видеопотоков на базе ИИ со 100% открытым кодом. Сквозная интеграция ИИ для видео IoT — от разметки до обучения и развёртывания на границе. Лицензия MIT, приватное развёртывание, более 500 потоков на сервер.">
+    <meta name="keywords" content="VLStream, платформа видео ИИ, видеоаналитика с открытым кодом, видео IoT, граничный ИИ, VLM-стриминг, умный город, видеонаблюдение, обнаружение объектов, RTSP, WebRTC, OortCloud">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://vlstream.dev/ru/">
+    
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://vlstream.dev/en/">
+    <link rel="alternate" hreflang="zh" href="https://vlstream.dev/">
+    <link rel="alternate" hreflang="es" href="https://vlstream.dev/es/">
+    <link rel="alternate" hreflang="ar" href="https://vlstream.dev/ar/">
+    <link rel="alternate" hreflang="de" href="https://vlstream.dev/de/">
+    <link rel="alternate" hreflang="fr" href="https://vlstream.dev/fr/">
+    <link rel="alternate" hreflang="ja" href="https://vlstream.dev/ja/">
+    <link rel="alternate" hreflang="pt" href="https://vlstream.dev/pt/">
+    <link rel="alternate" hreflang="ru" href="https://vlstream.dev/ru/">
+    <link rel="alternate" hreflang="ko" href="https://vlstream.dev/ko/">
+    <link rel="alternate" hreflang="id" href="https://vlstream.dev/id/">
+    <link rel="alternate" hreflang="tr" href="https://vlstream.dev/tr/">
+    <link rel="alternate" hreflang="x-default" href="https://vlstream.dev/en/">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="VLStream">
+    <meta property="og:title" content="VLStream - Платформа видеоаналитики на базе ИИ для принятия решений">
+    <meta property="og:description" content="Платформа агрегации и диспетчеризации видеопотоков на базе ИИ со 100% открытым кодом. Сквозная интеграция ИИ для видео IoT — от разметки до обучения и развёртывания на границе.">
+    <meta property="og:url" content="https://vlstream.dev/ru/">
+    <meta property="og:image" content="https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="ar_SA">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta property="og:locale:alternate" content="pt_BR">
+    <meta property="og:locale:alternate" content="ko_KR">
+    <meta property="og:locale:alternate" content="id_ID">
+    <meta property="og:locale:alternate" content="tr_TR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VLStream - Платформа видеоаналитики на базе ИИ для принятия решений">
+    <meta name="twitter:description" content="Платформа агрегации и диспетчеризации видеопотоков на базе ИИ со 100% открытым кодом. Сквозная интеграция ИИ для видео IoT.">
+    <meta name="twitter:image" content="https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "VLStream",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Linux, Windows, macOS",
+      "description": "Платформа агрегации и диспетчеризации видеопотоков на базе ИИ для принятия решений со 100% открытым кодом и сквозной интеграцией ИИ для видео IoT.",
+      "url": "https://vlstream.dev/ru/",
+      "inLanguage": "ru",
+      "license": "https://opensource.org/licenses/MIT",
+      "author": {
+        "@type": "Organization",
+        "name": "OortCloud (Shenzhen) Smart Technology Co., Ltd.",
+        "url": "https://oortcloudsmart.com"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Двойной движок ИИ",
+        "Собственный протокол VLS",
+        "VLM-стриминг",
+        "Развёртывание на границе",
+        "Оборудование AI IPCamera и AI-Box",
+        "AI-vLLM-SERVER Устройства вывода",
+        "Более 500 потоков на сервер",
+        "Поддержка разрешения 4K",
+        "Развёртывание в частном облаке",
+        "100% открытый код, лицензия MIT"
+      ],
+      "datePublished": "2019-01-01",
+      "softwareVersion": "1.0"
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>body { font-family: 'Inter', 'Noto Sans', sans-serif; }</style>
+    
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "OortCloud (Shenzhen) Smart Technology Co., Ltd.",
+      "alternateName": "OortCloud",
+      "url": "https://oortcloudsmart.com",
+      "logo": "https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png",
+      "foundingDate": "2019",
+      "description": "OortCloud — технологическая компания, специализирующаяся на платформах видеоаналитики и IoT на базе искусственного интеллекта.",
+      "sameAs": [
+        "https://github.com/OortCloudGroup"
+      ]
+    }
+    </script>
+    
+    <!-- FAQ Schema for LLM Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Что такое VLStream?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VLStream — это платформа агрегации и диспетчеризации видеопотоков на базе ИИ для принятия решений со 100% открытым кодом. Обеспечивает сквозную интеграцию ИИ для видео IoT, охватывающую разметку, обучение и развёртывание на границе. Оснащена двойным движком ИИ (дискриминативный ИИ + ИИ принятия решений), собственным протоколом VLS, возможностями VLM-стриминга и поддерживает более 500 потоков на сервер с разрешением 4K."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "VLStream действительно на 100% с открытым кодом?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. VLStream полностью открыт под лицензией MIT. Все основные компоненты — VLStream-Cloud, VLStream-Edge, VLStream-NVR, VLS-Protocol и VLStream-APP — доступны на GitHub по адресу github.com/OortCloudGroup. Скрытых проприетарных компонентов нет."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько видеопотоков может обрабатывать VLStream?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VLStream поддерживает более 500 одновременных потоков на сервер со сквозной задержкой менее 1,2 секунды и надёжностью 99,99%. Платформа разработана для высокоплотных развёртываний видео IoT."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Что такое VLM-стриминг в VLStream?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VLM-стриминг (Vision-Language Model) — это мультимодальная возможность ИИ в реальном времени от VLStream. Обеспечивает визуальные ответы на вопросы, обнаружение аномалий, понимание сцен и взаимодействие на естественном языке с живыми видеопотоками — всё обрабатывается в реальном времени на границе."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как развернуть VLStream?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VLStream поддерживает несколько способов развёртывания: установка одной командой через curl, Docker Compose для контейнерного развёртывания и Helm-чарты для кластеров Kubernetes. Работает на Linux, Windows и macOS, поддерживает развёртывание в частном облаке и в изолированных средах. Совместимое оборудование включает NVIDIA Jetson, Intel x86 и платформы ARM."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какие протоколы поддерживает VLStream?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VLStream поддерживает RTSP, RTMP, WebRTC, HLS, ONVIF и собственный протокол VLS. Протокол VLS обеспечивает сверхнизкую задержку потоковой передачи со сквозным шифрованием, адаптивным битрейтом и интеллектуальным планированием кадров, оптимизированным для рабочих нагрузок ИИ."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какое оборудование предлагает VLStream?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VLStream предлагает три категории оборудования: (1) AI IPCamera — интеллектуальные камеры со встроенным ИИ, от начального уровня до флагмана с 20 TOPS; (2) AI-Box — серия VLStream Edge, терминалы граничных вычислений, добавляющие ИИ-аналитику к существующим IP-камерам через RTSP, доступны в конфигурациях 1 канал/2T, 8 каналов/16T и 32 канала; (3) AI-vLLM-SERVER — выделенные серверы вывода vLLM (1 канал/20T, 8 каналов/160T, 64 канала/1P), не требующие обучения модели, с прямым распознаванием vLLM готовым к работе. Флагманский SVR-64 предлагает опциональную поставку в интегрированном шкафу со встроенным жидкостным охлаждением для развёртывания на периферии без выделенного серверного помещения. Все включают ПО с открытым кодом и работают на чипсетах HiSilicon HI3516, Rockchip RK3588 и других."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Что такое AI-vLLM-SERVER?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI-vLLM-SERVER — это серия выделенных серверов вывода vLLM от VLStream. Доступны три модели — SVR-1 (1 канал, вычислительная мощность 20T), SVR-8 (8 каналов, 160T) и SVR-64 (64 канала, 1P) — эти серверы не требуют обучения модели и обеспечивают прямое распознавание vLLM готовое к работе. Флагманский SVR-64 предлагает опциональную поставку в интегрированном шкафу со встроенной технологией жидкостного охлаждения, обеспечивая развёртывание на периферии без выделенного серверного помещения."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" aria-label="Основная навигация">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png" alt="Логотип VLStream" class="logo-icon" style="height:60px;width:auto;">
+            </a>
+            <div class="nav-links">
+                <a href="#features">Возможности</a>
+                <a href="#architecture">Архитектура</a>
+                <a href="#hardware">Оборудование</a>
+                <a href="#vlm">VLM-стриминг</a>
+                <a href="#deploy">Развёртывание</a>
+                <a href="#open-source">Открытый код</a>
+            </div>
+            <div class="nav-actions">
+                <!-- Language Switcher -->
+                <div class="nav-lang" id="langSwitch" title="Сменить язык">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">RU</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item" data-lang="en" href="../en/">
+                            <span class="nav-lang-item-flag">🇺🇸</span>
+                            <span class="nav-lang-item-label">English</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="zh" href="../">
+                            <span class="nav-lang-item-flag">🇨🇳</span>
+                            <span class="nav-lang-item-label">中文</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="es" href="../es/">
+                            <span class="nav-lang-item-flag">🇪🇸</span>
+                            <span class="nav-lang-item-label">Español</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="ar" href="../ar/">
+                            <span class="nav-lang-item-flag">🇸🇦</span>
+                            <span class="nav-lang-item-label">العربية</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="de" href="../de/">
+                            <span class="nav-lang-item-flag">🇩🇪</span>
+                            <span class="nav-lang-item-label">Deutsch</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="fr" href="../fr/">
+                            <span class="nav-lang-item-flag">🇫🇷</span>
+                            <span class="nav-lang-item-label">Français</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="ja" href="../ja/">
+                            <span class="nav-lang-item-flag">🇯🇵</span>
+                            <span class="nav-lang-item-label">日本語</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="pt" href="../pt/">
+                            <span class="nav-lang-item-flag">🇧🇷</span>
+                            <span class="nav-lang-item-label">Português</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item active" data-lang="ru" href="#">
+                            <span class="nav-lang-item-flag">🇷🇺</span>
+                            <span class="nav-lang-item-label">Русский</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="ko" href="../ko/">
+                            <span class="nav-lang-item-flag">🇰🇷</span>
+                            <span class="nav-lang-item-label">한국어</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="id" href="../id/">
+                            <span class="nav-lang-item-flag">🇮🇩</span>
+                            <span class="nav-lang-item-label">Indonesia</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="tr" href="../tr/">
+                            <span class="nav-lang-item-flag">🇹🇷</span>
+                            <span class="nav-lang-item-label">Türkçe</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://github.com/OortCloudGroup" class="btn btn-ghost" target="_blank" rel="noopener">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    GitHub
+                </a>
+                <a href="#deploy" class="btn btn-primary">Начать</a>
+            </div>
+            <button class="mobile-toggle" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-grid-bg"></div>
+        <div class="container">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Лицензия MIT &middot; 100% открытый код &middot; Без скрытых компонентов
+            </div>
+            <h1 class="hero-title">
+                ИИ для принятия решений<br>
+                <span class="gradient-text">Платформа видеоаналитики</span>
+            </h1>
+            <p class="hero-subtitle">
+                Сквозная интеграция ИИ для сферы видео IoT. Решение проблем изолированных данных, фрагментированной аналитики, 
+                сложной кастомизации и высоких затрат — с приватным развёртыванием, полным контролем стека 
+                и взаимодействием облако-граница-устройство.
+            </p>
+            <div class="hero-actions">
+                <a href="#deploy" class="btn btn-primary btn-lg">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                    Развернуть за 5 минут
+                </a>
+                <a href="https://github.com/OortCloudGroup" class="btn btn-outline btn-lg" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    Исходный код
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-value">&lt;1,2 с</span>
+                    <span class="stat-label">Сквозная задержка</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">500+</span>
+                    <span class="stat-label">Одновременных потоков</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">17</span>
+                    <span class="stat-label">Форматов экспорта</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">80+</span>
+                    <span class="stat-label">Типов объектов</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">99,99%</span>
+                    <span class="stat-label">Доступность</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section class="section painpoints-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Пять проблем, <span class="gradient-text">одно решение</span></h2>
+                <p class="section-subtitle">Традиционное видеонаблюдение имеет фундаментальные ограничения. VLStream решает их все.</p>
+            </div>
+            <div class="painpoints-grid">
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+                    </div>
+                    <h4>Изолированные данные</h4>
+                    <p>Унифицированная агрегация видео по всем протоколам — GB28181, RTSP, ONVIF, GA/T1400. Одна платформа для всех источников.</p>
+                </div>
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    </div>
+                    <h4>Фрагментированный ИИ</h4>
+                    <p>Замкнутый цикл двойного ИИ — дискриминативный ИИ для восприятия и ИИ принятия решений для исполнения. Видеть, анализировать, действовать.</p>
+                </div>
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                    </div>
+                    <h4>Сложная кастомизация</h4>
+                    <p>Импорт моделей TensorFlow/PyTorch, обучение собственных алгоритмов и развёртывание отраслевых решений — без привязки к поставщику.</p>
+                </div>
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    </div>
+                    <h4>Угрозы безопасности</h4>
+                    <p>Приватное развёртывание, данные не покидают вашу сеть. Соответствие GB35114, шифрование в покое и при передаче, полное журналирование аудита.</p>
+                </div>
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    <h4>Высокие затраты</h4>
+                    <p>Лицензия MIT, без лицензионных отчислений, без платы за узел. Используйте существующие камеры с модулями граничного ИИ — без замены оборудования.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dual AI Engine Section -->
+    <section id="features" class="section dualai-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Замкнутый цикл <span class="gradient-text">двойного ИИ</span></h2>
+                <p class="section-subtitle">От восприятия мира до принятия решений и действий — полностью автоматизированный конвейер аналитики.</p>
+            </div>
+            <div class="dualai-grid">
+                <div class="dualai-card">
+                    <div class="dualai-header">
+                        <div class="dualai-dot discriminative"></div>
+                        <h3>Дискриминативный ИИ</h3>
+                        <span class="dualai-badge">Восприятие</span>
+                    </div>
+                    <p class="dualai-desc">Видьте и понимайте визуальный мир с точностью промышленного уровня.</p>
+                    <ul class="dualai-list">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Более 80 типов объектов (люди, транспорт, предметы)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Анализ поведения (праздношатание, бег, скопление)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            База лиц 320 000+ с распознаванием в реальном времени
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Точность распознавания номеров 99%
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Более 10 типов аномалий (дым, вторжение, пересечение границы)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Извлечение признаков (лица, номера, атрибуты одежды)
+                        </li>
+                    </ul>
+                </div>
+                <div class="dualai-card">
+                    <div class="dualai-header">
+                        <div class="dualai-dot decision"></div>
+                        <h3>ИИ принятия решений</h3>
+                        <span class="dualai-badge">Исполнение</span>
+                    </div>
+                    <p class="dualai-desc">Анализируйте ситуации и координируйте автоматические реакции между системами.</p>
+                    <ul class="dualai-list">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Определение уровня события и приоритизация
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Прогнозирование тенденций и планирование ресурсов
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Многоканальная тревога (PSTN, SMS, приложение, e-mail)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Управление связями (PTZ, освещение, шлагбаумы)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Автоматическое создание и диспетчеризация заявок
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Оркестрация более 1 000 одновременных потоков
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section id="architecture" class="section architecture-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Четырёхуровневая <span class="gradient-text">сквозная архитектура</span></h2>
+                <p class="section-subtitle">Взаимодействие облако-граница-устройство с динамической диспетчеризацией. Глобальные решения в облаке, анализ в реальном времени на границе, сбор данных на устройстве.</p>
+            </div>
+            <div class="arch-diagram">
+                <!-- Layer 1: Cloud -->
+                <div class="arch-layer arch-cloud">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-dot cloud-dot"></div>
+                        <h4>Слой платформы — VLStream Cloud</h4>
+                        <span class="arch-layer-tag">Центральный узел</span>
+                    </div>
+                    <div class="arch-items">
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                            Рабочая среда и панель управления
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                            Движок агрегации видео
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33"/></svg>
+                            Интегрированное обучение и развёртывание
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                            Диспетчер вычислительных ресурсов
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            Движок ИИ принятия решений
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                            API-шлюз и SDK
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                            Мультитенантная изоляция
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                            Объектная модель IoT
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-label">Протокол VLS / WebRTC P2P / MQTT / REST</div>
+                    <div class="connector-line"></div>
+                </div>
+
+                <!-- Layer 2: Edge -->
+                <div class="arch-layer arch-edge">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-dot edge-dot"></div>
+                        <h4>Граничный слой — VLStream Edge</h4>
+                        <span class="arch-layer-tag">Аналитика в реальном времени</span>
+                    </div>
+                    <div class="arch-items">
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/></svg>
+                            Граничный блок ИИ (2T/6T/20T)
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                            Анализ ИИ в реальном времени
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/></svg>
+                            Локальная тревога и кэширование
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            Восстановление после обрыва сети
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-label">4G / Ethernet / Wi-Fi</div>
+                    <div class="connector-line"></div>
+                </div>
+
+                <!-- Layer 3: Device -->
+                <div class="arch-layer arch-device">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-dot device-dot"></div>
+                        <h4>Слой устройств — датчики и сбор данных</h4>
+                        <span class="arch-layer-tag">Конечные устройства</span>
+                    </div>
+                    <div class="arch-items">
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                            Камеры со встроенным ИИ
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/></svg>
+                            NVR с функцией вывода
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                            Датчики IoT (температура/дым/радар)
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                            Сторонние (Hikvision/Dahua)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-label">GB28181 / RTSP / ONVIF / GA/T1400</div>
+                    <div class="connector-line"></div>
+                </div>
+
+                <!-- Layer 4: Application -->
+                <div class="arch-layer arch-app">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-dot app-dot"></div>
+                        <h4>Слой приложений — клиентское ПО</h4>
+                        <span class="arch-layer-tag">Пользовательский интерфейс</span>
+                    </div>
+                    <div class="arch-items">
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                            VLStream CMS (десктоп)
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                            Мобильное приложение (iOS/Android/HarmonyOS)
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10"/></svg>
+                            Веб-консоль
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                            API и SDK
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hardware Section -->
+    <section id="hardware" class="section hardware-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Специализированное <span class="gradient-text">оборудование ИИ</span></h2>
+                <p class="section-subtitle">От нативных ИИ-камер до блоков граничных вычислений — разверните ИИ-аналитику на любой инфраструктуре.</p>
+            </div>
+
+            <!-- Категория AI IPCamera -->
+            <div class="hardware-category">
+                <h3 class="hardware-category-title">AI IPCamera</h3>
+                <p class="hardware-category-desc">Специализированные интеллектуальные камеры со встроенным ИИ — от наблюдения начального уровня до флагманской мультимодельной аналитики.</p>
+            </div>
+            <div class="hardware-grid">
+                <div class="hardware-card">
+                    <div class="hardware-tier">Базовый</div>
+                    <h4>OORT-IPC-4G-30M</h4>
+                    <div class="hardware-spec-highlight">Начальный уровень</div>
+                    <ul class="hardware-specs">
+                        <li>Двойная сеть 4G/проводная</li>
+                        <li>Цветное ночное видение AIISP</li>
+                        <li>Автоматический зум</li>
+                        <li>Защита IP66</li>
+                        <li>-30&#8451; до +60&#8451; широкий диапазон</li>
+                    </ul>
+                </div>
+                <div class="hardware-card">
+                    <div class="hardware-tier">Про</div>
+                    <h4>OORT-6600-2.5</h4>
+                    <div class="hardware-spec-highlight">1 TOPS ИИ</div>
+                    <ul class="hardware-specs">
+                        <li>2.5T вычислительной мощности на границе</li>
+                        <li>Обнаружение объектов на устройстве</li>
+                        <li>Оптическое просветление тумана</li>
+                        <li>Интеллектуальное отслеживание целей</li>
+                        <li>Локальный вывод + синхронизация с облаком</li>
+                    </ul>
+                </div>
+                <div class="hardware-card hardware-card-featured">
+                    <div class="hardware-tier">Расширенный</div>
+                    <h4>OORT-6600-6</h4>
+                    <div class="hardware-spec-highlight">6 TOPS ИИ</div>
+                    <ul class="hardware-specs">
+                        <li>6T вычислительной мощности на границе</li>
+                        <li>Многомодельный параллельный вывод</li>
+                        <li>Распознавание более 80 объектов</li>
+                        <li>Анализ поведения на устройстве</li>
+                        <li>Вывод структурированных данных в реальном времени</li>
+                    </ul>
+                    <div class="hardware-popular">Самый популярный</div>
+                </div>
+                <div class="hardware-card">
+                    <div class="hardware-tier">Флагман</div>
+                    <h4>OORT-6600-20</h4>
+                    <div class="hardware-spec-highlight">20 TOPS ИИ</div>
+                    <ul class="hardware-specs">
+                        <li>20T вычислительной мощности на границе</li>
+                        <li>Полная структуризация видео</li>
+                        <li>Параллельный анализ нескольких потоков</li>
+                        <li>Анализ сложных сцен</li>
+                        <li>Архитектура для VLM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Категория AI-Box -->
+            <div class="hardware-category">
+                <h3 class="hardware-category-title">AI-Box <span class="hardware-category-badge">VLStream Edge</span></h3>
+                <p class="hardware-category-desc">Терминалы граничных вычислений с ИИ для модернизации существующих IP-камер — добавьте интеллектуальную аналитику через RTSP без замены инфраструктуры камер.</p>
+            </div>
+            <div class="hardware-grid hardware-grid-3col">
+                <div class="hardware-card">
+                    <div class="hardware-tier">Lite</div>
+                    <h4>OORT-BOX-AI-1</h4>
+                    <div class="hardware-spec-highlight">1 Канал</div>
+                    <ul class="hardware-specs">
+                        <li>1-канальный вход RTSP</li>
+                        <li>Обнаружение объектов на устройстве</li>
+                        <li>Оповещения в реальном времени</li>
+                        <li>Компактный безвентиляторный дизайн</li>
+                        <li>ПО VLStream с открытым кодом включено</li>
+                    </ul>
+                </div>
+                <div class="hardware-card hardware-card-featured">
+                    <div class="hardware-tier">Стандарт</div>
+                    <h4>OORT-BOX-AI-8</h4>
+                    <div class="hardware-spec-highlight">8 Каналов</div>
+                    <ul class="hardware-specs">
+                        <li>8-канальный вход RTSP</li>
+                        <li>Мультимодельный одновременный вывод</li>
+                        <li>ИИ-анализ визуального поведения</li>
+                        <li>Вывод структурированных данных в реальном времени</li>
+                        <li>ПО VLStream с открытым кодом включено</li>
+                    </ul>
+                    <div class="hardware-popular">Самый популярный</div>
+                </div>
+                <div class="hardware-card">
+                    <div class="hardware-tier">Pro</div>
+                    <h4>OORT-BOX-AI-32</h4>
+                    <div class="hardware-spec-highlight">32 Канала</div>
+                    <ul class="hardware-specs">
+                        <li>32-канальный вход RTSP</li>
+                        <li>Полная структуризация видео</li>
+                        <li>ИИ-анализ визуального поведения</li>
+                        <li>Анализ сложных сцен</li>
+                        <li>Архитектура, готовая к VLM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- AI-vLLM-SERVER Category -->
+            <div class="hardware-category">
+                <h3 class="hardware-category-title">AI-vLLM-SERVER <span class="hardware-category-badge">Вывод vLLM</span></h3>
+                <p class="hardware-category-desc">Специализированные серверы вывода vLLM — обучение модели не требуется, прямое распознавание vLLM готово к работе.</p>
+            </div>
+            <div class="hardware-grid hardware-grid-3col">
+                <div class="hardware-card">
+                    <div class="hardware-tier">Начальный</div>
+                    <h4>OORT-AI-vLLM-SVR-1</h4>
+                    <div class="hardware-spec-highlight">1 канал / 20 TOPS</div>
+                    <ul class="hardware-specs">
+                        <li>Видеовход 1 канал</li>
+                        <li>Вычислительная мощность 20T</li>
+                        <li>Обучение модели не требуется</li>
+                        <li>Прямой вывод vLLM</li>
+                        <li>Готов к использованию</li>
+                    </ul>
+                </div>
+                <div class="hardware-card hardware-card-featured">
+                    <div class="hardware-tier">Стандартный</div>
+                    <h4>OORT-AI-vLLM-SVR-8</h4>
+                    <div class="hardware-spec-highlight">8 каналов / 160 TOPS</div>
+                    <ul class="hardware-specs">
+                        <li>Видеовход 8 каналов</li>
+                        <li>Вычислительная мощность 160T</li>
+                        <li>Обучение модели не требуется</li>
+                        <li>Прямой вывод vLLM</li>
+                        <li>Готов к использованию</li>
+                    </ul>
+                    <div class="hardware-popular">Самый популярный</div>
+                </div>
+                <div class="hardware-card">
+                    <div class="hardware-tier">Флагманский</div>
+                    <h4>OORT-AI-vLLM-SVR-64</h4>
+                    <div class="hardware-spec-highlight">64 канала / 1P</div>
+                    <ul class="hardware-specs">
+                        <li>Видеовход 64 канала</li>
+                        <li>Вычислительная мощность 1P</li>
+                        <li>Обучение модели не требуется</li>
+                        <li>Прямой вывод vLLM</li>
+                        <li>Готов к использованию</li>
+                        <li>Опциональная поставка в интегрированном шкафу
+                        Встроенная технология жидкостного охлаждения
+                        Развертывание на периферии без выделенного серверного помещения</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="hardware-chips">
+                <p class="hardware-chips-label">Поддерживаемые чипсеты</p>
+                <div class="chips-list">
+                    <span class="chip">HiSilicon HI3516</span>
+                    <span class="chip">Rockchip RK3588</span>
+                    <span class="chip">Rockchip RK1106</span>
+                    <span class="chip">Ingenic T31/T41</span>
+                    <span class="chip">Goke GK720x</span>
+                    <span class="chip">ESP32 (RTOS)</span>
+                    <span class="chip">BK7258 (RTOS)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VLM Streaming Section -->
+    <section id="vlm" class="section vlm-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span class="gradient-text">VLM-стриминг</span> в реальном времени</h2>
+                <p class="section-subtitle">Позвольте крупным моделям зрения и языка анализировать видеопотоки в реальном времени — понимание сцен кадр за кадром с потоковым выводом.</p>
+            </div>
+            <div class="vlm-content">
+                <div class="vlm-diagram">
+                    <div class="vlm-step">
+                        <div class="vlm-step-num">1</div>
+                        <div class="vlm-step-content">
+                            <h5>Входной видеопоток</h5>
+                            <p>RTSP / WebCam / файл при 15-30 FPS. Непрерывный захват кадров без потерь.</p>
+                        </div>
+                    </div>
+                    <div class="vlm-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                    <div class="vlm-step">
+                        <div class="vlm-step-num">2</div>
+                        <div class="vlm-step-content">
+                            <h5>Диспетчер кадров</h5>
+                            <p>Интеллектуальный пропуск и равномерная выборка кадров. Контроль потока для предотвращения перегрузки ИИ.</p>
+                        </div>
+                    </div>
+                    <div class="vlm-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                    <div class="vlm-step">
+                        <div class="vlm-step-num">3</div>
+                        <div class="vlm-step-content">
+                            <h5>Вывод VLM</h5>
+                            <p>LLaVA, Qwen-VL, InternVL — любая модель зрения с открытым кодом. Обучение не требуется.</p>
+                        </div>
+                    </div>
+                    <div class="vlm-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                    <div class="vlm-step">
+                        <div class="vlm-step-num">4</div>
+                        <div class="vlm-step-content">
+                            <h5>Потоковый вывод</h5>
+                            <p>Ответы в реальном времени за миллисекунды. Без ожидания окончания видео.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vlm-features">
+                    <div class="vlm-feature-card">
+                        <h5>Поддерживаемые модели</h5>
+                        <div class="vlm-models">
+                            <span>LLaVA</span>
+                            <span>Qwen-VL</span>
+                            <span>InternVL</span>
+                            <span>Qwen-VL-7B</span>
+                        </div>
+                    </div>
+                    <div class="vlm-feature-card">
+                        <h5>Сценарии использования</h5>
+                        <ul>
+                            <li>Анализ видеонаблюдения в реальном времени</li>
+                            <li>Комментирование прямых трансляций</li>
+                            <li>Понимание сцен робототехникой</li>
+                            <li>Восприятие AR/умных очков</li>
+                            <li>OCR документов и счетов</li>
+                            <li>Параллельный многоканальный анализ</li>
+                        </ul>
+                    </div>
+                    <div class="vlm-feature-card">
+                        <h5>Производительность</h5>
+                        <div class="vlm-perf">
+                            <div class="vlm-perf-item">
+                                <span class="vlm-perf-value">~200 мс</span>
+                                <span class="vlm-perf-label">Задержка вывода</span>
+                            </div>
+                            <div class="vlm-perf-item">
+                                <span class="vlm-perf-value">24 ГБ</span>
+                                <span class="vlm-perf-label">Мин. GPU (многоканальный)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pipeline Section -->
+    <section class="section pipeline-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">От сырых данных к <span class="gradient-text">моделям в продакшене</span></h2>
+                <p class="section-subtitle">Интегрированное обучение и развёртывание — проверьте вывод в браузере, затем разверните на граничных устройствах удалённо одним кликом.</p>
+            </div>
+            <div class="pipeline-steps">
+                <div class="pipeline-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h4>Разметка</h4>
+                        <p>Встроенная маркировка для обнаружения, сегментации и классификации. Совместные рабочие процессы с контролем качества.</p>
+                    </div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h4>Обучение</h4>
+                        <p>AutoML или полный ручной контроль. Распределённое обучение на GPU с динамическим планированием ресурсов. Импорт моделей TensorFlow/PyTorch.</p>
+                    </div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h4>Оптимизация</h4>
+                        <p>Экспорт в 17 форматов: ONNX, TensorRT, CoreML, TFLite, OpenVINO и другие. Квантизация и прунинг для границы.</p>
+                    </div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h4>Развёртывание</h4>
+                        <p>Проверка в браузере, затем удалённое развёртывание одним кликом. OTA-обновления, A/B-тестирование, откат и мониторинг производительности.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Section -->
+    <section class="section performance-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span class="gradient-text">Производительность</span> корпоративного уровня</h2>
+                <p class="section-subtitle">Создано для требовательных производственных сред с лучшими в отрасли характеристиками.</p>
+            </div>
+            <div class="perf-grid">
+                <div class="perf-card">
+                    <div class="perf-value">&lt;1,2 с</div>
+                    <div class="perf-label">Сквозная задержка</div>
+                    <div class="perf-detail">Собственный протокол VLS на базе TCP, превосходит RTMP/RTSP</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">30%</div>
+                    <div class="perf-label">Устойчивость к потере пакетов</div>
+                    <div class="perf-detail">Без зависаний при 30% потере, восстановление при 50% потере пакетов</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">&lt;200 мс</div>
+                    <div class="perf-label">Задержка анализа ИИ</div>
+                    <div class="perf-detail">Вывод в реальном времени на границе с аппаратным ускорением</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">70%</div>
+                    <div class="perf-label">Экономия полосы пропускания</div>
+                    <div class="perf-detail">WebRTC P2P устраняет релейные серверы, напрямую от камеры к клиенту</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">500+</div>
+                    <div class="perf-label">Потоков на сервер</div>
+                    <div class="perf-detail">Один сервер обрабатывает более 500 видеопотоков, более 100 анализов ИИ</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">4K</div>
+                    <div class="perf-label">Максимальное разрешение</div>
+                    <div class="perf-detail">Аппаратное кодирование/декодирование H.265, адаптивно от 128 кбит/с до 8 Мбит/с</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transmission Protocol Section -->
+    <section class="section protocol-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Собственный <span class="gradient-text">протокол VLS</span></h2>
+                <p class="section-subtitle">Разработан для видео IoT. Низкая задержка, экстремальная устойчивость к потере пакетов и универсальная совместимость.</p>
+            </div>
+            <div class="protocol-grid">
+                <div class="protocol-card">
+                    <h4>Передача видео</h4>
+                    <ul>
+                        <li><strong>Протокол VLS:</strong> на базе TCP, задержка &lt;1,2 с, без зависаний при 30% потере</li>
+                        <li><strong>WebRTC P2P:</strong> соединение за миллисекунды, экономия полосы 70%</li>
+                        <li><strong>Мультипротокол:</strong> HLS, FLV, RTSP, GB28181 — все терминалы</li>
+                        <li><strong>Кодирование:</strong> H.264/H.265, 4K/1080p/720p адаптивно</li>
+                    </ul>
+                </div>
+                <div class="protocol-card">
+                    <h4>IoT и управление</h4>
+                    <ul>
+                        <li><strong>MQTT:</strong> прозрачная передача команд на устройства</li>
+                        <li><strong>Центр IoT:</strong> сетевые возможности TCP/IP 4G для периферии</li>
+                        <li><strong>Объектная модель:</strong> стандартизированные описания устройств и синхронизация</li>
+                        <li><strong>Фузия:</strong> объединённые оповещения видеопоток + данные датчиков</li>
+                    </ul>
+                </div>
+                <div class="protocol-card">
+                    <h4>Безопасность и соответствие</h4>
+                    <ul>
+                        <li><strong>GB28181:</strong> национальный стандарт видеонаблюдения</li>
+                        <li><strong>GB35114:</strong> усиленная сертификация безопасности</li>
+                        <li><strong>Шифрование:</strong> защита данных при передаче и в покое</li>
+                        <li><strong>Аудит:</strong> полное журналирование операций и контроль доступа</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deploy Section -->
+    <section id="deploy" class="section deploy-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Развёртывание <span class="gradient-text">где угодно</span></h2>
+                <p class="section-subtitle">Частное облако, гибридное или изолированная среда. Данные не покидают вашу сеть. Поддержка x86 и ARM.</p>
+            </div>
+            <div class="deploy-grid">
+                <div class="deploy-card">
+                    <div class="deploy-card-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+                            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                            <line x1="6" y1="6" x2="6.01" y2="6"/>
+                            <line x1="6" y1="18" x2="6.01" y2="18"/>
+                        </svg>
+                        <h4>На собственных серверах</h4>
+                    </div>
+                    <p>Полная поддержка изолированной среды для чувствительных объектов. Полный суверенитет данных на вашей инфраструктуре.</p>
+                    <code class="deploy-code">curl -fsSL https://get.vlstream.dev | bash</code>
+                </div>
+                <div class="deploy-card">
+                    <div class="deploy-card-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+                        </svg>
+                        <h4>Docker</h4>
+                    </div>
+                    <p>Развёртывание одним кликом с Docker Compose. Полный стек за 5 минут с пробросом GPU.</p>
+                    <code class="deploy-code">docker compose up -d</code>
+                </div>
+                <div class="deploy-card">
+                    <div class="deploy-card-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                        <h4>Kubernetes</h4>
+                    </div>
+                    <p>Helm-чарты для продакшена с автомасштабированием, HA-кластером, балансировкой нагрузки и автоматическим переключением при сбое.</p>
+                    <code class="deploy-code">helm install vlstream oort/vlstream</code>
+                </div>
+            </div>
+            <div class="deploy-compatibility">
+                <p class="compat-label">Совместимость платформ</p>
+                <div class="compat-grid">
+                    <div class="compat-item">
+                        <span class="compat-icon">x86</span>
+                        <span>Серверы и ПК</span>
+                    </div>
+                    <div class="compat-item">
+                        <span class="compat-icon">ARM</span>
+                        <span>Граница и мобильные</span>
+                    </div>
+                    <div class="compat-item">
+                        <span class="compat-icon">GPU</span>
+                        <span>NVIDIA / AMD</span>
+                    </div>
+                    <div class="compat-item">
+                        <span class="compat-icon">IPC</span>
+                        <span>Промышленное управление</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="section usecases-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Создано для <span class="gradient-text">реального масштаба</span></h2>
+                <p class="section-subtitle">Развёрнуто в различных отраслях, где интеллектуальный видеоанализ определяет операционные решения.</p>
+            </div>
+            <div class="usecases-grid">
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <line x1="18" y1="20" x2="18" y2="10"/>
+                            <line x1="12" y1="20" x2="12" y2="4"/>
+                            <line x1="6" y1="20" x2="6" y2="14"/>
+                        </svg>
+                    </div>
+                    <h4>Умный город</h4>
+                    <p>Интегрированное видеонаблюдение, выявление городских нарушений, замкнутый цикл обработки заявок и диспетчеризация экстренных команд.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h4>Общественная безопасность</h4>
+                    <p>Мониторинг плотности толпы, раннее предупреждение аномального поведения, распознавание лиц и диспетчеризация ресурсов для крупных мероприятий.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                    </div>
+                    <h4>Умный кампус</h4>
+                    <p>Обнаружение подозрительного пребывания, незаконная парковка, соблюдение требований к каскам, оповещения о дыме/огне и мониторинг периметра.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                        </svg>
+                    </div>
+                    <h4>Цифровое правительство</h4>
+                    <p>Межведомственный обмен видео, единая диспетчеризация и интеллектуальный анализ для общественной безопасности, ЧС и транспорта.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33"/></svg>
+                    </div>
+                    <h4>Промышленность и добыча</h4>
+                    <p>Обнаружение неисправностей оборудования, вторжение в опасные зоны, выявление нарушений СИЗ, экологический мониторинг и удалённая инспекция.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M6.13 1L6 16a2 2 0 0 0 2 2h15"/><path d="M1 6.13L16 6a2 2 0 0 1 2 2v15"/></svg>
+                    </div>
+                    <h4>Умное сельское хозяйство</h4>
+                    <p>Предотвращение лесных пожаров, контроль паводков, инспекция ЛЭП, мониторинг роста и выявление вредителей в зонах со слабой связью.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Source Repos Section -->
+    <section id="open-source" class="section opensource-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">100% <span class="gradient-text">открытый код</span></h2>
+                <p class="section-subtitle">Лицензия MIT. Без скрытых проприетарных компонентов, без закрытых модулей. Основной код, протокол VLS, движок ИИ и движок диспетчеризации — всё открыто.</p>
+            </div>
+            <div class="repos-grid">
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-Cloud</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>Ядро облачной платформы — управление, движки ИИ, диспетчеризация, агрегация видео и принятие решений.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-NVR</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>Сетевой видеорегистратор — хранение, воспроизведение, управление и возможности локального вывода.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-CMS</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>Кроссплатформенный десктопный клиент (Windows/macOS/Linux) — мультимониторинг, электронные карты, всплывающие оповещения.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-APP</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>Мобильное приложение (iOS/Android/HarmonyOS) — предпросмотр, воспроизведение, оповещения, двусторонняя связь, управление PTZ.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-IPCamera</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>Прошивка камеры со встроенным ИИ + SDK — поддержка чипсетов HiSilicon, Rockchip, Ingenic и Goke.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-Edge</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>Прошивка граничного блока ИИ + пакеты алгоритмов — анализ в реальном времени, локальные оповещения, кэширование вычислений.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLS-Protocol</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>Собственный протокол VLS — низкая задержка, устойчивость к потере пакетов, управление IoT по MQTT и прозрачные команды устройств.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-Web</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>Архитектура с разделением фронтенда и бэкенда — современная кодовая база, чистые API-интерфейсы, легко кастомизировать и строить свой продукт поверх VLStream.</p>
+                </div>
+            </div>
+            <div class="opensource-cta">
+                <a href="https://github.com/OortCloudGroup" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    Все репозитории
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="section comparison-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Почему VLStream <span class="gradient-text">лучше закрытого кода</span></h2>
+                <p class="section-subtitle">Сравните VLStream с традиционными закрытыми видеоплатформами.</p>
+            </div>
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Параметр</th>
+                            <th class="highlight-col">VLStream (открытый код)</th>
+                            <th>Традиционные платформы</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Исходный код</td>
+                            <td class="highlight-col">100% открыт, без скрытых компонентов</td>
+                            <td>Закрытый код, ядро недоступно</td>
+                        </tr>
+                        <tr>
+                            <td>Коммерческая стоимость</td>
+                            <td class="highlight-col">Бесплатно для коммерции, без лицензионных отчислений</td>
+                            <td>Высокие лицензионные, годовые и кастомизационные сборы</td>
+                        </tr>
+                        <tr>
+                            <td>Кастомизация</td>
+                            <td class="highlight-col">Глубокая доработка, полная рефакторизация</td>
+                            <td>Длительный цикл, высокие затраты, привязка к поставщику</td>
+                        </tr>
+                        <tr>
+                            <td>Безопасность данных</td>
+                            <td class="highlight-col">Приватное развёртывание, данные не покидают сеть</td>
+                            <td>Загрузка в облако, риск утечки данных</td>
+                        </tr>
+                        <tr>
+                            <td>Протокол</td>
+                            <td class="highlight-col">Национальные стандарты + собственная разработка, 100% повторное использование</td>
+                            <td>Проприетарные протоколы, сложно повторно использовать</td>
+                        </tr>
+                        <tr>
+                            <td>Контроль ИИ</td>
+                            <td class="highlight-col">Полный контроль движка ИИ, собственные алгоритмы</td>
+                            <td>Закрытые алгоритмы, ограниченные обновления</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section class="section advantages-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Три ключевых <span class="gradient-text">преимущества</span></h2>
+            </div>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-num">01</div>
+                    <h4>Используйте существующее оборудование</h4>
+                    <p>Существующие камеры и IP-камеры остаются на месте. Граничные модули ИИ OortCloud придают им интеллект — без замены оборудования. Максимальная отдача от существующей инфраструктуры.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-num">02</div>
+                    <h4>От наблюдения к ИИ-мониторингу</h4>
+                    <p>Превратите ручное наблюдение в мониторинг на базе ИИ. Встроенные оповещения отправляют уведомления ответственным лицам в реальном времени. Сократите затраты на персонал и создайте интеллектуальные агенты.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-num">03</div>
+                    <h4>Настраиваемые алгоритмы ИИ</h4>
+                    <p>Обучайте и динамически загружайте алгоритмы по требованию. Разные сценарии, разные периоды времени, разные объекты раннего предупреждения — всё настраивается без изменения кода.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-glow"></div>
+            <h2 class="cta-title">Готовы внедрить <span class="gradient-text">видео ИИ</span>?</h2>
+            <p class="cta-subtitle">Разверните VLStream за 5 минут. Трансформируйте видеоинфраструктуру с ИИ для принятия решений. 100% открытый код, без привязки к поставщику.</p>
+            <div class="cta-actions">
+                <a href="#deploy" class="btn btn-primary btn-lg">
+                    Начать бесплатно
+                </a>
+                <a href="https://github.com/OortCloudGroup" class="btn btn-outline btn-lg" target="_blank" rel="noopener">
+                    Документация
+                </a>
+            </div>
+            <div class="cta-support">
+                <p>Нужна коммерческая поддержка? OortCloud предлагает платную техническую поддержку, индивидуальную разработку и услуги развёртывания.</p>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo">
+                        <img src="https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png" alt="Логотип VLStream" class="logo-icon" style="height:60px;width:auto;">
+                    </a>
+                    <p class="footer-desc">Платформа агрегации и диспетчеризации видеопотоков на базе ИИ для принятия решений от OortCloud (Shenzhen) Smart Technology Co., Ltd. Основана в 2019 году.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h5>Продукт</h5>
+                        <a href="#features">Двойной движок ИИ</a>
+                        <a href="#architecture">Архитектура</a>
+                        <a href="#hardware">Оборудование</a>
+                        <a href="#vlm">VLM-стриминг</a>
+                        <a href="#deploy">Развёртывание</a>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Ресурсы</h5>
+                        <a href="https://github.com/OortCloudGroup/VLStream-Docs">Документация</a>
+                        <a href="https://github.com/OortCloudGroup/VLStream-Docs">Справочник API</a>
+                        <a href="#">Список изменений</a>
+                        <a href="#">Блог</a>
+                        <a href="#">Сообщество Discord</a>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Открытый код</h5>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-Cloud</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-Edge</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-NVR</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLS-Protocol</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-APP</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-Web</a>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Компания</h5>
+                        <a href="https://oortcloudsmart.com/es/about.html" target="_blank">Об OortCloud</a>
+                        <a href="https://oortcloudsmart.com/es/contact.html" target="_blank">Связаться с отделом продаж</a>
+                        <a href="#">Коммерческая поддержка</a>
+                        <a href="#">Партнёры</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OortCloud (Shenzhen) Smart Technology Co., Ltd. Все права защищены.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Условия использования</a>
+                    <a href="#">Лицензия MIT</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

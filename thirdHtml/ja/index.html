@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0a0a">
+    <title>VLStream - 意思決定型AI映像インテリジェンスプラットフォーム | 100%オープンソース</title>
+    <meta name="description" content="VLStreamは100%オープンソースの意思決定型AI映像集約・スケジューリングプラットフォーム。映像IoTのためのエンドツーエンドAI融合――アノテーションからトレーニング、エッジデプロイまで。MITライセンス、プライベートデプロイ、サーバーあたり500+ストリーム対応。">
+    <meta name="keywords" content="VLStream, AI映像プラットフォーム, オープンソース映像解析, 映像IoT, エッジAI, VLMストリーミング, スマートシティ, 映像監視, 物体検出, RTSP, WebRTC, OortCloud">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://vlstream.dev/ja/">
+    
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://vlstream.dev/en/">
+    <link rel="alternate" hreflang="zh" href="https://vlstream.dev/">
+    <link rel="alternate" hreflang="es" href="https://vlstream.dev/es/">
+    <link rel="alternate" hreflang="ar" href="https://vlstream.dev/ar/">
+    <link rel="alternate" hreflang="de" href="https://vlstream.dev/de/">
+    <link rel="alternate" hreflang="fr" href="https://vlstream.dev/fr/">
+    <link rel="alternate" hreflang="ja" href="https://vlstream.dev/ja/">
+    <link rel="alternate" hreflang="pt" href="https://vlstream.dev/pt/">
+    <link rel="alternate" hreflang="ru" href="https://vlstream.dev/ru/">
+    <link rel="alternate" hreflang="ko" href="https://vlstream.dev/ko/">
+    <link rel="alternate" hreflang="id" href="https://vlstream.dev/id/">
+    <link rel="alternate" hreflang="tr" href="https://vlstream.dev/tr/">
+    <link rel="alternate" hreflang="x-default" href="https://vlstream.dev/en/">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="VLStream">
+    <meta property="og:title" content="VLStream - 意思決定型AI映像インテリジェンスプラットフォーム">
+    <meta property="og:description" content="100%オープンソースのAI映像集約・スケジューリングプラットフォーム。映像IoTのためのエンドツーエンドAI融合――アノテーションからトレーニング、エッジデプロイまで。">
+    <meta property="og:url" content="https://vlstream.dev/ja/">
+    <meta property="og:image" content="https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="ar_SA">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="pt_BR">
+    <meta property="og:locale:alternate" content="ru_RU">
+    <meta property="og:locale:alternate" content="ko_KR">
+    <meta property="og:locale:alternate" content="id_ID">
+    <meta property="og:locale:alternate" content="tr_TR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VLStream - 意思決定型AI映像インテリジェンスプラットフォーム">
+    <meta name="twitter:description" content="100%オープンソースのAI映像集約・スケジューリングプラットフォーム。映像IoTのためのエンドツーエンドAI融合。">
+    <meta name="twitter:image" content="https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "VLStream",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Linux, Windows, macOS",
+      "description": "映像IoTのためのエンドツーエンドAI融合を備えた、100%オープンソースの意思決定型AI映像集約・スケジューリングプラットフォーム。",
+      "url": "https://vlstream.dev/ja/",
+      "inLanguage": "ja",
+      "license": "https://opensource.org/licenses/MIT",
+      "author": {
+        "@type": "Organization",
+        "name": "OortCloud (Shenzhen) Smart Technology Co., Ltd.",
+        "url": "https://oortcloudsmart.com"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "デュアルAIエンジン",
+        "独自開発VLSプロトコル",
+        "VLMストリーミング",
+        "エッジデプロイメント",
+        "AI IPCamera＆AI-Boxハードウェア",
+        "AI-vLLM-SERVER推論アプライアンス",
+        "サーバーあたり500+ストリーム",
+        "4K解像度対応",
+        "プライベートクラウドデプロイ",
+        "100%オープンソース MITライセンス"
+      ],
+      "datePublished": "2019-01-01",
+      "softwareVersion": "1.0"
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>body { font-family: 'Inter', 'Noto Sans', 'Noto Sans JP', sans-serif; }</style>
+    
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "OortCloud (Shenzhen) Smart Technology Co., Ltd.",
+      "alternateName": "OortCloud",
+      "url": "https://oortcloudsmart.com",
+      "logo": "https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png",
+      "foundingDate": "2019",
+      "description": "OortCloudは、AIを活用した映像インテリジェンスおよびIoTプラットフォームに特化したテクノロジー企業です。",
+      "sameAs": [
+        "https://github.com/OortCloudGroup"
+      ]
+    }
+    </script>
+    
+    <!-- FAQ Schema for LLM Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "VLStreamとは何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VLStreamは100%オープンソースの意思決定型AI映像集約・スケジューリングプラットフォームです。映像IoTのためのエンドツーエンドAI融合を提供し、アノテーション、トレーニング、エッジデプロイを網羅しています。デュアルAIエンジン（識別AI＋意思決定AI）、独自開発VLSプロトコル、VLMストリーミング機能を備え、サーバーあたり500+ストリーム、4K解像度に対応しています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "VLStreamは本当に100%オープンソースですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。VLStreamはMITライセンスのもと完全にオープンソースです。VLStream-Cloud、VLStream-Edge、VLStream-NVR、VLS-Protocol、VLStream-APPの全コアコンポーネントがGitHub（github.com/OortCloudGroup）で公開されています。非公開の独自コンポーネントは一切存在しません。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "VLStreamは何本の映像ストリームを処理できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VLStreamはサーバーあたり500+以上の同時ストリームに対応し、エンドツーエンドの遅延は1.2秒未満、稼働率は99.99%の信頼性を実現しています。高密度映像IoTデプロイメント向けに設計されています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "VLStreamのVLMストリーミングとは何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VLM（Vision-Language Model）ストリーミングは、VLStreamのリアルタイムマルチモーダルAI機能です。ビジュアルQ&A、異常検知、シーン理解、ライブ映像ストリームとの自然言語対話を実現し、すべてエッジでリアルタイムに処理されます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "VLStreamのデプロイ方法を教えてください。",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VLStreamは複数のデプロイ方法に対応しています。curlによるワンラインインストール、Docker Composeによるコンテナデプロイ、Kubernetesクラスター向けHelmチャートなどです。Linux、Windows、macOSで動作し、プライベートクラウドおよびエアギャップ環境でのデプロイが可能です。NVIDIA Jetson、Intel x86、ARMプラットフォームに対応しています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "VLStreamはどのプロトコルに対応していますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VLStreamはRTSP、RTMP、WebRTC、HLS、ONVIF、および独自開発のVLSプロトコルに対応しています。VLSプロトコルは、超低遅延ストリーミング、エンドツーエンド暗号化、適応ビットレート、AIワークロードに最適化されたインテリジェントフレームスケジューリングを提供します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "VLStreamはどのようなハードウェアを提供していますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VLStreamは3つのハードウェアカテゴリを提供しています：(1) AI IPCamera――デバイス内蔵AI搭載のインテリジェントカメラ、エントリーレベルから20 TOPSのフラッグシップまで；(2) AI-Box――VLStream Edgeシリーズ、既存のIPカメラにRTSP経由でAI分析を追加するエッジコンピューティング端末、1チャンネル/2T、8チャンネル/16T、32チャンネル構成を用意；(3) AI-vLLM-SERVER――専用vLLM推論サーバー（1チャンネル/20T、8チャンネル/160T、64チャンネル/1P）、モデルトレーニング不要で直接vLLM認識が可能。フラッグシップSVR-64はオプションの一体化キャビネット納品と内蔵液冷技術により、専用サーバールーム不要のエッジデプロイメントを実現します。すべてオープンソースソフトウェアを含み、HiSilicon HI3516、Rockchip RK3588などのチップセットで動作します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "AI-vLLM-SERVERとは何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI-vLLM-SERVERはVLStreamの専用vLLM推論サーバーシリーズです。3つのモデル――SVR-1（1チャンネル、20T演算力）、SVR-8（8チャンネル、160T）、SVR-64（64チャンネル、1P）があり、モデルトレーニング不要で直接vLLM認識が可能です。フラッグシップSVR-64はオプションの一体化キャビネット納品と内蔵液冷技術を備え、専用サーバールーム不要のエッジデプロイメントを実現します。"
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" aria-label="メインナビゲーション">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png" alt="VLStream Logo" class="logo-icon" style="height:60px;width:auto;">
+            </a>
+            <div class="nav-links">
+                <a href="#features">機能</a>
+                <a href="#architecture">アーキテクチャ</a>
+                <a href="#hardware">ハードウェア</a>
+                <a href="#vlm">VLMストリーミング</a>
+                <a href="#deploy">デプロイ</a>
+                <a href="#open-source">オープンソース</a>
+            </div>
+            <div class="nav-actions">
+                <!-- Language Switcher -->
+                <div class="nav-lang" id="langSwitch" title="言語切替">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">JA</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item" data-lang="en" href="../en/">
+                            <span class="nav-lang-item-flag">🇺🇸</span>
+                            <span class="nav-lang-item-label">English</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="zh" href="../">
+                            <span class="nav-lang-item-flag">🇨🇳</span>
+                            <span class="nav-lang-item-label">中文</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="es" href="../es/">
+                            <span class="nav-lang-item-flag">🇪🇸</span>
+                            <span class="nav-lang-item-label">Español</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="ar" href="../ar/">
+                            <span class="nav-lang-item-flag">🇸🇦</span>
+                            <span class="nav-lang-item-label">العربية</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="de" href="../de/">
+                            <span class="nav-lang-item-flag">🇩🇪</span>
+                            <span class="nav-lang-item-label">Deutsch</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="fr" href="../fr/">
+                            <span class="nav-lang-item-flag">🇫🇷</span>
+                            <span class="nav-lang-item-label">Français</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item active" data-lang="ja" href="#">
+                            <span class="nav-lang-item-flag">🇯🇵</span>
+                            <span class="nav-lang-item-label">日本語</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="pt" href="../pt/">
+                            <span class="nav-lang-item-flag">🇧🇷</span>
+                            <span class="nav-lang-item-label">Português</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="ru" href="../ru/">
+                            <span class="nav-lang-item-flag">🇷🇺</span>
+                            <span class="nav-lang-item-label">Русский</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="ko" href="../ko/">
+                            <span class="nav-lang-item-flag">🇰🇷</span>
+                            <span class="nav-lang-item-label">한국어</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="id" href="../id/">
+                            <span class="nav-lang-item-flag">🇮🇩</span>
+                            <span class="nav-lang-item-label">Indonesia</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="tr" href="../tr/">
+                            <span class="nav-lang-item-flag">🇹🇷</span>
+                            <span class="nav-lang-item-label">Türkçe</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://github.com/OortCloudGroup" class="btn btn-ghost" target="_blank" rel="noopener">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    GitHub
+                </a>
+                <a href="#deploy" class="btn btn-primary">はじめる</a>
+            </div>
+            <button class="mobile-toggle" aria-label="メニュー切替">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-grid-bg"></div>
+        <div class="container">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                MITライセンス &middot; 100%オープンソース &middot; 非公開コンポーネントなし
+            </div>
+            <h1 class="hero-title">
+                意思決定型AI<br>
+                <span class="gradient-text">映像インテリジェンスプラットフォーム</span>
+            </h1>
+            <p class="hero-subtitle">
+                映像IoT領域におけるエンドツーエンドAI融合。データのサイロ化、分散インテリジェンス、
+                カスタマイズの困難さ、高コストを解決――プライベートデプロイ、フルスタック制御、
+                クラウド・エッジ・デバイス連携を実現します。
+            </p>
+            <div class="hero-actions">
+                <a href="#deploy" class="btn btn-primary btn-lg">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                    5分でデプロイ
+                </a>
+                <a href="https://github.com/OortCloudGroup" class="btn btn-outline btn-lg" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    ソースコードを見る
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-value">&lt;1.2秒</span>
+                    <span class="stat-label">エンドツーエンド遅延</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">500+</span>
+                    <span class="stat-label">同時ストリーム数</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">17</span>
+                    <span class="stat-label">エクスポート形式</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">80+</span>
+                    <span class="stat-label">検出対象種別</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">99.99%</span>
+                    <span class="stat-label">稼働率</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pain Points Section -->
+    <section class="section painpoints-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">5つの課題、<span class="gradient-text">1つの解決策</span></h2>
+                <p class="section-subtitle">従来の映像監視には根本的な制約があります。VLStreamはそのすべてに対応します。</p>
+            </div>
+            <div class="painpoints-grid">
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+                    </div>
+                    <h4>データのサイロ化</h4>
+                    <p>GB28181、RTSP、ONVIF、GA/T1400など全プロトコルに対応した統合映像集約。1つのプラットフォームですべてのソースを管理します。</p>
+                </div>
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    </div>
+                    <h4>分散するAI</h4>
+                    <p>デュアルAIのクローズドループ――知覚のための識別AIと実行のための意思決定AI。見て、判断し、行動する。</p>
+                </div>
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                    </div>
+                    <h4>カスタマイズの困難さ</h4>
+                    <p>TensorFlow/PyTorchモデルをインポートし、独自アルゴリズムをトレーニングして業界特化型ソリューションをデプロイ――ベンダーロックインゼロ。</p>
+                </div>
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    </div>
+                    <h4>セキュリティリスク</h4>
+                    <p>プライベートデプロイによりデータがネットワークから外に出ることはありません。GB35114準拠、保存時・転送時の暗号化、完全な監査ログ。</p>
+                </div>
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    <h4>高コスト</h4>
+                    <p>MITライセンス、ライセンス料なし、ノードごとの課金なし。既存のカメラをエッジAIモジュールで活用――ハードウェアの買い替え不要。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dual AI Engine Section -->
+    <section id="features" class="section dualai-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">デュアルAI<span class="gradient-text">クローズドループ</span></h2>
+                <p class="section-subtitle">世界を知覚することから意思決定と行動まで――完全に自動化されたインテリジェンスパイプライン。</p>
+            </div>
+            <div class="dualai-grid">
+                <div class="dualai-card">
+                    <div class="dualai-header">
+                        <div class="dualai-dot discriminative"></div>
+                        <h3>識別AIエンジン</h3>
+                        <span class="dualai-badge">知覚</span>
+                    </div>
+                    <p class="dualai-desc">産業グレードの精度で視覚世界を認識・理解します。</p>
+                    <ul class="dualai-list">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            80+の検出対象種別（人、車両、物体）
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            行動分析（うろつき、走行、集合）
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            32万+の顔データベースとリアルタイム照合
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            ナンバープレート認識精度99%
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            10+の異常種別（煙、侵入、境界越え）
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            特徴抽出（顔、ナンバープレート、服装属性）
+                        </li>
+                    </ul>
+                </div>
+                <div class="dualai-card">
+                    <div class="dualai-header">
+                        <div class="dualai-dot decision"></div>
+                        <h3>意思決定AIエンジン</h3>
+                        <span class="dualai-badge">実行</span>
+                    </div>
+                    <p class="dualai-desc">状況を判断し、システム全体で自動化された応答をオーケストレーションします。</p>
+                    <ul class="dualai-list">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            イベントレベル判定＆優先度ソート
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            トレンド予測＆リソーススケジューリング
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            マルチチャネルアラーム（PSTN、SMS、APP、メール）
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            連携制御（PTZ、照明、入退ゲート）
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            自動チケット生成＆ディスパッチ
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            1000+同時ストリームオーケストレーション
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section id="architecture" class="section architecture-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">4層<span class="gradient-text">フルリンクアーキテクチャ</span></h2>
+                <p class="section-subtitle">動的スケジューリングによるクラウド・エッジ・デバイス連携。クラウドでグローバル意思決定、エッジでリアルタイム解析、デバイスでデータ収集。</p>
+            </div>
+            <div class="arch-diagram">
+                <!-- Layer 1: Cloud -->
+                <div class="arch-layer arch-cloud">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-dot cloud-dot"></div>
+                        <h4>プラットフォーム層 — VLStream Cloud</h4>
+                        <span class="arch-layer-tag">コアハブ</span>
+                    </div>
+                    <div class="arch-items">
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                            ワークベンチ＆ダッシュボード
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                            映像集約エンジン
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33"/></svg>
+                            統合トレーニング＆デプロイ
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                            コンピューティングパワー Scheduler
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            意思決定AIエンジン
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                            APIゲートウェイ＆SDK
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                            マルチテナント分離
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                            IoTオブジェクトモデル
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-label">VLSプロトコル / WebRTC P2P / MQTT / REST</div>
+                    <div class="connector-line"></div>
+                </div>
+
+                <!-- Layer 2: Edge -->
+                <div class="arch-layer arch-edge">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-dot edge-dot"></div>
+                        <h4>エッジ層 — VLStream Edge</h4>
+                        <span class="arch-layer-tag">リアルタイムインテリジェンス</span>
+                    </div>
+                    <div class="arch-items">
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/></svg>
+                            エッジAIボックス（2T/6T/20T）
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                            リアルタイムAI解析
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/></svg>
+                            ローカルアラーム＆キャッシュ
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            ネットワーク断復旧後の自動再開
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-label">4G / Ethernet / Wi-Fi</div>
+                    <div class="connector-line"></div>
+                </div>
+
+                <!-- Layer 3: Device -->
+                <div class="arch-layer arch-device">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-dot device-dot"></div>
+                        <h4>デバイス層 — センシング＆取得</h4>
+                        <span class="arch-layer-tag">エンドデバイス</span>
+                    </div>
+                    <div class="arch-items">
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                            AIネイティブカメラ
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/></svg>
+                            推論機能付きNVR
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                            IoTセンサー（温度/煙/レーダー）
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                            サードパーティ（Hikvision/Dahua）
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-label">GB28181 / RTSP / ONVIF / GA/T1400</div>
+                    <div class="connector-line"></div>
+                </div>
+
+                <!-- Layer 4: Application -->
+                <div class="arch-layer arch-app">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-dot app-dot"></div>
+                        <h4>アプリケーション層 — クライアントソフトウェア</h4>
+                        <span class="arch-layer-tag">ユーザーインターフェース</span>
+                    </div>
+                    <div class="arch-items">
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                            VLStream CMS（デスクトップ）
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                            モバイルアプリ（iOS/Android/HarmonyOS）
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10"/></svg>
+                            Webコンソール
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                            API＆SDK
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hardware Section -->
+    <section id="hardware" class="section hardware-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">専用設計<span class="gradient-text">AIハードウェア</span></h2>
+                <p class="section-subtitle">ネイティブAIカメラからエッジコンピューティングボックスまで――あらゆるインフラにAI分析を展開。</p>
+            </div>
+
+            <!-- AI IPCamera カテゴリ -->
+            <div class="hardware-category">
+                <h3 class="hardware-category-title">AI IPCamera</h3>
+                <p class="hardware-category-desc">デバイス内蔵AIを搭載した専用設計のインテリジェントカメラ――エントリーレベルの監視からフラッグシップのマルチモデル解析まで。</p>
+            </div>
+            <div class="hardware-grid">
+                <div class="hardware-card">
+                    <div class="hardware-tier">ベーシック</div>
+                    <h4>OORT-IPC-4G-30M</h4>
+                    <div class="hardware-spec-highlight">エントリーモデル</div>
+                    <ul class="hardware-specs">
+                        <li>4G/有線デュアルネットワーク</li>
+                        <li>AIISPフルカラー暗視</li>
+                        <li>自動ズーム</li>
+                        <li>IP66防塵防水</li>
+                        <li>-30℃〜+60℃広温度対応</li>
+                    </ul>
+                </div>
+                <div class="hardware-card">
+                    <div class="hardware-tier">プロ</div>
+                    <h4>OORT-6600-2.5</h4>
+                    <div class="hardware-spec-highlight">1 TOPS AI</div>
+                    <ul class="hardware-specs">
+                        <li>2.5Tエッジコンピューティングパワー</li>
+                        <li>デバイス上での物体検出</li>
+                        <li>光学式霧透過</li>
+                        <li>スマートターゲットトラッキング</li>
+                        <li>ローカル推論＋クラウド同期</li>
+                    </ul>
+                </div>
+                <div class="hardware-card hardware-card-featured">
+                    <div class="hardware-tier">エンハンスド</div>
+                    <h4>OORT-6600-6</h4>
+                    <div class="hardware-spec-highlight">6 TOPS AI</div>
+                    <ul class="hardware-specs">
+                        <li>6Tエッジコンピューティングパワー</li>
+                        <li>マルチモデル同時推論</li>
+                        <li>80+の検出対象認識</li>
+                        <li>デバイス上での行動分析</li>
+                        <li>リアルタイム構造化データ出力</li>
+                    </ul>
+                    <div class="hardware-popular">最も人気</div>
+                </div>
+                <div class="hardware-card">
+                    <div class="hardware-tier">フラッグシップ</div>
+                    <h4>OORT-6600-20</h4>
+                    <div class="hardware-spec-highlight">20 TOPS AI</div>
+                    <ul class="hardware-specs">
+                        <li>20Tエッジコンピューティングパワー</li>
+                        <li>フル映像構造化</li>
+                        <li>マルチストリーム並列解析</li>
+                        <li>複雑シーン推論</li>
+                        <li>VLM対応アーキテクチャ</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- AI-Box カテゴリ -->
+            <div class="hardware-category">
+                <h3 class="hardware-category-title">AI-Box <span class="hardware-category-badge">VLStream Edge</span></h3>
+                <p class="hardware-category-desc">既存のIPカメラを近代化するAIエッジコンピューティング端末――カメラインフラを交換せず、RTSP経由でインテリジェント分析を追加。</p>
+            </div>
+            <div class="hardware-grid hardware-grid-3col">
+                <div class="hardware-card">
+                    <div class="hardware-tier">Lite</div>
+                    <h4>OORT-BOX-AI-1</h4>
+                    <div class="hardware-spec-highlight">1チャンネル</div>
+                    <ul class="hardware-specs">
+                        <li>1チャンネルRTSP入力</li>
+                        <li>デバイス上での物体検出</li>
+                        <li>リアルタイムアラート通知</li>
+                        <li>コンパクトファンレス設計</li>
+                        <li>VLStreamオープンソースソフトウェア同梱</li>
+                    </ul>
+                </div>
+                <div class="hardware-card hardware-card-featured">
+                    <div class="hardware-tier">スタンダード</div>
+                    <h4>OORT-BOX-AI-8</h4>
+                    <div class="hardware-spec-highlight">8チャンネル</div>
+                    <ul class="hardware-specs">
+                        <li>8チャンネルRTSP入力</li>
+                        <li>マルチモデル同時推論</li>
+                        <li>AI視覚行動分析</li>
+                        <li>リアルタイム構造化データ出力</li>
+                        <li>VLStreamオープンソースソフトウェア同梱</li>
+                    </ul>
+                    <div class="hardware-popular">最も人気</div>
+                </div>
+                <div class="hardware-card">
+                    <div class="hardware-tier">Pro</div>
+                    <h4>OORT-BOX-AI-32</h4>
+                    <div class="hardware-spec-highlight">32チャンネル</div>
+                    <ul class="hardware-specs">
+                        <li>32チャンネルRTSP入力</li>
+                        <li>フル映像構造化</li>
+                        <li>AI視覚行動分析</li>
+                        <li>複雑シーン推論</li>
+                        <li>VLM対応アーキテクチャ</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- AI-vLLM-SERVER Category -->
+            <div class="hardware-category">
+                <h3 class="hardware-category-title">AI-vLLM-SERVER <span class="hardware-category-badge">vLLM推論</span></h3>
+                <p class="hardware-category-desc">vLLM推論専用サーバー — モデルトレーニング不要、vLLM認識ですぐに利用可能。</p>
+            </div>
+            <div class="hardware-grid hardware-grid-3col">
+                <div class="hardware-card">
+                    <div class="hardware-tier">エントリー</div>
+                    <h4>OORT-AI-vLLM-SVR-1</h4>
+                    <div class="hardware-spec-highlight">1チャンネル / 20 TOPS</div>
+                    <ul class="hardware-specs">
+                        <li>1チャンネル映像入力</li>
+                        <li>20T演算力</li>
+                        <li>モデルトレーニング不要</li>
+                        <li>直接vLLM推論</li>
+                        <li>すぐに使えるデプロイメント</li>
+                    </ul>
+                </div>
+                <div class="hardware-card hardware-card-featured">
+                    <div class="hardware-tier">スタンダード</div>
+                    <h4>OORT-AI-vLLM-SVR-8</h4>
+                    <div class="hardware-spec-highlight">8チャンネル / 160 TOPS</div>
+                    <ul class="hardware-specs">
+                        <li>8チャンネル映像入力</li>
+                        <li>160T演算力</li>
+                        <li>モデルトレーニング不要</li>
+                        <li>直接vLLM推論</li>
+                        <li>すぐに使えるデプロイメント</li>
+                    </ul>
+                    <div class="hardware-popular">最も人気</div>
+                </div>
+                <div class="hardware-card">
+                    <div class="hardware-tier">フラグシップ</div>
+                    <h4>OORT-AI-vLLM-SVR-64</h4>
+                    <div class="hardware-spec-highlight">64チャンネル / 1P</div>
+                    <ul class="hardware-specs">
+                        <li>64チャンネル映像入力</li>
+                        <li>1P演算力</li>
+                        <li>モデルトレーニング不要</li>
+                        <li>直接vLLM推論</li>
+                        <li>すぐに使えるデプロイメント</li>
+                        <li>一体化キャビネット納品オプション
+                        液冷技術内蔵
+                        専用サーバールーム不要のエッジデプロイメント</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="hardware-chips">
+                <p class="hardware-chips-label">対応チップセット</p>
+                <div class="chips-list">
+                    <span class="chip">HiSilicon HI3516</span>
+                    <span class="chip">Rockchip RK3588</span>
+                    <span class="chip">Rockchip RK1106</span>
+                    <span class="chip">Ingenic T31/T41</span>
+                    <span class="chip">Goke GK720x</span>
+                    <span class="chip">ESP32 (RTOS)</span>
+                    <span class="chip">BK7258 (RTOS)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VLM Streaming Section -->
+    <section id="vlm" class="section vlm-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">リアルタイム<span class="gradient-text">VLMストリーミング</span></h2>
+                <p class="section-subtitle">大規模視覚言語モデルに映像ストリームをリアルタイムで視聴させ――フレームごとにシーンを理解し、ストリーミング出力で回答します。</p>
+            </div>
+            <div class="vlm-content">
+                <div class="vlm-diagram">
+                    <div class="vlm-step">
+                        <div class="vlm-step-num">1</div>
+                        <div class="vlm-step-content">
+                            <h5>映像ストリーム入力</h5>
+                            <p>RTSP / WebCam / ファイル、15〜30 FPS。フレームドロップゼロの連続キャプチャ。</p>
+                        </div>
+                    </div>
+                    <div class="vlm-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                    <div class="vlm-step">
+                        <div class="vlm-step-num">2</div>
+                        <div class="vlm-step-content">
+                            <h5>フレームスケジューラー</h5>
+                            <p>インテリジェントなフレームスキップと均一サンプリング。AI過負荷を防ぐフロー制御。</p>
+                        </div>
+                    </div>
+                    <div class="vlm-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                    <div class="vlm-step">
+                        <div class="vlm-step-num">3</div>
+                        <div class="vlm-step-content">
+                            <h5>VLM推論</h5>
+                            <p>LLaVA、Qwen-VL、InternVL――あらゆるオープンソース視覚モデルに対応。トレーニング不要。</p>
+                        </div>
+                    </div>
+                    <div class="vlm-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                    <div class="vlm-step">
+                        <div class="vlm-step-num">4</div>
+                        <div class="vlm-step-content">
+                            <h5>ストリーミング出力</h5>
+                            <p>ミリ秒単位でリアルタイム回答。映像の終了を待つ必要はありません。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vlm-features">
+                    <div class="vlm-feature-card">
+                        <h5>対応モデル</h5>
+                        <div class="vlm-models">
+                            <span>LLaVA</span>
+                            <span>Qwen-VL</span>
+                            <span>InternVL</span>
+                            <span>Qwen-VL-7B</span>
+                        </div>
+                    </div>
+                    <div class="vlm-feature-card">
+                        <h5>活用シーン</h5>
+                        <ul>
+                            <li>リアルタイム監視分析</li>
+                            <li>ライブ配信コメンタリー</li>
+                            <li>ロボットビジョン理解</li>
+                            <li>AR/スマートグラス知覚</li>
+                            <li>帳票・請求書OCR</li>
+                            <li>マルチチャネル並列解析</li>
+                        </ul>
+                    </div>
+                    <div class="vlm-feature-card">
+                        <h5>パフォーマンス</h5>
+                        <div class="vlm-perf">
+                            <div class="vlm-perf-item">
+                                <span class="vlm-perf-value">約200ms</span>
+                                <span class="vlm-perf-label">推論遅延</span>
+                            </div>
+                            <div class="vlm-perf-item">
+                                <span class="vlm-perf-value">24GB</span>
+                                <span class="vlm-perf-label">最小GPU（マルチチャネル）</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pipeline Section -->
+    <section class="section pipeline-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">生データから<span class="gradient-text">本番モデル</span>へ</h2>
+                <p class="section-subtitle">統合トレーニング＆デプロイ――ブラウザで推論を検証し、エッジデバイスへワンクリックでリモートデプロイ。</p>
+            </div>
+            <div class="pipeline-steps">
+                <div class="pipeline-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h4>アノテーション</h4>
+                        <p>検出、セグメンテーション、分類のための内蔵ラベリングツール。品質保証付きの協調ワークフロー。</p>
+                    </div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h4>トレーニング</h4>
+                        <p>AutoMLまたは完全手動制御。動的リソーススケジューリングによる分散GPUトレーニング。TensorFlow/PyTorchモデルのインポート対応。</p>
+                    </div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h4>最適化</h4>
+                        <p>ONNX、TensorRT、CoreML、TFLite、OpenVINOなど17形式にエクスポート。量子化・枝刈りによるエッジ最適化。</p>
+                    </div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h4>デプロイ</h4>
+                        <p>ブラウザで検証後、ワンクリックでリモートデプロイ。OTAアップデート、A/Bテスト、ロールバック、リアルタイムパフォーマンス監視。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Section -->
+    <section class="section performance-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">エンタープライズグレードの<span class="gradient-text">パフォーマンス</span></h2>
+                <p class="section-subtitle">厳しい本番環境に対応する、業界最高水準の仕様。</p>
+            </div>
+            <div class="perf-grid">
+                <div class="perf-card">
+                    <div class="perf-value">&lt;1.2秒</div>
+                    <div class="perf-label">エンドツーエンド遅延</div>
+                    <div class="perf-detail">独自開発VLSプロトコル、TCPベース、RTMP/RTSPを凌駕</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">30%</div>
+                    <div class="perf-label">パケット損失耐性</div>
+                    <div class="perf-detail">30%損失でもカクつきなし、50%損失でも復旧可能</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">&lt;200ms</div>
+                    <div class="perf-label">AI解析遅延</div>
+                    <div class="perf-detail">ハードウェアアクセラレーションによるエッジでのリアルタイム推論</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">70%</div>
+                    <div class="perf-label">帯域幅削減</div>
+                    <div class="perf-detail">WebRTC P2Pでリレーサーバー不要、カメラからクライアントへ直接接続</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">500+</div>
+                    <div class="perf-label">サーバーあたりストリーム数</div>
+                    <div class="perf-detail">1台のサーバーで500+映像ストリーム、100+AI解析を同時処理</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">4K</div>
+                    <div class="perf-label">最大解像度</div>
+                    <div class="perf-detail">H.265ハードウェアエンコード/デコード、128kbps〜8Mbps適応</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transmission Protocol Section -->
+    <section class="section protocol-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">独自開発<span class="gradient-text">VLSプロトコル</span></h2>
+                <p class="section-subtitle">映像IoTのために専用設計。低遅延、極限のパケット損失耐性、汎用互換性。</p>
+            </div>
+            <div class="protocol-grid">
+                <div class="protocol-card">
+                    <h4>映像伝送</h4>
+                    <ul>
+                        <li><strong>VLSプロトコル：</strong>TCPベース、&lt;1.2秒遅延、30%損失でもカクつきなし</li>
+                        <li><strong>WebRTC P2P：</strong>ミリ秒単位相互接続、70%帯域幅削減</li>
+                        <li><strong>マルチプロトコル：</strong>HLS、FLV、RTSP、GB28181――全端末対応</li>
+                        <li><strong>エンコーディング：</strong>H.264/H.265、4K/1080p/720p適応</li>
+                    </ul>
+                </div>
+                <div class="protocol-card">
+                    <h4>IoT＆制御</h4>
+                    <ul>
+                        <li><strong>MQTT：</strong>デバイスへの透過的コマンド伝送</li>
+                        <li><strong>IoTセンター：</strong>周辺機器向けTCP/IP 4Gネットワーク機能</li>
+                        <li><strong>オブジェクトモデル：</strong>標準化されたデバイス記述＆同期</li>
+                        <li><strong>融合：</strong>映像ストリーム＋センサーデータの統合アラート</li>
+                    </ul>
+                </div>
+                <div class="protocol-card">
+                    <h4>セキュリティ＆コンプライアンス</h4>
+                    <ul>
+                        <li><strong>GB28181：</strong>国家監視規格</li>
+                        <li><strong>GB35114：</strong>強化セキュリティ認証</li>
+                        <li><strong>暗号化：</strong>転送時および保存時のデータ保護</li>
+                        <li><strong>監査：</strong>完全な操作ログ＆アクセス制御</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Deploy Section -->
+    <section id="deploy" class="section deploy-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">どこにでも<span class="gradient-text">デプロイ可能</span></h2>
+                <p class="section-subtitle">プライベートクラウド、ハイブリッド、またはエアギャップ環境。データがネットワークから出ることはありません。x86およびARM対応。</p>
+            </div>
+            <div class="deploy-grid">
+                <div class="deploy-card">
+                    <div class="deploy-card-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+                            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                            <line x1="6" y1="6" x2="6.01" y2="6"/>
+                            <line x1="6" y1="18" x2="6.01" y2="18"/>
+                        </svg>
+                        <h4>オンプレミス</h4>
+                    </div>
+                    <p>機密環境向けの完全エアギャップ対応。自社インフラ上で完全なデータ主権を確保。</p>
+                    <code class="deploy-code">curl -fsSL https://get.vlstream.dev | bash</code>
+                </div>
+                <div class="deploy-card">
+                    <div class="deploy-card-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+                        </svg>
+                        <h4>Docker</h4>
+                    </div>
+                    <p>Docker Composeによるワンクリックデプロイ。GPUパススルー対応のフルスタックを5分で起動。</p>
+                    <code class="deploy-code">docker compose up -d</code>
+                </div>
+                <div class="deploy-card">
+                    <div class="deploy-card-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                        <h4>Kubernetes</h4>
+                    </div>
+                    <p>本番用Helmチャート。オートスケーリング、HAクラスタリング、ロードバランシング、自動フェイルオーバー対応。</p>
+                    <code class="deploy-code">helm install vlstream oort/vlstream</code>
+                </div>
+            </div>
+            <div class="deploy-compatibility">
+                <p class="compat-label">プラットフォーム互換性</p>
+                <div class="compat-grid">
+                    <div class="compat-item">
+                        <span class="compat-icon">x86</span>
+                        <span>サーバー＆PC</span>
+                    </div>
+                    <div class="compat-item">
+                        <span class="compat-icon">ARM</span>
+                        <span>エッジ＆モバイル</span>
+                    </div>
+                    <div class="compat-item">
+                        <span class="compat-icon">GPU</span>
+                        <span>NVIDIA / AMD</span>
+                    </div>
+                    <div class="compat-item">
+                        <span class="compat-icon">IPC</span>
+                        <span>産業用制御</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="section usecases-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">実世界の<span class="gradient-text">スケール</span>に対応</h2>
+                <p class="section-subtitle">インテリジェント映像解析が運用上の意思決定を推進する、さまざまな業界で導入されています。</p>
+            </div>
+            <div class="usecases-grid">
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <line x1="18" y1="20" x2="18" y2="10"/>
+                            <line x1="12" y1="20" x2="12" y2="4"/>
+                            <line x1="6" y1="20" x2="6" y2="14"/>
+                        </svg>
+                    </div>
+                    <h4>スマートシティ</h4>
+                    <p>統合映像監視、都市違反識別、クローズドループ作業指示処理、緊急コマンドディスパッチ。</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h4>公共安全</h4>
+                    <p>群衆密度モニタリング、異常行動早期警戒、顔認識、大規模イベント向け緊急リソースディスパッチ。</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                    </div>
+                    <h4>スマートキャンパス</h4>
+                    <p>不審なうろつき検出、違法駐車、ヘルメット着用確認、煙/火災アラート、周囲侵入監視。</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                        </svg>
+                    </div>
+                    <h4>デジタル行政</h4>
+                    <p>部門間映像共有、統合スケジューリング、公安・緊急時・交通向けインテリジェント解析。</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33"/></svg>
+                    </div>
+                    <h4>産業・鉱業</h4>
+                    <p>設備障害検出、危険区域侵入、PPE違反検出、環境モニタリング、リモート点検。</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M6.13 1L6 16a2 2 0 0 0 2 2h15"/><path d="M1 6.13L16 6a2 2 0 0 1 2 2v15"/></svg>
+                    </div>
+                    <h4>スマート農業</h4>
+                    <p>森林火災予防、河川洪水制御、送電線点検、生育モニタリング、弱ネットワークエリアでの害虫識別。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Source Repos Section -->
+    <section id="open-source" class="section opensource-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">100%<span class="gradient-text">オープンソース</span></h2>
+                <p class="section-subtitle">MITライセンス。非公開の独自コンポーネントなし、クローズドソースモジュールなし。コアソースコード、VLSプロトコル、AIエンジン、スケジューリングエンジン――すべてオープン。</p>
+            </div>
+            <div class="repos-grid">
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-Cloud</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>クラウドプラットフォームコア――管理、AIエンジン、スケジューリング、映像集約、意思決定。</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-NVR</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>ネットワークビデオレコーダー――ストレージ、再生、管理、ローカル推論機能。</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-CMS</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>クロスプラットフォームデスクトップクライアント（Windows/macOS/Linux）――マルチデバイス監視、電子地図、アラームポップアップ。</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-APP</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>モバイルアプリ（iOS/Android/HarmonyOS）――ライブプレビュー、再生、アラート、双方向音声、PTZ制御。</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-IPCamera</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>AIネイティブカメラファームウェア＋SDK――HiSilicon、Rockchip、Ingenic、Gokeチップセット対応。</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-Edge</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>エッジAIボックスファームウェア＋アルゴリズムパッケージ――リアルタイム解析、ローカルアラート、コンピューティングパワーキャッシング。</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLS-Protocol</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>独自開発VLSプロトコル――低遅延、パケット損失耐性、MQTT IoT制御、透過的デバイスコマンド。</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-Web</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>フロントエンド/バックエンド分離アーキテクチャ――モダンなコードベース、クリーンなAPI、VLStreamの上に独自製品を構築可能。</p>
+                </div>
+            </div>
+            <div class="opensource-cta">
+                <a href="https://github.com/OortCloudGroup" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    すべてのリポジトリを見る
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="section comparison-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">なぜVLStream<span class="gradient-text"> vs. クローズドソース</span></h2>
+                <p class="section-subtitle">VLStreamと従来のクローズドソース映像プラットフォームを比較します。</p>
+            </div>
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>評価項目</th>
+                            <th class="highlight-col">VLStream（オープンソース）</th>
+                            <th>従来のプラットフォーム</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ソースコード</td>
+                            <td class="highlight-col">100%オープン、非公開コンポーネントなし</td>
+                            <td>クローズドソース、コアは非公開</td>
+                        </tr>
+                        <tr>
+                            <td>商用コスト</td>
+                            <td class="highlight-col">商用利用無料、ライセンス料なし</td>
+                            <td>高額なライセンス料、年間費用、カスタマイズ費用</td>
+                        </tr>
+                        <tr>
+                            <td>カスタマイズ性</td>
+                            <td class="highlight-col">深い二次開発、フルリファクタリング可能</td>
+                            <td>長い開発サイクル、高コスト、ベンダーロックイン</td>
+                        </tr>
+                        <tr>
+                            <td>データセキュリティ</td>
+                            <td class="highlight-col">プライベートデプロイ、データはネットワーク内</td>
+                            <td>クラウドアップロード、データ漏洩リスク</td>
+                        </tr>
+                        <tr>
+                            <td>プロトコル</td>
+                            <td class="highlight-col">国家規格＋独自開発、100%再利用可能</td>
+                            <td>独自プロトコル、再利用困難</td>
+                        </tr>
+                        <tr>
+                            <td>AI制御</td>
+                            <td class="highlight-col">AIエンジンの完全制御、独自アルゴリズム対応</td>
+                            <td>クローズドアルゴリズム、アップグレード制限あり</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section class="section advantages-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">3つのコア<span class="gradient-text">アドバンテージ</span></h2>
+            </div>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-num">01</div>
+                    <h4>既存設備の活用</h4>
+                    <p>既存のカメラやIPCをそのまま活用。OortCloudのエッジAIモジュールでインテリジェンスを付加――ハードウェアの買い替え不要。既存インフラのROIを最大化します。</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-num">02</div>
+                    <h4>人からAI監視へ</h4>
+                    <p>手動監視をAI活用モニタリングに変革。内蔵アラートプッシュで関係者にリアルタイム通知。人件費を削減し、知覚可能なインテリジェントエージェントを構築します。</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-num">03</div>
+                    <h4>設定可能なAIアルゴリズム</h4>
+                    <p>必要に応じてアルゴリズムをトレーニングし動的ロード。異なるシナリオ、異なる時間帯、異なる早期警告項目――コード変更なしですべて設定可能。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-glow"></div>
+            <h2 class="cta-title"><span class="gradient-text">ビジョンAI</span>を始める準備はできましたか？</h2>
+            <p class="cta-subtitle">VLStreamを5分でデプロイ。意思決定型AIで映像インフラを変革。100%オープンソース、ベンダーロックインゼロ。</p>
+            <div class="cta-actions">
+                <a href="#deploy" class="btn btn-primary btn-lg">
+                    無料で始める
+                </a>
+                <a href="https://github.com/OortCloudGroup" class="btn btn-outline btn-lg" target="_blank" rel="noopener">
+                    ドキュメントを読む
+                </a>
+            </div>
+            <div class="cta-support">
+                <p>商用サポートをご希望ですか？OortCloudは有料のテクニカルサポート、カスタム開発、デプロイメントサービスを提供しています。</p>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo">
+                        <img src="https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png" alt="VLStream Logo" class="logo-icon" style="height:60px;width:auto;">
+                    </a>
+                    <p class="footer-desc">OortCloud（深圳）智能科技有限公司が提供する、意思決定型AI映像集約・スケジューリングプラットフォーム。2019年設立。</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h5>製品</h5>
+                        <a href="#features">デュアルAIエンジン</a>
+                        <a href="#architecture">アーキテクチャ</a>
+                        <a href="#hardware">ハードウェア</a>
+                        <a href="#vlm">VLMストリーミング</a>
+                        <a href="#deploy">デプロイメント</a>
+                    </div>
+                    <div class="footer-col">
+                        <h5>リソース</h5>
+                        <a href="https://github.com/OortCloudGroup/VLStream-Docs">ドキュメント</a>
+                        <a href="https://github.com/OortCloudGroup/VLStream-Docs">APIリファレンス</a>
+                        <a href="#">変更履歴</a>
+                        <a href="#">ブログ</a>
+                        <a href="#">Discordコミュニティ</a>
+                    </div>
+                    <div class="footer-col">
+                        <h5>オープンソース</h5>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-Cloud</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-Edge</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-NVR</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLS-Protocol</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-APP</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-Web</a>
+                    </div>
+                    <div class="footer-col">
+                        <h5>企業情報</h5>
+                        <a href="https://oortcloudsmart.com/es/about.html" target="_blank">OortCloudについて</a>
+                        <a href="https://oortcloudsmart.com/es/contact.html" target="_blank">お問い合わせ</a>
+                        <a href="#">商用サポート</a>
+                        <a href="#">パートナー</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OortCloud (Shenzhen) Smart Technology Co., Ltd. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">プライバシーポリシー</a>
+                    <a href="#">利用規約</a>
+                    <a href="#">MITライセンス</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

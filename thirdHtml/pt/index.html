@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0a0a">
+    <title>VLStream - Plataforma de Inteligência de Vídeo IA Orientada a Decisões | 100% Código Aberto</title>
+    <meta name="description" content="VLStream é uma plataforma de agregação e agendamento de vídeo IA 100% código aberto e orientada a decisões. Fusão de IA ponta a ponta para IoT de vídeo — da anotação ao treinamento até a implantação na borda. Licença MIT, implantação privada, mais de 500 streams por servidor.">
+    <meta name="keywords" content="VLStream, plataforma de vídeo IA, análise de vídeo código aberto, IoT de vídeo, IA de borda, streaming VLM, cidade inteligente, videovigilância, detecção de objetos, RTSP, WebRTC, OortCloud">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://vlstream.dev/pt/">
+    
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://vlstream.dev/en/">
+    <link rel="alternate" hreflang="zh" href="https://vlstream.dev/">
+    <link rel="alternate" hreflang="es" href="https://vlstream.dev/es/">
+    <link rel="alternate" hreflang="ar" href="https://vlstream.dev/ar/">
+    <link rel="alternate" hreflang="de" href="https://vlstream.dev/de/">
+    <link rel="alternate" hreflang="fr" href="https://vlstream.dev/fr/">
+    <link rel="alternate" hreflang="ja" href="https://vlstream.dev/ja/">
+    <link rel="alternate" hreflang="pt" href="https://vlstream.dev/pt/">
+    <link rel="alternate" hreflang="ru" href="https://vlstream.dev/ru/">
+    <link rel="alternate" hreflang="ko" href="https://vlstream.dev/ko/">
+    <link rel="alternate" hreflang="id" href="https://vlstream.dev/id/">
+    <link rel="alternate" hreflang="tr" href="https://vlstream.dev/tr/">
+    <link rel="alternate" hreflang="x-default" href="https://vlstream.dev/en/">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="VLStream">
+    <meta property="og:title" content="VLStream - Plataforma de Inteligência de Vídeo IA Orientada a Decisões">
+    <meta property="og:description" content="Plataforma de agregação e agendamento de vídeo IA 100% código aberto. Fusão de IA ponta a ponta para IoT de vídeo — da anotação ao treinamento até a implantação na borda.">
+    <meta property="og:url" content="https://vlstream.dev/pt/">
+    <meta property="og:image" content="https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="ar_SA">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta property="og:locale:alternate" content="ru_RU">
+    <meta property="og:locale:alternate" content="ko_KR">
+    <meta property="og:locale:alternate" content="id_ID">
+    <meta property="og:locale:alternate" content="tr_TR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VLStream - Plataforma de Inteligência de Vídeo IA Orientada a Decisões">
+    <meta name="twitter:description" content="Plataforma de agregação e agendamento de vídeo IA 100% código aberto. Fusão de IA ponta a ponta para IoT de vídeo.">
+    <meta name="twitter:image" content="https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "VLStream",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Linux, Windows, macOS",
+      "description": "Plataforma de agregação e agendamento de vídeo IA orientada a decisões, 100% código aberto, com fusão de IA ponta a ponta para IoT de vídeo.",
+      "url": "https://vlstream.dev/pt/",
+      "inLanguage": "pt",
+      "license": "https://opensource.org/licenses/MIT",
+      "author": {
+        "@type": "Organization",
+        "name": "OortCloud (Shenzhen) Smart Technology Co., Ltd.",
+        "url": "https://oortcloudsmart.com"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Motor de IA Duplo",
+        "Protocolo VLS Desenvolvido Propriamente",
+        "Streaming VLM",
+        "Implantação na Borda",
+        "Hardware AI IPCamera e AI-Box",
+        "AI-vLLM-SERVER Appliances de Inferência",
+        "Mais de 500 streams por servidor",
+        "Suporte a resolução 4K",
+        "Implantação em nuvem privada",
+        "Licença MIT 100% Código Aberto"
+      ],
+      "datePublished": "2019-01-01",
+      "softwareVersion": "1.0"
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "OortCloud (Shenzhen) Smart Technology Co., Ltd.",
+      "alternateName": "OortCloud",
+      "url": "https://oortcloudsmart.com",
+      "logo": "https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png",
+      "foundingDate": "2019",
+      "description": "A OortCloud é uma empresa de tecnologia especializada em plataformas de inteligência de vídeo e IoT alimentadas por IA.",
+      "sameAs": [
+        "https://github.com/OortCloudGroup"
+      ]
+    }
+    </script>
+    
+    <!-- FAQ Schema for LLM Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "O que é o VLStream?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O VLStream é uma plataforma de agregação e agendamento de vídeo IA orientada a decisões, 100% código aberto. Oferece fusão de IA ponta a ponta para IoT de vídeo, cobrindo anotação, treinamento e implantação na borda. Conta com um Motor de IA Duplo (IA Discriminativa + IA de Tomada de Decisão), Protocolo VLS desenvolvido propriamente, capacidades de Streaming VLM e suporta mais de 500 streams por servidor com resolução 4K."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O VLStream é realmente 100% código aberto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. O VLStream é totalmente código aberto sob a Licença MIT. Todos os componentes principais — VLStream-Cloud, VLStream-Edge, VLStream-NVR, VLS-Protocol e VLStream-APP — estão disponíveis no GitHub em github.com/OortCloudGroup. Não há componentes proprietários ocultos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quantos streams de vídeo o VLStream suporta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O VLStream suporta mais de 500 streams simultâneos por servidor com latência ponta a ponta inferior a 1,2 segundos e confiabilidade de 99,99% de disponibilidade. A plataforma é projetada para implantações de IoT de vídeo de alta densidade."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que é o Streaming VLM no VLStream?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O Streaming VLM (Vision-Language Model) é a capacidade de IA multimodal em tempo real do VLStream. Permite perguntas e respostas visuais, detecção de anomalias, compreensão de cenas e interação em linguagem natural com streams de vídeo ao vivo — tudo processado em tempo real na borda."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como faço para implantar o VLStream?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O VLStream suporta vários métodos de implantação: instalação em uma linha via curl, Docker Compose para implantação em contêineres e Helm charts para clusters Kubernetes. Funciona em Linux, Windows e macOS, e suporta implantações em nuvem privada e ambientes isolados. O hardware compatível inclui NVIDIA Jetson, Intel x86 e plataformas ARM."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais protocolos o VLStream suporta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O VLStream suporta RTSP, RTMP, WebRTC, HLS, ONVIF e seu Protocolo VLS proprietário. O Protocolo VLS oferece streaming de ultrabaixa latência com criptografia ponta a ponta, taxa de bits adaptativa e agendamento inteligente de quadros otimizado para cargas de trabalho de IA."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual hardware o VLStream oferece?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O VLStream oferece três categorias de hardware: (1) AI IPCamera — câmeras inteligentes com IA integrada no dispositivo, do nível de entrada ao flagship de 20 TOPS; (2) AI-Box — a série VLStream Edge, terminais de computação de borda que adicionam análise de IA às câmeras IP existentes via RTSP, disponíveis em configurações de 1 canal/2T, 8 canais/16T e 32 canais; (3) AI-vLLM-SERVER — servidores dedicados de inferência vLLM (1 canal/20T, 8 canais/160T, 64 canais/1P) sem necessidade de treinamento de modelos, com reconhecimento vLLM direto pronto para uso. O flagship SVR-64 oferece entrega em gabinete integrado opcional com refrigeração líquida integrada para implantação na borda sem sala de servidores dedicada. Todos incluem software de código aberto e funcionam com chipsets como HiSilicon HI3516, Rockchip RK3588 e outros."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que é o AI-vLLM-SERVER?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O AI-vLLM-SERVER é a série de servidores dedicados de inferência vLLM do VLStream. Disponível em três modelos — SVR-1 (1 canal, 20T de potência de computação), SVR-8 (8 canais, 160T) e SVR-64 (64 canais, 1P) — estes servidores não requerem treinamento de modelos e oferecem reconhecimento vLLM direto pronto para uso. O flagship SVR-64 oferece entrega em gabinete integrado opcional com tecnologia de refrigeração líquida integrada, permitindo implantação na borda sem sala de servidores dedicada."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" aria-label="Navegação principal">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png" alt="Logo VLStream" class="logo-icon" style="height:60px;width:auto;">
+            </a>
+            <div class="nav-links">
+                <a href="#features">Recursos</a>
+                <a href="#architecture">Arquitetura</a>
+                <a href="#hardware">Hardware</a>
+                <a href="#vlm">Streaming VLM</a>
+                <a href="#deploy">Implantação</a>
+                <a href="#open-source">Código Aberto</a>
+            </div>
+            <div class="nav-actions">
+                <!-- Language Switcher -->
+                <div class="nav-lang" id="langSwitch" title="Trocar idioma">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">PT</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item" data-lang="en" href="../en/">
+                            <span class="nav-lang-item-flag">🇺🇸</span>
+                            <span class="nav-lang-item-label">English</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="zh" href="../">
+                            <span class="nav-lang-item-flag">🇨🇳</span>
+                            <span class="nav-lang-item-label">中文</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="es" href="../es/">
+                            <span class="nav-lang-item-flag">🇪🇸</span>
+                            <span class="nav-lang-item-label">Español</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="ar" href="../ar/">
+                            <span class="nav-lang-item-flag">🇸🇦</span>
+                            <span class="nav-lang-item-label">العربية</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="de" href="../de/">
+                            <span class="nav-lang-item-flag">🇩🇪</span>
+                            <span class="nav-lang-item-label">Deutsch</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="fr" href="../fr/">
+                            <span class="nav-lang-item-flag">🇫🇷</span>
+                            <span class="nav-lang-item-label">Français</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="ja" href="../ja/">
+                            <span class="nav-lang-item-flag">🇯🇵</span>
+                            <span class="nav-lang-item-label">日本語</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item active" data-lang="pt" href="#">
+                            <span class="nav-lang-item-flag">🇧🇷</span>
+                            <span class="nav-lang-item-label">Português</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="ru" href="../ru/">
+                            <span class="nav-lang-item-flag">🇷🇺</span>
+                            <span class="nav-lang-item-label">Русский</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="ko" href="../ko/">
+                            <span class="nav-lang-item-flag">🇰🇷</span>
+                            <span class="nav-lang-item-label">한국어</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="id" href="../id/">
+                            <span class="nav-lang-item-flag">🇮🇩</span>
+                            <span class="nav-lang-item-label">Indonesia</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="tr" href="../tr/">
+                            <span class="nav-lang-item-flag">🇹🇷</span>
+                            <span class="nav-lang-item-label">Türkçe</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://github.com/OortCloudGroup" class="btn btn-ghost" target="_blank" rel="noopener">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    GitHub
+                </a>
+                <a href="#deploy" class="btn btn-primary">Começar</a>
+            </div>
+            <button class="mobile-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-grid-bg"></div>
+        <div class="container">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Licença MIT &middot; 100% Código Aberto &middot; Sem Componentes Ocultos
+            </div>
+            <h1 class="hero-title">
+                IA Orientada a Decisões<br>
+                <span class="gradient-text">Plataforma de Inteligência de Vídeo</span>
+            </h1>
+            <p class="hero-subtitle">
+                Fusão de IA ponta a ponta para o campo de IoT de vídeo. Resolva silos de dados, inteligência fragmentada, 
+                personalização difícil e custos elevados — com implantação privada, controle total da pilha 
+                e colaboração nuvem-borda-dispositivo.
+            </p>
+            <div class="hero-actions">
+                <a href="#deploy" class="btn btn-primary btn-lg">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                    Implante em 5 Minutos
+                </a>
+                <a href="https://github.com/OortCloudGroup" class="btn btn-outline btn-lg" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    Ver Código-Fonte
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-value">&lt;1,2s</span>
+                    <span class="stat-label">Latência Ponta a Ponta</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">500+</span>
+                    <span class="stat-label">Streams Simultâneos</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">17</span>
+                    <span class="stat-label">Formatos de Exportação</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">80+</span>
+                    <span class="stat-label">Tipos de Alvo</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">99,99%</span>
+                    <span class="stat-label">Disponibilidade</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section class="section painpoints-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Cinco Problemas, <span class="gradient-text">Uma Solução</span></h2>
+                <p class="section-subtitle">A videovigilância tradicional sofre com limitações fundamentais. O VLStream resolve todas elas.</p>
+            </div>
+            <div class="painpoints-grid">
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+                    </div>
+                    <h4>Silos de Dados</h4>
+                    <p>Agregação de vídeo unificada em todos os protocolos — GB28181, RTSP, ONVIF, GA/T1400. Uma plataforma para todas as fontes.</p>
+                </div>
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    </div>
+                    <h4>IA Fragmentada</h4>
+                    <p>Ciclo fechado de IA dupla — IA discriminativa para percepção e IA de tomada de decisão para execução. Ver, julgar, agir.</p>
+                </div>
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                    </div>
+                    <h4>Difícil de Personalizar</h4>
+                    <p>Importe modelos TensorFlow/PyTorch, treine algoritmos personalizados e implante soluções específicas para o seu setor — zero dependência de fornecedor.</p>
+                </div>
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    </div>
+                    <h4>Riscos de Segurança</h4>
+                    <p>Implantação privada, os dados nunca saem da sua rede. Compatível com GB35114, criptografia em repouso e em trânsito, registro completo de auditoria.</p>
+                </div>
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    <h4>Custos Elevados</h4>
+                    <p>Licença MIT, sem taxas de licença, sem cobranças por nó. Reutilize câmeras existentes com módulos de IA de borda — sem substituição de hardware.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dual AI Engine Section -->
+    <section id="features" class="section dualai-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Ciclo Fechado de <span class="gradient-text">IA Dupla</span></h2>
+                <p class="section-subtitle">Da percepção do mundo à tomada de decisões e ação — pipeline de inteligência totalmente automatizada.</p>
+            </div>
+            <div class="dualai-grid">
+                <div class="dualai-card">
+                    <div class="dualai-header">
+                        <div class="dualai-dot discriminative"></div>
+                        <h3>Motor de IA Discriminativa</h3>
+                        <span class="dualai-badge">Percepção</span>
+                    </div>
+                    <p class="dualai-desc">Veja e compreenda o mundo visual com precisão de nível industrial.</p>
+                    <ul class="dualai-list">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Mais de 80 tipos de alvo (pessoas, veículos, objetos)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Análise de comportamento (permanência, corrida, aglomeração)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Banco facial com mais de 320.000 registros e correspondência em tempo real
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            99% de precisão no reconhecimento de placas
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Mais de 10 tipos de anomalia (fumaça, intrusão, cruzamento de limite)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Extração de características (rostos, placas, atributos de vestuário)
+                        </li>
+                    </ul>
+                </div>
+                <div class="dualai-card">
+                    <div class="dualai-header">
+                        <div class="dualai-dot decision"></div>
+                        <h3>Motor de IA de Tomada de Decisão</h3>
+                        <span class="dualai-badge">Execução</span>
+                    </div>
+                    <p class="dualai-desc">Julgue situações e orquestre respostas automatizadas entre sistemas.</p>
+                    <ul class="dualai-list">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Determinação de nível de evento e priorização
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Previsão de tendências e agendamento de recursos
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Alarme multicanal (PSTN, SMS, APP, E-mail)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Controle de vinculação (PTZ, luzes, portões de acesso)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Geração e despacho automático de chamados
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Orquestração de mais de 1.000 streams simultâneos
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section id="architecture" class="section architecture-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Arquitetura Completa de <span class="gradient-text">Quatro Camadas</span></h2>
+                <p class="section-subtitle">Colaboração nuvem-borda-dispositivo com agendamento dinâmico. Decisões globais na nuvem, análise em tempo real na borda, coleta de dados no dispositivo.</p>
+            </div>
+            <div class="arch-diagram">
+                <!-- Layer 1: Cloud -->
+                <div class="arch-layer arch-cloud">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-dot cloud-dot"></div>
+                        <h4>Camada de Plataforma — VLStream Cloud</h4>
+                        <span class="arch-layer-tag">Hub Central</span>
+                    </div>
+                    <div class="arch-items">
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                            Painel de Trabalho &amp; Dashboard
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                            Motor de Agregação de Vídeo
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33"/></svg>
+                            Treinamento &amp; Implantação Integrados
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                            Agendador de Poder Computacional
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            Motor de IA de Tomada de Decisão
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                            Gateway de API &amp; SDKs
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                            Isolamento Multilocatário
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                            Modelo de Objeto IoT
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-label">Protocolo VLS / WebRTC P2P / MQTT / REST</div>
+                    <div class="connector-line"></div>
+                </div>
+
+                <!-- Layer 2: Edge -->
+                <div class="arch-layer arch-edge">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-dot edge-dot"></div>
+                        <h4>Camada de Borda — VLStream Edge</h4>
+                        <span class="arch-layer-tag">Inteligência em Tempo Real</span>
+                    </div>
+                    <div class="arch-items">
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/></svg>
+                            Caixa de IA de Borda (2T/6T/20T)
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                            Análise de IA em Tempo Real
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/></svg>
+                            Alarme Local &amp; Cache
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            Retomada Após Queda de Rede
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-label">4G / Ethernet / Wi-Fi</div>
+                    <div class="connector-line"></div>
+                </div>
+
+                <!-- Layer 3: Device -->
+                <div class="arch-layer arch-device">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-dot device-dot"></div>
+                        <h4>Camada de Dispositivo — Sensoriamento &amp; Aquisição</h4>
+                        <span class="arch-layer-tag">Dispositivos Finais</span>
+                    </div>
+                    <div class="arch-items">
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                            Câmeras Nativas com IA
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/></svg>
+                            NVR com Inferência
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                            Sensores IoT (Temp/Fumaça/Radar)
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                            Terceiros (Hikvision/Dahua)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-label">GB28181 / RTSP / ONVIF / GA/T1400</div>
+                    <div class="connector-line"></div>
+                </div>
+
+                <!-- Layer 4: Application -->
+                <div class="arch-layer arch-app">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-dot app-dot"></div>
+                        <h4>Camada de Aplicação — Software Cliente</h4>
+                        <span class="arch-layer-tag">Interface do Usuário</span>
+                    </div>
+                    <div class="arch-items">
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                            VLStream CMS (Desktop)
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                            Aplicativo Móvel (iOS/Android/HarmonyOS)
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10"/></svg>
+                            Console Web
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                            APIs &amp; SDKs
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hardware Section -->
+    <section id="hardware" class="section hardware-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span class="gradient-text">Hardware IA</span> Projetado para Uso Específico</h2>
+                <p class="section-subtitle">De câmeras IA nativas a caixas de computação de borda — implante análise de IA em qualquer infraestrutura.</p>
+            </div>
+
+            <!-- Categoria AI IPCamera -->
+            <div class="hardware-category">
+                <h3 class="hardware-category-title">AI IPCamera</h3>
+                <p class="hardware-category-desc">Câmeras inteligentes projetadas com IA integrada no dispositivo — da vigilância de nível de entrada à análise multimodelo flagship.</p>
+            </div>
+            <div class="hardware-grid">
+                <div class="hardware-card">
+                    <div class="hardware-tier">Básico</div>
+                    <h4>OORT-IPC-4G-30M</h4>
+                    <div class="hardware-spec-highlight">Nível de Entrada</div>
+                    <ul class="hardware-specs">
+                        <li>Rede dupla 4G/Cabeada</li>
+                        <li>Visão noturna colorida AIISP</li>
+                        <li>Zoom automático</li>
+                        <li>Proteção IP66</li>
+                        <li>-30&#8451; a +60&#8451; temperatura ampla</li>
+                    </ul>
+                </div>
+                <div class="hardware-card">
+                    <div class="hardware-tier">Pro</div>
+                    <h4>OORT-6600-2.5</h4>
+                    <div class="hardware-spec-highlight">1 TOPS IA</div>
+                    <ul class="hardware-specs">
+                        <li>2.5T de poder computacional na borda</li>
+                        <li>Detecção de objetos no dispositivo</li>
+                        <li>Penetração óptica de neblina</li>
+                        <li>Rastreamento inteligente de alvos</li>
+                        <li>Inferência local + sincronização na nuvem</li>
+                    </ul>
+                </div>
+                <div class="hardware-card hardware-card-featured">
+                    <div class="hardware-tier">Aprimorado</div>
+                    <h4>OORT-6600-6</h4>
+                    <div class="hardware-spec-highlight">6 TOPS IA</div>
+                    <ul class="hardware-specs">
+                        <li>6T de poder computacional na borda</li>
+                        <li>Inferência simultânea multimodelo</li>
+                        <li>Reconhecimento de mais de 80 alvos</li>
+                        <li>Análise de comportamento no dispositivo</li>
+                        <li>Saída de dados estruturados em tempo real</li>
+                    </ul>
+                    <div class="hardware-popular">Mais Popular</div>
+                </div>
+                <div class="hardware-card">
+                    <div class="hardware-tier">Flagship</div>
+                    <h4>OORT-6600-20</h4>
+                    <div class="hardware-spec-highlight">20 TOPS IA</div>
+                    <ul class="hardware-specs">
+                        <li>20T de poder computacional na borda</li>
+                        <li>Estruturação completa de vídeo</li>
+                        <li>Análise paralela de múltiplos streams</li>
+                        <li>Raciocínio de cenas complexas</li>
+                        <li>Arquitetura preparada para VLM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Categoria AI-Box -->
+            <div class="hardware-category">
+                <h3 class="hardware-category-title">AI-Box <span class="hardware-category-badge">VLStream Edge</span></h3>
+                <p class="hardware-category-desc">Terminais de computação de borda com IA que modernizam suas câmeras IP existentes — adicione análise inteligente via RTSP sem substituir sua infraestrutura de câmeras.</p>
+            </div>
+            <div class="hardware-grid hardware-grid-3col">
+                <div class="hardware-card">
+                    <div class="hardware-tier">Lite</div>
+                    <h4>OORT-BOX-AI-1</h4>
+                    <div class="hardware-spec-highlight">1 Canal</div>
+                    <ul class="hardware-specs">
+                        <li>Entrada RTSP de 1 canal</li>
+                        <li>Detecção de objetos no dispositivo</li>
+                        <li>Alerta em tempo real</li>
+                        <li>Design compacto sem ventoinha</li>
+                        <li>Software VLStream de código aberto incluído</li>
+                    </ul>
+                </div>
+                <div class="hardware-card hardware-card-featured">
+                    <div class="hardware-tier">Padrão</div>
+                    <h4>OORT-BOX-AI-8</h4>
+                    <div class="hardware-spec-highlight">8 Canais</div>
+                    <ul class="hardware-specs">
+                        <li>Entrada RTSP de 8 canais</li>
+                        <li>Inferência simultânea multimodelo</li>
+                        <li>Análise de comportamento visual IA</li>
+                        <li>Saída de dados estruturados em tempo real</li>
+                        <li>Software VLStream de código aberto incluído</li>
+                    </ul>
+                    <div class="hardware-popular">Mais Popular</div>
+                </div>
+                <div class="hardware-card">
+                    <div class="hardware-tier">Pro</div>
+                    <h4>OORT-BOX-AI-32</h4>
+                    <div class="hardware-spec-highlight">32 Canais</div>
+                    <ul class="hardware-specs">
+                        <li>Entrada RTSP de 32 canais</li>
+                        <li>Estruturação completa de vídeo</li>
+                        <li>Análise de comportamento visual IA</li>
+                        <li>Raciocínio de cenas complexas</li>
+                        <li>Arquitetura preparada para VLM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- AI-vLLM-SERVER Category -->
+            <div class="hardware-category">
+                <h3 class="hardware-category-title">AI-vLLM-SERVER <span class="hardware-category-badge">Inferência vLLM</span></h3>
+                <p class="hardware-category-desc">Servidores de inferência vLLM dedicados — sem necessidade de treinamento de modelos, reconhecimento vLLM direto pronto para uso.</p>
+            </div>
+            <div class="hardware-grid hardware-grid-3col">
+                <div class="hardware-card">
+                    <div class="hardware-tier">Básico</div>
+                    <h4>OORT-AI-vLLM-SVR-1</h4>
+                    <div class="hardware-spec-highlight">1 Canal / 20 TOPS</div>
+                    <ul class="hardware-specs">
+                        <li>Entrada de vídeo de 1 canal</li>
+                        <li>Potência de computação de 20T</li>
+                        <li>Sem necessidade de treinamento de modelos</li>
+                        <li>Inferência vLLM direta</li>
+                        <li>Pronto para uso</li>
+                    </ul>
+                </div>
+                <div class="hardware-card hardware-card-featured">
+                    <div class="hardware-tier">Padrão</div>
+                    <h4>OORT-AI-vLLM-SVR-8</h4>
+                    <div class="hardware-spec-highlight">8 Canais / 160 TOPS</div>
+                    <ul class="hardware-specs">
+                        <li>Entrada de vídeo de 8 canais</li>
+                        <li>Potência de computação de 160T</li>
+                        <li>Sem necessidade de treinamento de modelos</li>
+                        <li>Inferência vLLM direta</li>
+                        <li>Pronto para uso</li>
+                    </ul>
+                    <div class="hardware-popular">Mais Popular</div>
+                </div>
+                <div class="hardware-card">
+                    <div class="hardware-tier">Flagship</div>
+                    <h4>OORT-AI-vLLM-SVR-64</h4>
+                    <div class="hardware-spec-highlight">64 Canais / 1P</div>
+                    <ul class="hardware-specs">
+                        <li>Entrada de vídeo de 64 canais</li>
+                        <li>Potência de computação de 1P</li>
+                        <li>Sem necessidade de treinamento de modelos</li>
+                        <li>Inferência vLLM direta</li>
+                        <li>Pronto para uso</li>
+                        <li>Entrega em gabinete integrado opcional
+                        Tecnologia de refrigeração líquida integrada
+                        Implantação na borda sem sala de servidores dedicada</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="hardware-chips">
+                <p class="hardware-chips-label">Chipsets Suportados</p>
+                <div class="chips-list">
+                    <span class="chip">HiSilicon HI3516</span>
+                    <span class="chip">Rockchip RK3588</span>
+                    <span class="chip">Rockchip RK1106</span>
+                    <span class="chip">Ingenic T31/T41</span>
+                    <span class="chip">Goke GK720x</span>
+                    <span class="chip">ESP32 (RTOS)</span>
+                    <span class="chip">BK7258 (RTOS)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VLM Streaming Section -->
+    <section id="vlm" class="section vlm-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Streaming <span class="gradient-text">VLM em Tempo Real</span></h2>
+                <p class="section-subtitle">Faça com que grandes modelos de visão e linguagem assistam streams de vídeo em tempo real — compreenda cenas quadro a quadro com saída em streaming.</p>
+            </div>
+            <div class="vlm-content">
+                <div class="vlm-diagram">
+                    <div class="vlm-step">
+                        <div class="vlm-step-num">1</div>
+                        <div class="vlm-step-content">
+                            <h5>Entrada de Stream de Vídeo</h5>
+                            <p>RTSP / WebCam / Arquivo a 15-30 FPS. Captura contínua de quadros sem perdas.</p>
+                        </div>
+                    </div>
+                    <div class="vlm-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                    <div class="vlm-step">
+                        <div class="vlm-step-num">2</div>
+                        <div class="vlm-step-content">
+                            <h5>Agendador de Quadros</h5>
+                            <p>Salto inteligente de quadros e amostragem uniforme. Controla o fluxo para evitar sobrecarga da IA.</p>
+                        </div>
+                    </div>
+                    <div class="vlm-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                    <div class="vlm-step">
+                        <div class="vlm-step-num">3</div>
+                        <div class="vlm-step-content">
+                            <h5>Inferência VLM</h5>
+                            <p>LLaVA, Qwen-VL, InternVL — qualquer modelo de visão de código aberto. Sem necessidade de treinamento.</p>
+                        </div>
+                    </div>
+                    <div class="vlm-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                    <div class="vlm-step">
+                        <div class="vlm-step-num">4</div>
+                        <div class="vlm-step-content">
+                            <h5>Saída em Streaming</h5>
+                            <p>Respostas em tempo real em milissegundos. Sem espera para o vídeo terminar.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vlm-features">
+                    <div class="vlm-feature-card">
+                        <h5>Modelos Suportados</h5>
+                        <div class="vlm-models">
+                            <span>LLaVA</span>
+                            <span>Qwen-VL</span>
+                            <span>InternVL</span>
+                            <span>Qwen-VL-7B</span>
+                        </div>
+                    </div>
+                    <div class="vlm-feature-card">
+                        <h5>Casos de Uso</h5>
+                        <ul>
+                            <li>Análise de vigilância em tempo real</li>
+                            <li>Comentários em transmissões ao vivo</li>
+                            <li>Compreensão de visão robótica</li>
+                            <li>Percepção em óculos inteligentes/RA</li>
+                            <li>OCR de documentos e notas fiscais</li>
+                            <li>Análise paralela multicanal</li>
+                        </ul>
+                    </div>
+                    <div class="vlm-feature-card">
+                        <h5>Desempenho</h5>
+                        <div class="vlm-perf">
+                            <div class="vlm-perf-item">
+                                <span class="vlm-perf-value">~200ms</span>
+                                <span class="vlm-perf-label">Latência de Inferência</span>
+                            </div>
+                            <div class="vlm-perf-item">
+                                <span class="vlm-perf-value">24GB</span>
+                                <span class="vlm-perf-label">GPU Mín. (Multicanal)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pipeline Section -->
+    <section class="section pipeline-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">De Dados Brutos a <span class="gradient-text">Modelos em Produção</span></h2>
+                <p class="section-subtitle">Treinamento e implantação integrados — verifique a inferência no navegador e implante remotamente em dispositivos de borda com um clique.</p>
+            </div>
+            <div class="pipeline-steps">
+                <div class="pipeline-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h4>Anotar</h4>
+                        <p>Rotulagem integrada para detecção, segmentação e classificação. Fluxos de trabalho colaborativos com garantia de qualidade.</p>
+                    </div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h4>Treinar</h4>
+                        <p>AutoML ou controle manual completo. Treinamento distribuído em GPU com agendamento dinâmico de recursos. Importe modelos TensorFlow/PyTorch.</p>
+                    </div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h4>Otimizar</h4>
+                        <p>Exporte para 17 formatos: ONNX, TensorRT, CoreML, TFLite, OpenVINO e mais. Quantização e poda para borda.</p>
+                    </div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h4>Implantar</h4>
+                        <p>Verifique no navegador e implante remotamente com um clique. Atualizações OTA, testes A/B, rollback e monitoramento de desempenho em tempo real.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Section -->
+    <section class="section performance-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span class="gradient-text">Desempenho</span> de Nível Empresarial</h2>
+                <p class="section-subtitle">Construído para ambientes de produção exigentes com especificações líderes do setor.</p>
+            </div>
+            <div class="perf-grid">
+                <div class="perf-card">
+                    <div class="perf-value">&lt;1,2s</div>
+                    <div class="perf-label">Latência Ponta a Ponta</div>
+                    <div class="perf-detail">Protocolo VLS desenvolvido propriamente, baseado em TCP, superior ao RTMP/RTSP</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">30%</div>
+                    <div class="perf-label">Resistência à Perda de Pacotes</div>
+                    <div class="perf-detail">Sem travamentos com 30% de perda, recuperável com 50% de perda de pacotes</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">&lt;200ms</div>
+                    <div class="perf-label">Latência de Análise IA</div>
+                    <div class="perf-detail">Inferência em tempo real na borda com aceleração de hardware</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">70%</div>
+                    <div class="perf-label">Economia de Largura de Banda</div>
+                    <div class="perf-detail">WebRTC P2P elimina servidores relay, direto da câmera ao cliente</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">500+</div>
+                    <div class="perf-label">Streams por Servidor</div>
+                    <div class="perf-detail">Servidor único processa mais de 500 streams de vídeo, mais de 100 análises de IA</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">4K</div>
+                    <div class="perf-label">Resolução Máxima</div>
+                    <div class="perf-detail">Codificação/decodificação H.265 por hardware, adaptativo de 128kbps a 8Mbps</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transmission Protocol Section -->
+    <section class="section protocol-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span class="gradient-text">Protocolo VLS</span> Desenvolvido Propriamente</h2>
+                <p class="section-subtitle">Construído para IoT de vídeo. Baixa latência, resistência extrema à perda de pacotes e compatibilidade universal.</p>
+            </div>
+            <div class="protocol-grid">
+                <div class="protocol-card">
+                    <h4>Transmissão de Vídeo</h4>
+                    <ul>
+                        <li><strong>Protocolo VLS:</strong> Baseado em TCP, latência &lt;1,2s, sem travamentos com 30% de perda</li>
+                        <li><strong>WebRTC P2P:</strong> Interconexão em milissegundos, 70% de economia de largura de banda</li>
+                        <li><strong>Multiprotocolo:</strong> HLS, FLV, RTSP, GB28181 — todos os terminais</li>
+                        <li><strong>Codificação:</strong> H.264/H.265, 4K/1080p/720p adaptativo</li>
+                    </ul>
+                </div>
+                <div class="protocol-card">
+                    <h4>IoT &amp; Controle</h4>
+                    <ul>
+                        <li><strong>MQTT:</strong> Transmissão transparente de comandos para dispositivos</li>
+                        <li><strong>Centro IoT:</strong> Capacidades de rede TCP/IP 4G para periféricos</li>
+                        <li><strong>Modelo de Objeto:</strong> Descrições padronizadas de dispositivos &amp; sincronização</li>
+                        <li><strong>Fusão:</strong> Alertas combinados de stream de vídeo + dados de sensores</li>
+                    </ul>
+                </div>
+                <div class="protocol-card">
+                    <h4>Segurança &amp; Conformidade</h4>
+                    <ul>
+                        <li><strong>GB28181:</strong> Padrão nacional de vigilância</li>
+                        <li><strong>GB35114:</strong> Certificação de segurança aprimorada</li>
+                        <li><strong>Criptografia:</strong> Proteção de dados em trânsito e em repouso</li>
+                        <li><strong>Auditoria:</strong> Registro completo de operações &amp; controle de acesso</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deploy Section -->
+    <section id="deploy" class="section deploy-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Implante <span class="gradient-text">em Qualquer Lugar</span></h2>
+                <p class="section-subtitle">Nuvem privada, híbrida ou ambiente isolado. Os dados nunca saem da sua rede. Suporte a x86 e ARM.</p>
+            </div>
+            <div class="deploy-grid">
+                <div class="deploy-card">
+                    <div class="deploy-card-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+                            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                            <line x1="6" y1="6" x2="6.01" y2="6"/>
+                            <line x1="6" y1="18" x2="6.01" y2="18"/>
+                        </svg>
+                        <h4>On-Premise</h4>
+                    </div>
+                    <p>Suporte completo a ambiente isolado para ambientes sensíveis. Soberania total dos dados na sua própria infraestrutura.</p>
+                    <code class="deploy-code">curl -fsSL https://get.vlstream.dev | bash</code>
+                </div>
+                <div class="deploy-card">
+                    <div class="deploy-card-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+                        </svg>
+                        <h4>Docker</h4>
+                    </div>
+                    <p>Implantação com um clique usando Docker Compose. Pilha completa rodando em 5 minutos com passthrough de GPU.</p>
+                    <code class="deploy-code">docker compose up -d</code>
+                </div>
+                <div class="deploy-card">
+                    <div class="deploy-card-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                        <h4>Kubernetes</h4>
+                    </div>
+                    <p>Helm charts para produção com escalonamento automático, cluster HA, balanceamento de carga e failover automático.</p>
+                    <code class="deploy-code">helm install vlstream oort/vlstream</code>
+                </div>
+            </div>
+            <div class="deploy-compatibility">
+                <p class="compat-label">Compatibilidade de Plataformas</p>
+                <div class="compat-grid">
+                    <div class="compat-item">
+                        <span class="compat-icon">x86</span>
+                        <span>Servidores &amp; PCs</span>
+                    </div>
+                    <div class="compat-item">
+                        <span class="compat-icon">ARM</span>
+                        <span>Borda &amp; Móvel</span>
+                    </div>
+                    <div class="compat-item">
+                        <span class="compat-icon">GPU</span>
+                        <span>NVIDIA / AMD</span>
+                    </div>
+                    <div class="compat-item">
+                        <span class="compat-icon">IPC</span>
+                        <span>Controle Industrial</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="section usecases-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Feito para <span class="gradient-text">Escala Real</span></h2>
+                <p class="section-subtitle">Implantado em diversos setores onde a análise inteligente de vídeo impulsiona decisões operacionais.</p>
+            </div>
+            <div class="usecases-grid">
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <line x1="18" y1="20" x2="18" y2="10"/>
+                            <line x1="12" y1="20" x2="12" y2="4"/>
+                            <line x1="6" y1="20" x2="6" y2="14"/>
+                        </svg>
+                    </div>
+                    <h4>Cidade Inteligente</h4>
+                    <p>Videovigilância integrada, identificação de infrações urbanas, processamento de ordens de serviço em ciclo fechado e despacho de comando de emergência.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h4>Segurança Pública</h4>
+                    <p>Monitoramento de densidade de multidões, alerta precoce de comportamento anormal, reconhecimento facial e despacho de recursos de emergência para grandes eventos.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                    </div>
+                    <h4>Campus Inteligente</h4>
+                    <p>Detecção de permanência suspeita, estacionamento ilegal, conformidade com capacete, alertas de fumaça/fogo e monitoramento de intrusão perimetral.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                        </svg>
+                    </div>
+                    <h4>Governo Digital</h4>
+                    <p>Compartilhamento de vídeo entre departamentos, agendamento unificado e análise inteligente para segurança pública, emergência e transporte.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33"/></svg>
+                    </div>
+                    <h4>Indústria &amp; Mineração</h4>
+                    <p>Detecção de falhas em equipamentos, intrusão em áreas perigosas, detecção de violações de EPI, monitoramento ambiental e inspeção remota.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M6.13 1L6 16a2 2 0 0 0 2 2h15"/><path d="M1 6.13L16 6a2 2 0 0 1 2 2v15"/></svg>
+                    </div>
+                    <h4>Agricultura Inteligente</h4>
+                    <p>Prevenção de incêndios florestais, controle de enchentes em rios, inspeção de linhas de energia, monitoramento de crescimento e identificação de pragas em áreas com rede fraca.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Source Repos Section -->
+    <section id="open-source" class="section opensource-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">100% <span class="gradient-text">Código Aberto</span></h2>
+                <p class="section-subtitle">Licença MIT. Sem componentes proprietários ocultos, sem módulos de código fechado. Código-fonte principal, protocolo VLS, motor de IA e motor de agendamento — tudo aberto.</p>
+            </div>
+            <div class="repos-grid">
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-Cloud</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>Núcleo da plataforma em nuvem — gerenciamento, motores de IA, agendamento, agregação de vídeo e tomada de decisão.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-NVR</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>Gravador de vídeo em rede — armazenamento, reprodução, gerenciamento e capacidades de inferência local.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-CMS</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>Cliente desktop multiplataforma (Windows/macOS/Linux) — monitoramento multimídia, mapas eletrônicos, alertas pop-up.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-APP</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>Aplicativo móvel (iOS/Android/HarmonyOS) — pré-visualização ao vivo, reprodução, alertas, voz bidirecional, controle PTZ.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-IPCamera</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>Firmware de câmera nativa com IA + SDK — suporta chipsets HiSilicon, Rockchip, Ingenic e Goke.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-Edge</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>Firmware de caixa de IA de borda + pacotes de algoritmos — análise em tempo real, alertas locais, cache de poder computacional.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLS-Protocol</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>Protocolo VLS desenvolvido propriamente — baixa latência, resistência à perda de pacotes, controle IoT MQTT e comandos transparentes para dispositivos.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-Web</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>Arquitetura front-end/back-end separados — base de código moderna, interfaces de API limpas, fácil de personalizar e construir seu próprio produto sobre o VLStream.</p>
+                </div>
+            </div>
+            <div class="opensource-cta">
+                <a href="https://github.com/OortCloudGroup" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    Explorar Todos os Repositórios
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="section comparison-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Por que VLStream <span class="gradient-text">vs. Código Fechado</span></h2>
+                <p class="section-subtitle">Compare o VLStream com as plataformas de vídeo tradicionais de código fechado.</p>
+            </div>
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Dimensão</th>
+                            <th class="highlight-col">VLStream (Código Aberto)</th>
+                            <th>Plataformas Tradicionais</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Código-Fonte</td>
+                            <td class="highlight-col">100% aberto, sem componentes ocultos</td>
+                            <td>Código fechado, núcleo não visível</td>
+                        </tr>
+                        <tr>
+                            <td>Custo Comercial</td>
+                            <td class="highlight-col">Uso comercial gratuito, sem taxas de licença</td>
+                            <td>Altas taxas de licença, anuidade e personalização</td>
+                        </tr>
+                        <tr>
+                            <td>Personalização</td>
+                            <td class="highlight-col">Desenvolvimento secundário profundo, refatoração completa</td>
+                            <td>Ciclo longo, custo alto, dependência do fornecedor</td>
+                        </tr>
+                        <tr>
+                            <td>Segurança de Dados</td>
+                            <td class="highlight-col">Implantação privada, dados nunca saem da rede</td>
+                            <td>Upload para nuvem, risco de vazamento de dados</td>
+                        </tr>
+                        <tr>
+                            <td>Protocolo</td>
+                            <td class="highlight-col">Padrões nacionais + desenvolvimento próprio, 100% reutilizável</td>
+                            <td>Protocolos proprietários, difíceis de reutilizar</td>
+                        </tr>
+                        <tr>
+                            <td>Controle de IA</td>
+                            <td class="highlight-col">Controle total do motor de IA, algoritmos personalizados</td>
+                            <td>Algoritmos fechados, atualizações limitadas</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section class="section advantages-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Três <span class="gradient-text">Vantagens</span> Principais</h2>
+            </div>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-num">01</div>
+                    <h4>Reutilize Equipamentos Existentes</h4>
+                    <p>Câmeras e IPCs existentes permanecem no local. Os módulos de IA de borda da OortCloud dão inteligência a eles — sem necessidade de substituição de hardware. Maximize o ROI da infraestrutura existente.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-num">02</div>
+                    <h4>De Vigilância Humana para IA</h4>
+                    <p>Transforme a vigilância manual em monitoramento alimentado por IA. Alertas integrados enviam notificações em tempo real para os responsáveis. Reduza custos de trabalho e crie agentes inteligentes perceptivos.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-num">03</div>
+                    <h4>Algoritmos de IA Configuráveis</h4>
+                    <p>Treine e carregue algoritmos dinamicamente sob demanda. Diferentes cenários, diferentes períodos de tempo, diferentes itens de alerta precoce — tudo configurável sem alterações de código.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-glow"></div>
+            <h2 class="cta-title">Pronto para implantar <span class="gradient-text">IA de Visão</span>?</h2>
+            <p class="cta-subtitle">Implante o VLStream em 5 minutos. Transforme sua infraestrutura de vídeo com IA orientada a decisões. 100% código aberto, zero dependência de fornecedor.</p>
+            <div class="cta-actions">
+                <a href="#deploy" class="btn btn-primary btn-lg">
+                    Comece Gratuitamente
+                </a>
+                <a href="https://github.com/OortCloudGroup" class="btn btn-outline btn-lg" target="_blank" rel="noopener">
+                    Leia a Documentação
+                </a>
+            </div>
+            <div class="cta-support">
+                <p>Precisa de suporte comercial? A OortCloud oferece suporte técnico pago, desenvolvimento personalizado e serviços de implantação.</p>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo">
+                        <img src="https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png" alt="Logo VLStream" class="logo-icon" style="height:60px;width:auto;">
+                    </a>
+                    <p class="footer-desc">Plataforma de agregação e agendamento de vídeo IA orientada a decisões da OortCloud (Shenzhen) Smart Technology Co., Ltd. Fundada em 2019.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h5>Produto</h5>
+                        <a href="#features">Motor de IA Duplo</a>
+                        <a href="#architecture">Arquitetura</a>
+                        <a href="#hardware">Hardware</a>
+                        <a href="#vlm">Streaming VLM</a>
+                        <a href="#deploy">Implantação</a>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Recursos</h5>
+                        <a href="https://github.com/OortCloudGroup/VLStream-Docs">Documentação</a>
+                        <a href="https://github.com/OortCloudGroup/VLStream-Docs">Referência de API</a>
+                        <a href="#">Changelog</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Comunidade Discord</a>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Código Aberto</h5>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-Cloud</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-Edge</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-NVR</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLS-Protocol</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-APP</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-Web</a>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Empresa</h5>
+                        <a href="https://oortcloudsmart.com/es/about.html" target="_blank">Sobre a OortCloud</a>
+                        <a href="https://oortcloudsmart.com/es/contact.html" target="_blank">Contato Comercial</a>
+                        <a href="#">Suporte Comercial</a>
+                        <a href="#">Parceiros</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OortCloud (Shenzhen) Smart Technology Co., Ltd. Todos os direitos reservados.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos de Serviço</a>
+                    <a href="#">Licença MIT</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

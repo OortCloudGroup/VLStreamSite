@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0a0a">
+    <title>VLStream - Platform Kecerdasan Video AI Berbasis Keputusan | 100% Sumber Terbuka</title>
+    <meta name="description" content="VLStream adalah platform agregasi dan penjadwalan video AI berbasis keputusan yang 100% sumber terbuka. Integrasi AI end-to-end untuk video IoT — mulai dari anotasi, pelatihan, hingga deployment edge. Lisensi MIT, deploy privat, 500+ stream per server.">
+    <meta name="keywords" content="VLStream, platform video AI, analitik video open source, video IoT, edge AI, VLM streaming, smart city, pengawasan video, deteksi objek, RTSP, WebRTC, OortCloud">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://vlstream.dev/id/">
+    
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://vlstream.dev/en/">
+    <link rel="alternate" hreflang="zh" href="https://vlstream.dev/">
+    <link rel="alternate" hreflang="es" href="https://vlstream.dev/es/">
+    <link rel="alternate" hreflang="ar" href="https://vlstream.dev/ar/">
+    <link rel="alternate" hreflang="de" href="https://vlstream.dev/de/">
+    <link rel="alternate" hreflang="fr" href="https://vlstream.dev/fr/">
+    <link rel="alternate" hreflang="ja" href="https://vlstream.dev/ja/">
+    <link rel="alternate" hreflang="pt" href="https://vlstream.dev/pt/">
+    <link rel="alternate" hreflang="ru" href="https://vlstream.dev/ru/">
+    <link rel="alternate" hreflang="ko" href="https://vlstream.dev/ko/">
+    <link rel="alternate" hreflang="id" href="https://vlstream.dev/id/">
+    <link rel="alternate" hreflang="tr" href="https://vlstream.dev/tr/">
+    <link rel="alternate" hreflang="x-default" href="https://vlstream.dev/en/">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="VLStream">
+    <meta property="og:title" content="VLStream - Platform Kecerdasan Video AI Berbasis Keputusan">
+    <meta property="og:description" content="Platform agregasi dan penjadwalan video AI 100% sumber terbuka. Integrasi AI end-to-end untuk video IoT — mulai dari anotasi, pelatihan, hingga deployment edge.">
+    <meta property="og:url" content="https://vlstream.dev/id/">
+    <meta property="og:image" content="https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="ar_SA">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta property="og:locale:alternate" content="pt_BR">
+    <meta property="og:locale:alternate" content="ru_RU">
+    <meta property="og:locale:alternate" content="ko_KR">
+    <meta property="og:locale:alternate" content="tr_TR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VLStream - Platform Kecerdasan Video AI Berbasis Keputusan">
+    <meta name="twitter:description" content="Platform agregasi dan penjadwalan video AI 100% sumber terbuka. Integrasi AI end-to-end untuk video IoT.">
+    <meta name="twitter:image" content="https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "VLStream",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Linux, Windows, macOS",
+      "description": "Platform agregasi dan penjadwalan video AI berbasis keputusan yang 100% sumber terbuka dengan integrasi AI end-to-end untuk video IoT.",
+      "url": "https://vlstream.dev/id/",
+      "inLanguage": "id",
+      "license": "https://opensource.org/licenses/MIT",
+      "author": {
+        "@type": "Organization",
+        "name": "OortCloud (Shenzhen) Smart Technology Co., Ltd.",
+        "url": "https://oortcloudsmart.com"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Mesin AI Ganda",
+        "Protokol VLS Buatan Sendiri",
+        "VLM Streaming",
+        "Deployment Edge",
+        "Hardware AI IPCamera & AI-Box",
+        "AI-vLLM-SERVER Appliance Inferensi",
+        "500+ stream per server",
+        "Dukungan resolusi 4K",
+        "Deployment cloud privat",
+        "Lisensi MIT 100% Sumber Terbuka"
+      ],
+      "datePublished": "2019-01-01",
+      "softwareVersion": "1.0"
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "OortCloud (Shenzhen) Smart Technology Co., Ltd.",
+      "alternateName": "OortCloud",
+      "url": "https://oortcloudsmart.com",
+      "logo": "https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png",
+      "foundingDate": "2019",
+      "description": "OortCloud adalah perusahaan teknologi yang mengkhususkan diri dalam platform kecerdasan video dan IoT berbasis AI.",
+      "sameAs": [
+        "https://github.com/OortCloudGroup"
+      ]
+    }
+    </script>
+    
+    <!-- FAQ Schema for LLM Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Apa itu VLStream?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VLStream adalah platform agregasi dan penjadwalan video AI berbasis keputusan yang 100% sumber terbuka. Platform ini menyediakan integrasi AI end-to-end untuk video IoT, mencakup anotasi, pelatihan, dan deployment edge. Dilengkapi dengan Mesin AI Ganda (AI Diskriminatif + AI Pengambilan Keputusan), Protokol VLS buatan sendiri, kemampuan VLM Streaming, serta mendukung 500+ stream per server dengan resolusi 4K."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Apakah VLStream benar-benar 100% sumber terbuka?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ya. VLStream sepenuhnya sumber terbuka di bawah Lisensi MIT. Semua komponen inti — VLStream-Cloud, VLStream-Edge, VLStream-NVR, VLS-Protocol, dan VLStream-APP — tersedia di GitHub di github.com/OortCloudGroup. Tidak ada komponen proprietari tersembunyi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Berapa banyak stream video yang bisa ditangani VLStream?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VLStream mendukung 500+ stream bersamaan per server dengan latensi end-to-end di bawah 1,2 detik dan keandalan uptime 99,99%. Platform ini dirancang untuk deployment video IoT berdensitas tinggi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Apa itu VLM Streaming di VLStream?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VLM (Vision-Language Model) Streaming adalah kemampuan AI multimodal real-time dari VLStream. Fitur ini memungkinkan tanya jawab visual, deteksi anomali, pemahaman adegan, dan interaksi bahasa alami dengan stream video langsung — semuanya diproses secara real-time di edge."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bagaimana cara deploy VLStream?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VLStream mendukung berbagai metode deployment: instalasi satu baris via curl, Docker Compose untuk deployment container, dan Helm charts untuk cluster Kubernetes. Berjalan di Linux, Windows, dan macOS, serta mendukung deployment cloud privat dan air-gapped. Hardware yang kompatibel meliputi NVIDIA Jetson, Intel x86, dan platform ARM."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Protokol apa saja yang didukung VLStream?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VLStream mendukung RTSP, RTMP, WebRTC, HLS, ONVIF, dan Protokol VLS proprietari. Protokol VLS menyediakan streaming latensi ultra-rendah dengan enkripsi end-to-end, bitrate adaptif, dan penjadwalan frame cerdas yang dioptimalkan untuk workload AI."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hardware apa saja yang ditawarkan VLStream?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VLStream menawarkan tiga kategori hardware: (1) AI IPCamera — kamera cerdas dengan AI tertanam, dari level entry hingga flagship 20 TOPS; (2) AI-Box — seri VLStream Edge, terminal komputasi edge yang menambahkan analitik AI ke kamera IP yang sudah ada melalui RTSP, tersedia dalam konfigurasi 1 channel/2T, 8 channel/16T, dan 32 channel; (3) AI-vLLM-SERVER — server inferensi vLLM khusus (1 channel/20T, 8 channel/160T, 64 channel/1P) tanpa pelatihan model, dengan pengenalan vLLM langsung siap pakai. Flagship SVR-64 menawarkan pengiriman kabinet terintegrasi opsional dengan pendingin cair bawaan untuk deployment edge tanpa ruang server khusus. Semua menyertakan software open-source dan berjalan pada chipset seperti HiSilicon HI3516, Rockchip RK3588, dan lainnya."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Apa itu AI-vLLM-SERVER?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI-vLLM-SERVER adalah seri server inferensi vLLM khusus dari VLStream. Tersedia dalam tiga model — SVR-1 (1 channel, daya komputasi 20T), SVR-8 (8 channel, 160T), dan SVR-64 (64 channel, 1P) — server ini tidak memerlukan pelatihan model dan menyediakan pengenalan vLLM langsung siap pakai. Flagship SVR-64 menawarkan pengiriman kabinet terintegrasi opsional dengan teknologi pendingin cair bawaan, memungkinkan deployment edge tanpa ruang server khusus."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" aria-label="Navigasi utama">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png" alt="Logo VLStream" class="logo-icon" style="height:60px;width:auto;">
+            </a>
+            <div class="nav-links">
+                <a href="#features">Fitur</a>
+                <a href="#architecture">Arsitektur</a>
+                <a href="#hardware">Hardware</a>
+                <a href="#vlm">VLM Streaming</a>
+                <a href="#deploy">Deploy</a>
+                <a href="#open-source">Sumber Terbuka</a>
+            </div>
+            <div class="nav-actions">
+                <!-- Language Switcher -->
+                <div class="nav-lang" id="langSwitch" title="Ganti Bahasa">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">ID</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item" data-lang="en" href="../en/">
+                            <span class="nav-lang-item-flag">🇺🇸</span>
+                            <span class="nav-lang-item-label">English</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="zh" href="../">
+                            <span class="nav-lang-item-flag">🇨🇳</span>
+                            <span class="nav-lang-item-label">中文</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="es" href="../es/">
+                            <span class="nav-lang-item-flag">🇪🇸</span>
+                            <span class="nav-lang-item-label">Español</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="ar" href="../ar/">
+                            <span class="nav-lang-item-flag">🇸🇦</span>
+                            <span class="nav-lang-item-label">العربية</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="de" href="../de/">
+                            <span class="nav-lang-item-flag">🇩🇪</span>
+                            <span class="nav-lang-item-label">Deutsch</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="fr" href="../fr/">
+                            <span class="nav-lang-item-flag">🇫🇷</span>
+                            <span class="nav-lang-item-label">Français</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="ja" href="../ja/">
+                            <span class="nav-lang-item-flag">🇯🇵</span>
+                            <span class="nav-lang-item-label">日本語</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="pt" href="../pt/">
+                            <span class="nav-lang-item-flag">🇧🇷</span>
+                            <span class="nav-lang-item-label">Português</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="ru" href="../ru/">
+                            <span class="nav-lang-item-flag">🇷🇺</span>
+                            <span class="nav-lang-item-label">Русский</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="ko" href="../ko/">
+                            <span class="nav-lang-item-flag">🇰🇷</span>
+                            <span class="nav-lang-item-label">한국어</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item active" data-lang="id" href="#">
+                            <span class="nav-lang-item-flag">🇮🇩</span>
+                            <span class="nav-lang-item-label">Indonesia</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="tr" href="../tr/">
+                            <span class="nav-lang-item-flag">🇹🇷</span>
+                            <span class="nav-lang-item-label">Türkçe</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://github.com/OortCloudGroup" class="btn btn-ghost" target="_blank" rel="noopener">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    GitHub
+                </a>
+                <a href="#deploy" class="btn btn-primary">Mulai Sekarang</a>
+            </div>
+            <button class="mobile-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-grid-bg"></div>
+        <div class="container">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Lisensi MIT &middot; 100% Sumber Terbuka &middot; Tanpa Komponen Tersembunyi
+            </div>
+            <h1 class="hero-title">
+                Kecerdasan Video AI<br>
+                <span class="gradient-text">Berbasis Keputusan</span>
+            </h1>
+            <p class="hero-subtitle">
+                Integrasi AI end-to-end untuk bidang video IoT. Atasi silo data, kecerdasan yang terfragmentasi, 
+                kustomisasi yang sulit, dan biaya tinggi — dengan deployment privat, kendali penuh full-stack, 
+                dan kolaborasi cloud-edge-device.
+            </p>
+            <div class="hero-actions">
+                <a href="#deploy" class="btn btn-primary btn-lg">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                    Deploy dalam 5 Menit
+                </a>
+                <a href="https://github.com/OortCloudGroup" class="btn btn-outline btn-lg" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    Lihat Source
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-value">&lt;1,2d</span>
+                    <span class="stat-label">Latensi End-to-End</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">500+</span>
+                    <span class="stat-label">Stream Bersamaan</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">17</span>
+                    <span class="stat-label">Format Ekspor</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">80+</span>
+                    <span class="stat-label">Jenis Target</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">99,99%</span>
+                    <span class="stat-label">Ketersediaan</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section class="section painpoints-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Lima Masalah, <span class="gradient-text">Satu Solusi</span></h2>
+                <p class="section-subtitle">Pengawasan video tradisional memiliki keterbatasan mendasar. VLStream mengatasi semuanya.</p>
+            </div>
+            <div class="painpoints-grid">
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+                    </div>
+                    <h4>Silo Data</h4>
+                    <p>Agregasi video terpadu lintas protokol — GB28181, RTSP, ONVIF, GA/T1400. Satu platform untuk semua sumber.</p>
+                </div>
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    </div>
+                    <h4>AI Terfragmentasi</h4>
+                    <p>Loop tertutup AI ganda — AI diskriminatif untuk persepsi ditambah AI pengambilan keputusan untuk eksekusi. Lihat, nilai, bertindak.</p>
+                </div>
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                    </div>
+                    <h4>Sulit Dikustomisasi</h4>
+                    <p>Impor model TensorFlow/PyTorch, latih algoritma kustom, dan deploy solusi spesifik industri — tanpa vendor lock-in.</p>
+                </div>
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    </div>
+                    <h4>Risiko Keamanan</h4>
+                    <p>Deployment privat, data tidak pernah keluar dari jaringan Anda. Sesuai GB35114, enkripsi saat diam dan transit, log audit lengkap.</p>
+                </div>
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    <h4>Biaya Tinggi</h4>
+                    <p>Lisensi MIT, tanpa biaya lisensi, tanpa biaya per-node. Gunakan kembali kamera yang ada dengan modul edge AI — tanpa ganti hardware.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dual AI Engine Section -->
+    <section id="features" class="section dualai-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">AI Ganda <span class="gradient-text">Loop Tertutup</span></h2>
+                <p class="section-subtitle">Dari memahami dunia hingga membuat keputusan dan mengambil tindakan — pipeline kecerdasan otomatis penuh.</p>
+            </div>
+            <div class="dualai-grid">
+                <div class="dualai-card">
+                    <div class="dualai-header">
+                        <div class="dualai-dot discriminative"></div>
+                        <h3>Mesin AI Diskriminatif</h3>
+                        <span class="dualai-badge">Persepsi</span>
+                    </div>
+                    <p class="dualai-desc">Lihat dan pahami dunia visual dengan akurasi tingkat industri.</p>
+                    <ul class="dualai-list">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            80+ jenis target (orang, kendaraan, objek)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Analisis perilaku (berkeliaran, berlari, berkumpul)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Database wajah 320.000+ dengan pencocokan real-time
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Akurasi pengenalan pelat nomor 99%
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            10+ jenis anomali (asap, intrusi, melewati batas)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Ekstraksi fitur (wajah, pelat, atribut pakaian)
+                        </li>
+                    </ul>
+                </div>
+                <div class="dualai-card">
+                    <div class="dualai-header">
+                        <div class="dualai-dot decision"></div>
+                        <h3>Mesin AI Pengambilan Keputusan</h3>
+                        <span class="dualai-badge">Eksekusi</span>
+                    </div>
+                    <p class="dualai-desc">Nilai situasi dan koordinasi respons otomatis lintas sistem.</p>
+                    <ul class="dualai-list">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Penentuan level event &amp; prioritas
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Prediksi tren &amp; penjadwalan sumber daya
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Alarm multi-saluran (PSTN, SMS, APP, Email)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Kontrol linkage (PTZ, lampu, gerbang akses)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Pembuatan &amp; dispatch tiket otomatis
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Orkestrasi 1000+ stream bersamaan
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section id="architecture" class="section architecture-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Arsitektur <span class="gradient-text">Empat Lapis Full-Link</span></h2>
+                <p class="section-subtitle">Kolaborasi cloud-edge-device dengan penjadwalan dinamis. Keputusan global di cloud, analisis real-time di edge, pengumpulan data di device.</p>
+            </div>
+            <div class="arch-diagram">
+                <!-- Layer 1: Cloud -->
+                <div class="arch-layer arch-cloud">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-dot cloud-dot"></div>
+                        <h4>Lapisan Platform — VLStream Cloud</h4>
+                        <span class="arch-layer-tag">Hub Inti</span>
+                    </div>
+                    <div class="arch-items">
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                            Workbench &amp; Dashboard
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                            Mesin Agregasi Video
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33"/></svg>
+                            Pelatihan &amp; Deploy Terintegrasi
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                            Penjadwal Daya Komputasi
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            Mesin AI Keputusan
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                            API Gateway &amp; SDK
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                            Isolasi Multi-Tenant
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                            Model Objek IoT
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-label">Protokol VLS / WebRTC P2P / MQTT / REST</div>
+                    <div class="connector-line"></div>
+                </div>
+
+                <!-- Layer 2: Edge -->
+                <div class="arch-layer arch-edge">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-dot edge-dot"></div>
+                        <h4>Lapisan Edge — VLStream Edge</h4>
+                        <span class="arch-layer-tag">Kecerdasan Real-Time</span>
+                    </div>
+                    <div class="arch-items">
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/></svg>
+                            Edge AI Box (2T/6T/20T)
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                            Analisis AI Real-Time
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/></svg>
+                            Alarm Lokal &amp; Cache
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            Lanjut Setelah Jaringan Putus
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-label">4G / Ethernet / Wi-Fi</div>
+                    <div class="connector-line"></div>
+                </div>
+
+                <!-- Layer 3: Device -->
+                <div class="arch-layer arch-device">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-dot device-dot"></div>
+                        <h4>Lapisan Device — Sensor &amp; Akuisisi</h4>
+                        <span class="arch-layer-tag">Perangkat Ujung</span>
+                    </div>
+                    <div class="arch-items">
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                            Kamera AI Native
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/></svg>
+                            NVR dengan Inferensi
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                            Sensor IoT (Suhu/Asap/Radar)
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                            Pihak Ketiga (Hikvision/Dahua)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-label">GB28181 / RTSP / ONVIF / GA/T1400</div>
+                    <div class="connector-line"></div>
+                </div>
+
+                <!-- Layer 4: Application -->
+                <div class="arch-layer arch-app">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-dot app-dot"></div>
+                        <h4>Lapisan Aplikasi — Perangkat Lunak Klien</h4>
+                        <span class="arch-layer-tag">Antarmuka Pengguna</span>
+                    </div>
+                    <div class="arch-items">
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                            VLStream CMS (Desktop)
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                            Aplikasi Mobile (iOS/Android/HarmonyOS)
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10"/></svg>
+                            Konsol Web
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                            API &amp; SDK
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hardware Section -->
+    <section id="hardware" class="section hardware-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Hardware AI <span class="gradient-text">Khusus</span></h2>
+                <p class="section-subtitle">Dari kamera AI native hingga box komputasi edge — deploy analitik AI di infrastruktur apa pun.</p>
+            </div>
+
+            <!-- Kategori AI IPCamera -->
+            <div class="hardware-category">
+                <h3 class="hardware-category-title">AI IPCamera</h3>
+                <p class="hardware-category-desc">Kamera cerdas yang dirancang khusus dengan AI tertanam — dari pengawasan level entry hingga analitik multi-model flagship.</p>
+            </div>
+            <div class="hardware-grid">
+                <div class="hardware-card">
+                    <div class="hardware-tier">Dasar</div>
+                    <h4>OORT-IPC-4G-30M</h4>
+                    <div class="hardware-spec-highlight">Level Awal</div>
+                    <ul class="hardware-specs">
+                        <li>Jaringan ganda 4G/Kabel</li>
+                        <li>Night vision penuh warna AIISP</li>
+                        <li>Zoom otomatis</li>
+                        <li>Tahan cuaca IP66</li>
+                        <li>Suhu luas -30&#8451; hingga +60&#8451;</li>
+                    </ul>
+                </div>
+                <div class="hardware-card">
+                    <div class="hardware-tier">Pro</div>
+                    <h4>OORT-6600-2.5</h4>
+                    <div class="hardware-spec-highlight">1 TOPS AI</div>
+                    <ul class="hardware-specs">
+                        <li>Daya komputasi edge 2.5T</li>
+                        <li>Deteksi objek on-device</li>
+                        <li>Penembusan kabut optik</li>
+                        <li>Pelacakan target cerdas</li>
+                        <li>Inferensi lokal + sinkronisasi cloud</li>
+                    </ul>
+                </div>
+                <div class="hardware-card hardware-card-featured">
+                    <div class="hardware-tier">Enhanced</div>
+                    <h4>OORT-6600-6</h4>
+                    <div class="hardware-spec-highlight">6 TOPS AI</div>
+                    <ul class="hardware-specs">
+                        <li>Daya komputasi edge 6T</li>
+                        <li>Inferensi multi-model bersamaan</li>
+                        <li>Pengenalan 80+ target</li>
+                        <li>Analisis perilaku on-device</li>
+                        <li>Output data terstruktur real-time</li>
+                    </ul>
+                    <div class="hardware-popular">Paling Populer</div>
+                </div>
+                <div class="hardware-card">
+                    <div class="hardware-tier">Flagship</div>
+                    <h4>OORT-6600-20</h4>
+                    <div class="hardware-spec-highlight">20 TOPS AI</div>
+                    <ul class="hardware-specs">
+                        <li>Daya komputasi edge 20T</li>
+                        <li>Strukturisasi video penuh</li>
+                        <li>Analisis multi-stream paralel</li>
+                        <li>Penalaran adegan kompleks</li>
+                        <li>Arsitektur siap VLM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Kategori AI-Box -->
+            <div class="hardware-category">
+                <h3 class="hardware-category-title">AI-Box <span class="hardware-category-badge">VLStream Edge</span></h3>
+                <p class="hardware-category-desc">Terminal komputasi edge AI yang memodernisasi kamera IP yang sudah ada — tambahkan analitik cerdas melalui RTSP tanpa mengganti infrastruktur kamera Anda.</p>
+            </div>
+            <div class="hardware-grid hardware-grid-3col">
+                <div class="hardware-card">
+                    <div class="hardware-tier">Lite</div>
+                    <h4>OORT-BOX-AI-1</h4>
+                    <div class="hardware-spec-highlight">1 Saluran</div>
+                    <ul class="hardware-specs">
+                        <li>Input RTSP 1 channel</li>
+                        <li>Deteksi objek di perangkat</li>
+                        <li>Peringatan waktu nyata</li>
+                        <li>Desain compact tanpa kipas</li>
+                        <li>Software VLStream open-source termasuk</li>
+                    </ul>
+                </div>
+                <div class="hardware-card hardware-card-featured">
+                    <div class="hardware-tier">Standar</div>
+                    <h4>OORT-BOX-AI-8</h4>
+                    <div class="hardware-spec-highlight">8 Saluran</div>
+                    <ul class="hardware-specs">
+                        <li>Input RTSP 8 channel</li>
+                        <li>Inferensi multi-model simultan</li>
+                        <li>Analisis perilaku visual AI</li>
+                        <li>Output data terstruktur waktu nyata</li>
+                        <li>Software VLStream open-source termasuk</li>
+                    </ul>
+                    <div class="hardware-popular">Paling Populer</div>
+                </div>
+                <div class="hardware-card">
+                    <div class="hardware-tier">Pro</div>
+                    <h4>OORT-BOX-AI-32</h4>
+                    <div class="hardware-spec-highlight">32 Channel</div>
+                    <ul class="hardware-specs">
+                        <li>Input RTSP 32 channel</li>
+                        <li>Strukturisasi video penuh</li>
+                        <li>Analisis perilaku visual AI</li>
+                        <li>Penalaran adegan kompleks</li>
+                        <li>Arsitektur siap VLM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- AI-vLLM-SERVER Category -->
+            <div class="hardware-category">
+                <h3 class="hardware-category-title">AI-vLLM-SERVER <span class="hardware-category-badge">Inferensi vLLM</span></h3>
+                <p class="hardware-category-desc">Server inferensi vLLM khusus — tanpa pelatihan model, pengenalan vLLM langsung siap pakai.</p>
+            </div>
+            <div class="hardware-grid hardware-grid-3col">
+                <div class="hardware-card">
+                    <div class="hardware-tier">Entry</div>
+                    <h4>OORT-AI-vLLM-SVR-1</h4>
+                    <div class="hardware-spec-highlight">1 Saluran / 20 TOPS</div>
+                    <ul class="hardware-specs">
+                        <li>Input video 1 saluran</li>
+                        <li>Daya komputasi 20T</li>
+                        <li>Tanpa pelatihan model</li>
+                        <li>Inferensi vLLM langsung</li>
+                        <li>Siap pakai</li>
+                    </ul>
+                </div>
+                <div class="hardware-card hardware-card-featured">
+                    <div class="hardware-tier">Standar</div>
+                    <h4>OORT-AI-vLLM-SVR-8</h4>
+                    <div class="hardware-spec-highlight">8 Saluran / 160 TOPS</div>
+                    <ul class="hardware-specs">
+                        <li>Input video 8 saluran</li>
+                        <li>Daya komputasi 160T</li>
+                        <li>Tanpa pelatihan model</li>
+                        <li>Inferensi vLLM langsung</li>
+                        <li>Siap pakai</li>
+                    </ul>
+                    <div class="hardware-popular">Paling Populer</div>
+                </div>
+                <div class="hardware-card">
+                    <div class="hardware-tier">Flagship</div>
+                    <h4>OORT-AI-vLLM-SVR-64</h4>
+                    <div class="hardware-spec-highlight">64 Saluran / 1P</div>
+                    <ul class="hardware-specs">
+                        <li>Input video 64 saluran</li>
+                        <li>Daya komputasi 1P</li>
+                        <li>Tanpa pelatihan model</li>
+                        <li>Inferensi vLLM langsung</li>
+                        <li>Siap pakai</li>
+                        <li>Pengiriman kabinet terintegrasi opsional
+                        Teknologi pendingin cair bawaan
+                        Deployment edge tanpa ruang server khusus</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="hardware-chips">
+                <p class="hardware-chips-label">Chipset yang Didukung</p>
+                <div class="chips-list">
+                    <span class="chip">HiSilicon HI3516</span>
+                    <span class="chip">Rockchip RK3588</span>
+                    <span class="chip">Rockchip RK1106</span>
+                    <span class="chip">Ingenic T31/T41</span>
+                    <span class="chip">Goke GK720x</span>
+                    <span class="chip">ESP32 (RTOS)</span>
+                    <span class="chip">BK7258 (RTOS)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VLM Streaming Section -->
+    <section id="vlm" class="section vlm-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">VLM Streaming <span class="gradient-text">Real-Time</span></h2>
+                <p class="section-subtitle">Biarkan model vision-language besar menonton stream video secara real-time — pahami adegan frame demi frame dengan output streaming.</p>
+            </div>
+            <div class="vlm-content">
+                <div class="vlm-diagram">
+                    <div class="vlm-step">
+                        <div class="vlm-step-num">1</div>
+                        <div class="vlm-step-content">
+                            <h5>Input Stream Video</h5>
+                            <p>RTSP / WebCam / File pada 15-30 FPS. Penangkapan frame berkelanjutan tanpa drop.</p>
+                        </div>
+                    </div>
+                    <div class="vlm-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                    <div class="vlm-step">
+                        <div class="vlm-step-num">2</div>
+                        <div class="vlm-step-content">
+                            <h5>Penjadwal Frame</h5>
+                            <p>Frame skipping cerdas dan sampling seragam. Kontrol aliran untuk mencegah overload AI.</p>
+                        </div>
+                    </div>
+                    <div class="vlm-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                    <div class="vlm-step">
+                        <div class="vlm-step-num">3</div>
+                        <div class="vlm-step-content">
+                            <h5>Inferensi VLM</h5>
+                            <p>LLaVA, Qwen-VL, InternVL — model vision open source apa saja. Tanpa perlu pelatihan.</p>
+                        </div>
+                    </div>
+                    <div class="vlm-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                    <div class="vlm-step">
+                        <div class="vlm-step-num">4</div>
+                        <div class="vlm-step-content">
+                            <h5>Output Streaming</h5>
+                            <p>Jawaban real-time dalam milidetik. Tidak perlu menunggu video selesai.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vlm-features">
+                    <div class="vlm-feature-card">
+                        <h5>Model yang Didukung</h5>
+                        <div class="vlm-models">
+                            <span>LLaVA</span>
+                            <span>Qwen-VL</span>
+                            <span>InternVL</span>
+                            <span>Qwen-VL-7B</span>
+                        </div>
+                    </div>
+                    <div class="vlm-feature-card">
+                        <h5>Kasus Penggunaan</h5>
+                        <ul>
+                            <li>Analisis pengawasan real-time</li>
+                            <li>Komentar live streaming</li>
+                            <li>Pemahaman visi robot</li>
+                            <li>Persepsi AR/kacamata pintar</li>
+                            <li>OCR dokumen &amp; faktur</li>
+                            <li>Analisis paralel multi-saluran</li>
+                        </ul>
+                    </div>
+                    <div class="vlm-feature-card">
+                        <h5>Performa</h5>
+                        <div class="vlm-perf">
+                            <div class="vlm-perf-item">
+                                <span class="vlm-perf-value">~200ms</span>
+                                <span class="vlm-perf-label">Latensi Inferensi</span>
+                            </div>
+                            <div class="vlm-perf-item">
+                                <span class="vlm-perf-value">24GB</span>
+                                <span class="vlm-perf-label">Min GPU (Multi-Saluran)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pipeline Section -->
+    <section class="section pipeline-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Dari Data Mentah ke <span class="gradient-text">Model Produksi</span></h2>
+                <p class="section-subtitle">Pelatihan dan deployment terintegrasi — verifikasi inferensi di browser, lalu deploy satu klik ke perangkat edge secara remote.</p>
+            </div>
+            <div class="pipeline-steps">
+                <div class="pipeline-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h4>Anotasi</h4>
+                        <p>Pelabelan bawaan untuk deteksi, segmentasi, dan klasifikasi. Alur kerja kolaboratif dengan jaminan kualitas.</p>
+                    </div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h4>Pelatihan</h4>
+                        <p>AutoML atau kontrol manual penuh. Pelatihan GPU terdistribusi dengan penjadwalan sumber daya dinamis. Impor model TensorFlow/PyTorch.</p>
+                    </div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h4>Optimasi</h4>
+                        <p>Ekspor ke 17 format: ONNX, TensorRT, CoreML, TFLite, OpenVINO, dan lainnya. Kuantisasi dan pruning untuk edge.</p>
+                    </div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h4>Deploy</h4>
+                        <p>Verifikasi di browser, lalu deploy remote satu klik. Update OTA, pengujian A/B, rollback, dan pemantauan performa real-time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Section -->
+    <section class="section performance-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Performa <span class="gradient-text">Kelas Enterprise</span></h2>
+                <p class="section-subtitle">Dibangun untuk lingkungan produksi yang menuntut dengan spesifikasi terdepan di industri.</p>
+            </div>
+            <div class="perf-grid">
+                <div class="perf-card">
+                    <div class="perf-value">&lt;1,2d</div>
+                    <div class="perf-label">Latensi End-to-End</div>
+                    <div class="perf-detail">Protokol VLS buatan sendiri, berbasis TCP, lebih unggul dari RTMP/RTSP</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">30%</div>
+                    <div class="perf-label">Ketahanan Packet Loss</div>
+                    <div class="perf-detail">Tidak terganggu pada loss 30%, dapat dipulihkan pada packet loss 50%</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">&lt;200ms</div>
+                    <div class="perf-label">Latensi Analisis AI</div>
+                    <div class="perf-detail">Inferensi real-time di edge dengan akselerasi hardware</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">70%</div>
+                    <div class="perf-label">Penghematan Bandwidth</div>
+                    <div class="perf-detail">WebRTC P2P menghilangkan server relay, langsung cam-ke-klien</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">500+</div>
+                    <div class="perf-label">Stream per Server</div>
+                    <div class="perf-detail">Server tunggal menangani 500+ stream video, 100+ analisis AI</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">4K</div>
+                    <div class="perf-label">Resolusi Maksimum</div>
+                    <div class="perf-detail">Encode/decode hardware H.265, adaptif 128kbps hingga 8Mbps</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transmission Protocol Section -->
+    <section class="section protocol-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Protokol VLS <span class="gradient-text">Buatan Sendiri</span></h2>
+                <p class="section-subtitle">Dibangun khusus untuk video IoT. Latensi rendah, ketahanan packet loss ekstrem, dan kompatibilitas universal.</p>
+            </div>
+            <div class="protocol-grid">
+                <div class="protocol-card">
+                    <h4>Transmisi Video</h4>
+                    <ul>
+                        <li><strong>Protokol VLS:</strong> Berbasis TCP, latensi &lt;1,2d, tidak terganggu pada loss 30%</li>
+                        <li><strong>WebRTC P2P:</strong> Interkoneksi milidetik, penghematan bandwidth 70%</li>
+                        <li><strong>Multi-protokol:</strong> HLS, FLV, RTSP, GB28181 — semua terminal</li>
+                        <li><strong>Encoding:</strong> H.264/H.265, 4K/1080p/720p adaptif</li>
+                    </ul>
+                </div>
+                <div class="protocol-card">
+                    <h4>IoT &amp; Kontrol</h4>
+                    <ul>
+                        <li><strong>MQTT:</strong> Transmisi perintah transparan ke perangkat</li>
+                        <li><strong>IoT Center:</strong> Kemampuan jaringan TCP/IP 4G untuk periferal</li>
+                        <li><strong>Model Objek:</strong> Deskripsi &amp; sinkronisasi perangkat terstandarisasi</li>
+                        <li><strong>Fusi:</strong> Stream video + data sensor peringatan gabungan</li>
+                    </ul>
+                </div>
+                <div class="protocol-card">
+                    <h4>Keamanan &amp; Kepatuhan</h4>
+                    <ul>
+                        <li><strong>GB28181:</strong> Standar pengawasan nasional</li>
+                        <li><strong>GB35114:</strong> Sertifikasi keamanan tingkat lanjut</li>
+                        <li><strong>Enkripsi:</strong> Perlindungan data saat transit dan diam</li>
+                        <li><strong>Audit:</strong> Log operasi penuh &amp; kontrol akses</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deploy Section -->
+    <section id="deploy" class="section deploy-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Deploy <span class="gradient-text">Di Mana Saja</span></h2>
+                <p class="section-subtitle">Cloud privat, hybrid, atau air-gapped. Data tidak pernah keluar dari jaringan Anda. Mendukung x86 dan ARM.</p>
+            </div>
+            <div class="deploy-grid">
+                <div class="deploy-card">
+                    <div class="deploy-card-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+                            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                            <line x1="6" y1="6" x2="6.01" y2="6"/>
+                            <line x1="6" y1="18" x2="6.01" y2="18"/>
+                        </svg>
+                        <h4>On-Premise</h4>
+                    </div>
+                    <p>Dukungan air-gap penuh untuk lingkungan sensitif. Kedaulatan data lengkap di infrastruktur Anda sendiri.</p>
+                    <code class="deploy-code">curl -fsSL https://get.vlstream.dev | bash</code>
+                </div>
+                <div class="deploy-card">
+                    <div class="deploy-card-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+                        </svg>
+                        <h4>Docker</h4>
+                    </div>
+                    <p>Deployment satu klik dengan Docker Compose. Full stack berjalan dalam 5 menit dengan GPU passthrough.</p>
+                    <code class="deploy-code">docker compose up -d</code>
+                </div>
+                <div class="deploy-card">
+                    <div class="deploy-card-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                        <h4>Kubernetes</h4>
+                    </div>
+                    <p>Helm charts produksi dengan auto-scaling, clustering HA, load balancing, dan failover otomatis.</p>
+                    <code class="deploy-code">helm install vlstream oort/vlstream</code>
+                </div>
+            </div>
+            <div class="deploy-compatibility">
+                <p class="compat-label">Kompatibilitas Platform</p>
+                <div class="compat-grid">
+                    <div class="compat-item">
+                        <span class="compat-icon">x86</span>
+                        <span>Server &amp; PC</span>
+                    </div>
+                    <div class="compat-item">
+                        <span class="compat-icon">ARM</span>
+                        <span>Edge &amp; Mobile</span>
+                    </div>
+                    <div class="compat-item">
+                        <span class="compat-icon">GPU</span>
+                        <span>NVIDIA / AMD</span>
+                    </div>
+                    <div class="compat-item">
+                        <span class="compat-icon">IPC</span>
+                        <span>Kontrol Industri</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="section usecases-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Dibangun untuk <span class="gradient-text">Skala Dunia Nyata</span></h2>
+                <p class="section-subtitle">Diterapkan di berbagai industri di mana analisis video cerdas mendorong keputusan operasional.</p>
+            </div>
+            <div class="usecases-grid">
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <line x1="18" y1="20" x2="18" y2="10"/>
+                            <line x1="12" y1="20" x2="12" y2="4"/>
+                            <line x1="6" y1="20" x2="6" y2="14"/>
+                        </svg>
+                    </div>
+                    <h4>Smart City</h4>
+                    <p>Pengawasan video terintegrasi, identifikasi pelanggaran kota, pemrosesan work order loop tertutup, dan dispatch perintah darurat.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h4>Keamanan Publik</h4>
+                    <p>Pemantauan kepadatan massa, peringatan dini perilaku abnormal, pengenalan wajah, dan dispatch sumber daya darurat untuk acara besar.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                    </div>
+                    <h4>Kampus Cerdas</h4>
+                    <p>Deteksi orang mencurigakan, parkir ilegal, kepatuhan helm, peringatan asap/kebakaran, dan pemantauan intrusi perimeter.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                        </svg>
+                    </div>
+                    <h4>Pemerintahan Digital</h4>
+                    <p>Berbagi video lintas departemen, penjadwalan terpadu, dan analisis cerdas untuk keamanan publik, darurat, dan transportasi.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33"/></svg>
+                    </div>
+                    <h4>Industri &amp; Pertambangan</h4>
+                    <p>Deteksi kerusakan peralatan, intrusi area berbahaya, deteksi pelanggaran APD, pemantauan lingkungan, dan inspeksi jarak jauh.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M6.13 1L6 16a2 2 0 0 0 2 2h15"/><path d="M1 6.13L16 6a2 2 0 0 1 2 2v15"/></svg>
+                    </div>
+                    <h4>Pertanian Cerdas</h4>
+                    <p>Pencegahan kebakaran hutan, pengendalian banjir sungai, inspeksi jalur listrik, pemantauan pertumbuhan, dan identifikasi hama di area jaringan lemah.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Source Repos Section -->
+    <section id="open-source" class="section opensource-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">100% <span class="gradient-text">Sumber Terbuka</span></h2>
+                <p class="section-subtitle">Lisensi MIT. Tanpa komponen proprietari tersembunyi, tanpa modul closed-source. Kode inti, protokol VLS, mesin AI, dan mesin penjadwalan — semuanya terbuka.</p>
+            </div>
+            <div class="repos-grid">
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-Cloud</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>Inti platform cloud — manajemen, mesin AI, penjadwalan, agregasi video, dan pengambilan keputusan.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-NVR</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>Perekam video jaringan — penyimpanan, pemutaran, manajemen, dan kemampuan inferensi lokal.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-CMS</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>Klien desktop lintas platform (Windows/macOS/Linux) — pemantauan multi-perangkat, peta elektronik, popup alarm.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-APP</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>Aplikasi mobile (iOS/Android/HarmonyOS) — pratinjau langsung, pemutaran, peringatan, suara dua arah, kontrol PTZ.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-IPCamera</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>Firmware kamera AI native + SDK — mendukung chipset HiSilicon, Rockchip, Ingenic, dan Goke.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-Edge</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>Firmware edge AI box + paket algoritma — analisis real-time, peringatan lokal, caching daya komputasi.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLS-Protocol</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>Protokol VLS buatan sendiri — latensi rendah, ketahanan packet loss, kontrol IoT MQTT, dan perintah perangkat transparan.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-Web</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>Arsitektur front-end/back-end terpisah — codebase modern, antarmuka API bersih, mudah dikustomisasi dan dibangun produk Anda sendiri di atas VLStream.</p>
+                </div>
+            </div>
+            <div class="opensource-cta">
+                <a href="https://github.com/OortCloudGroup" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    Jelajahi Semua Repositori
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="section comparison-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mengapa VLStream <span class="gradient-text">vs. Closed Source</span></h2>
+                <p class="section-subtitle">Bandingkan VLStream dengan platform video closed-source tradisional.</p>
+            </div>
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Dimensi</th>
+                            <th class="highlight-col">VLStream (Sumber Terbuka)</th>
+                            <th>Platform Tradisional</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Kode Sumber</td>
+                            <td class="highlight-col">100% terbuka, tanpa komponen tersembunyi</td>
+                            <td>Closed source, inti tidak terlihat</td>
+                        </tr>
+                        <tr>
+                            <td>Biaya Komersial</td>
+                            <td class="highlight-col">Gratis untuk komersial, tanpa biaya lisensi</td>
+                            <td>Lisensi mahal, biaya tahunan, dan biaya kustomisasi</td>
+                        </tr>
+                        <tr>
+                            <td>Kustomisasi</td>
+                            <td class="highlight-col">Pengembangan sekunder mendalam, refactoring penuh</td>
+                            <td>Siklus panjang, biaya tinggi, vendor lock-in</td>
+                        </tr>
+                        <tr>
+                            <td>Keamanan Data</td>
+                            <td class="highlight-col">Deploy privat, data tidak keluar jaringan</td>
+                            <td>Upload cloud, risiko kebocoran data</td>
+                        </tr>
+                        <tr>
+                            <td>Protokol</td>
+                            <td class="highlight-col">Standar nasional + buatan sendiri, 100% dapat digunakan kembali</td>
+                            <td>Protokol proprietari, sulit digunakan kembali</td>
+                        </tr>
+                        <tr>
+                            <td>Kontrol AI</td>
+                            <td class="highlight-col">Kendali penuh mesin AI, algoritma kustom</td>
+                            <td>Algoritma tertutup, upgrade terbatas</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section class="section advantages-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Tiga <span class="gradient-text">Keunggulan Inti</span></h2>
+            </div>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-num">01</div>
+                    <h4>Gunakan Kembali Peralatan yang Ada</h4>
+                    <p>Kamera dan IPC yang sudah ada tetap terpasang. Modul edge AI OortCloud memberikan kecerdasan — tanpa perlu ganti hardware. Maksimalkan ROI infrastruktur yang ada.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-num">02</div>
+                    <h4>Dari Pengawasan Manusia ke AI</h4>
+                    <p>Ubah pengawasan manual menjadi pemantauan berbasis AI. Peringatan bawaan mengirim notifikasi real-time ke personel terkait. Kurangi biaya tenaga kerja dan ciptakan agen cerdas yang perseptif.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-num">03</div>
+                    <h4>Algoritma AI yang Dapat Dikonfigurasi</h4>
+                    <p>Latih dan muat algoritma secara dinamis sesuai kebutuhan. Skenario berbeda, periode waktu berbeda, item peringatan berbeda — semuanya dapat dikonfigurasi tanpa perubahan kode.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-glow"></div>
+            <h2 class="cta-title">Siap menghadirkan <span class="gradient-text">Vision AI</span>?</h2>
+            <p class="cta-subtitle">Deploy VLStream dalam 5 menit. Transformasi infrastruktur video Anda dengan AI berbasis keputusan. 100% sumber terbuka, tanpa vendor lock-in.</p>
+            <div class="cta-actions">
+                <a href="#deploy" class="btn btn-primary btn-lg">
+                    Mulai Gratis
+                </a>
+                <a href="https://github.com/OortCloudGroup" class="btn btn-outline btn-lg" target="_blank" rel="noopener">
+                    Baca Dokumentasi
+                </a>
+            </div>
+            <div class="cta-support">
+                <p>Butuh dukungan komersial? OortCloud menawarkan dukungan teknis berbayar, pengembangan kustom, dan layanan deployment.</p>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo">
+                        <img src="https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png" alt="Logo VLStream" class="logo-icon" style="height:60px;width:auto;">
+                    </a>
+                    <p class="footer-desc">Platform agregasi dan penjadwalan video AI berbasis keputusan oleh OortCloud (Shenzhen) Smart Technology Co., Ltd. Didirikan tahun 2019.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h5>Produk</h5>
+                        <a href="#features">Mesin AI Ganda</a>
+                        <a href="#architecture">Arsitektur</a>
+                        <a href="#hardware">Hardware</a>
+                        <a href="#vlm">VLM Streaming</a>
+                        <a href="#deploy">Deployment</a>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Sumber Daya</h5>
+                        <a href="https://github.com/OortCloudGroup/VLStream-Docs">Dokumentasi</a>
+                        <a href="https://github.com/OortCloudGroup/VLStream-Docs">Referensi API</a>
+                        <a href="#">Catatan Perubahan</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Komunitas Discord</a>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Sumber Terbuka</h5>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-Cloud</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-Edge</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-NVR</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLS-Protocol</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-APP</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-Web</a>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Perusahaan</h5>
+                        <a href="https://oortcloudsmart.com/es/about.html" target="_blank">Tentang OortCloud</a>
+                        <a href="https://oortcloudsmart.com/es/contact.html" target="_blank">Hubungi Penjualan</a>
+                        <a href="#">Dukungan Komersial</a>
+                        <a href="#">Mitra</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OortCloud (Shenzhen) Smart Technology Co., Ltd. Hak cipta dilindungi.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Kebijakan Privasi</a>
+                    <a href="#">Ketentuan Layanan</a>
+                    <a href="#">Lisensi MIT</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

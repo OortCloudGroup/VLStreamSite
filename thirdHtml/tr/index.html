@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0a0a">
+    <title>VLStream - Karar Odaklı AI Video İstihbarat Platformu | %100 Açık Kaynak</title>
+    <meta name="description" content="VLStream, %100 açık kaynaklı karar odaklı AI video toplama ve zamanlama platformudur. Video IoT için uçtan uca AI entegrasyonu — etiketleme, eğitim ve edge dağıtımı. MIT lisanslı, özel dağıtım, sunucu başına 500+ akış.">
+    <meta name="keywords" content="VLStream, AI video platformu, açık kaynak video analitiği, video IoT, edge AI, VLM streaming, akıllı şehir, video gözetim, nesne algılama, RTSP, WebRTC, OortCloud">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://vlstream.dev/tr/">
+    
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://vlstream.dev/en/">
+    <link rel="alternate" hreflang="zh" href="https://vlstream.dev/">
+    <link rel="alternate" hreflang="es" href="https://vlstream.dev/es/">
+    <link rel="alternate" hreflang="ar" href="https://vlstream.dev/ar/">
+    <link rel="alternate" hreflang="de" href="https://vlstream.dev/de/">
+    <link rel="alternate" hreflang="fr" href="https://vlstream.dev/fr/">
+    <link rel="alternate" hreflang="ja" href="https://vlstream.dev/ja/">
+    <link rel="alternate" hreflang="pt" href="https://vlstream.dev/pt/">
+    <link rel="alternate" hreflang="ru" href="https://vlstream.dev/ru/">
+    <link rel="alternate" hreflang="ko" href="https://vlstream.dev/ko/">
+    <link rel="alternate" hreflang="id" href="https://vlstream.dev/id/">
+    <link rel="alternate" hreflang="tr" href="https://vlstream.dev/tr/">
+    <link rel="alternate" hreflang="x-default" href="https://vlstream.dev/en/">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="VLStream">
+    <meta property="og:title" content="VLStream - Karar Odaklı AI Video İstihbarat Platformu">
+    <meta property="og:description" content="%100 açık kaynaklı AI video toplama ve zamanlama platformu. Video IoT için uçtan uca AI entegrasyonu — etiketleme, eğitim ve edge dağıtımı.">
+    <meta property="og:url" content="https://vlstream.dev/tr/">
+    <meta property="og:image" content="https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="ar_SA">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta property="og:locale:alternate" content="pt_BR">
+    <meta property="og:locale:alternate" content="ru_RU">
+    <meta property="og:locale:alternate" content="ko_KR">
+    <meta property="og:locale:alternate" content="id_ID">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VLStream - Karar Odaklı AI Video İstihbarat Platformu">
+    <meta name="twitter:description" content="%100 açık kaynaklı AI video toplama ve zamanlama platformu. Video IoT için uçtan uca AI entegrasyonu.">
+    <meta name="twitter:image" content="https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "VLStream",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Linux, Windows, macOS",
+      "description": "Video IoT için uçtan uca AI entegrasyonu sunan, %100 açık kaynaklı karar odaklı AI video toplama ve zamanlama platformu.",
+      "url": "https://vlstream.dev/tr/",
+      "inLanguage": "tr",
+      "license": "https://opensource.org/licenses/MIT",
+      "author": {
+        "@type": "Organization",
+        "name": "OortCloud (Shenzhen) Smart Technology Co., Ltd.",
+        "url": "https://oortcloudsmart.com"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Çift AI Motoru",
+        "Kendi Geliştirdiği VLS Protokolü",
+        "VLM Streaming",
+        "Edge Dağıtımı",
+        "AI IPCamera ve AI-Box Donanımı",
+        "AI-vLLM-SERVER Çıkarım Cihazları",
+        "Sunucu başına 500+ akış",
+        "4K çözünürlük desteği",
+        "Özel bulut dağıtımı",
+        "%100 Açık Kaynak MIT Lisansı"
+      ],
+      "datePublished": "2019-01-01",
+      "softwareVersion": "1.0"
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>body { font-family: 'Inter', 'Noto Sans', sans-serif; }</style>
+    
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "OortCloud (Shenzhen) Smart Technology Co., Ltd.",
+      "alternateName": "OortCloud",
+      "url": "https://oortcloudsmart.com",
+      "logo": "https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png",
+      "foundingDate": "2019",
+      "description": "OortCloud, AI destekli video istihbarat ve IoT platformları konusunda uzmanlaşmış bir teknoloji şirketidir.",
+      "sameAs": [
+        "https://github.com/OortCloudGroup"
+      ]
+    }
+    </script>
+    
+    <!-- FAQ Schema for LLM Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "VLStream nedir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VLStream, %100 açık kaynaklı karar odaklı AI video toplama ve zamanlama platformudur. Video IoT için uçtan uca AI entegrasyonu sunar; etiketleme, eğitim ve edge dağıtımını kapsar. Çift AI Motoru (Ayrımsal AI + Karar Verme AI), kendi geliştirdiği VLS Protokolü, VLM Streaming kapasiteleri ile donatılmıştır ve sunucu başına 500+ akışı 4K çözünürlükle destekler."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "VLStream gerçekten %100 açık kaynak mı?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Evet. VLStream, MIT Lisansı altında tamamen açık kaynaktır. Tüm temel bileşenler — VLStream-Cloud, VLStream-Edge, VLStream-NVR, VLS-Protocol ve VLStream-APP — github.com/OortCloudGroup adresinde GitHub'da mevcuttur. Gizli tescilli bileşen yoktur."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "VLStream kaç video akışını işleyebilir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VLStream, sunucu başına 500+ eşzamanlı akışı destekler; uçtan uca gecikme 1,2 saniyenin altında ve %99,99 çalışma süresi güvenilirliği sunar. Platform, yüksek yoğunluklu video IoT dağıtımları için tasarlanmıştır."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "VLStream'de VLM Streaming nedir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VLM (Vision-Language Model) Streaming, VLStream'in gerçek zamanlı çok modlu AI kapasitesidir. Canlı video akışlarıyla görsel soru cevaplama, anomali algılama, sahne anlama ve doğal dil etkileşimi sağlar — tümü edge'de gerçek zamanlı işlenir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "VLStream'i nasıl dağıtırım?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VLStream birden fazla dağıtım yöntemi destekler: curl ile tek satır kurulum, konteyner dağıtımı için Docker Compose ve Kubernetes kümeleri için Helm chart'ları. Linux, Windows ve macOS üzerinde çalışır; özel bulut ve air-gapped dağıtımları destekler. Uyumlu donanımlar arasında NVIDIA Jetson, Intel x86 ve ARM platformları bulunur."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "VLStream hangi protokolleri destekler?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VLStream, RTSP, RTMP, WebRTC, HLS, ONVIF ve tescilli VLS Protokolünü destekler. VLS Protokolü, AI iş yükleri için optimize edilmiş uçtan uca şifreleme, uyarlanabilir bit hızı ve akıllı kare zamanlaması ile ultra düşük gecikmeli akış sağlar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "VLStream hangi donanımları sunuyor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VLStream üç donanım kategorisi sunar: (1) AI IPCamera — cihaz içi AI'ya sahip akıllı kameralar, giriş seviyesinden 20 TOPS amiral gemisine kadar; (2) AI-Box — VLStream Edge serisi, RTSP aracılığıyla mevcut IP kameralara AI analitiği ekleyen edge hesaplama terminalleri, 1 kanal/2T, 8 kanal/16T ve 32 kanal yapılandırmalarında mevcuttur; (3) AI-vLLM-SERVER — adanmış vLLM çıkarım sunucuları (1 kanal/20T, 8 kanal/160T, 64 kanal/1P), model eğitimi gerektirmez, doğrudan vLLM tanıma kullanıma hazır. Amiral gemisi SVR-64, isteğe bağlı entegre kabin teslimatı ve dahili sıvı soğutma teknolojisi ile özel sunucu odası gerektirmeden uç noktada dağıtım sağlar. Tümü açık kaynak yazılım içerir ve HiSilicon HI3516, Rockchip RK3588 gibi yonga setlerinde çalışır."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "AI-vLLM-SERVER nedir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI-vLLM-SERVER, VLStream'in adanmış vLLM çıkarım sunucu serisidir. Üç modelde mevcuttur — SVR-1 (1 kanal, 20T işlem gücü), SVR-8 (8 kanal, 160T) ve SVR-64 (64 kanal, 1P) — bu sunucular model eğitimi gerektirmez ve doğrudan vLLM tanıma kullanıma hazır şekilde sunulur. Amiral gemisi SVR-64, isteğe bağlı entegre kabin teslimatı ve dahili sıvı soğutma teknolojisi ile özel sunucu odası gerektirmeden uç noktada dağıtım imkanı sağlar."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" aria-label="Ana gezinme">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png" alt="VLStream Logo" class="logo-icon" style="height:60px;width:auto;">
+            </a>
+            <div class="nav-links">
+                <a href="#features">Özellikler</a>
+                <a href="#architecture">Mimari</a>
+                <a href="#hardware">Donanım</a>
+                <a href="#vlm">VLM Streaming</a>
+                <a href="#deploy">Dağıtım</a>
+                <a href="#open-source">Açık Kaynak</a>
+            </div>
+            <div class="nav-actions">
+                <!-- Language Switcher -->
+                <div class="nav-lang" id="langSwitch" title="Dil Değiştir">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">TR</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item" data-lang="en" href="../en/">
+                            <span class="nav-lang-item-flag">🇺🇸</span>
+                            <span class="nav-lang-item-label">English</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="zh" href="../">
+                            <span class="nav-lang-item-flag">🇨🇳</span>
+                            <span class="nav-lang-item-label">中文</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="es" href="../es/">
+                            <span class="nav-lang-item-flag">🇪🇸</span>
+                            <span class="nav-lang-item-label">Español</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="ar" href="../ar/">
+                            <span class="nav-lang-item-flag">🇸🇦</span>
+                            <span class="nav-lang-item-label">العربية</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="de" href="../de/">
+                            <span class="nav-lang-item-flag">🇩🇪</span>
+                            <span class="nav-lang-item-label">Deutsch</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="fr" href="../fr/">
+                            <span class="nav-lang-item-flag">🇫🇷</span>
+                            <span class="nav-lang-item-label">Français</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="ja" href="../ja/">
+                            <span class="nav-lang-item-flag">🇯🇵</span>
+                            <span class="nav-lang-item-label">日本語</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="pt" href="../pt/">
+                            <span class="nav-lang-item-flag">🇧🇷</span>
+                            <span class="nav-lang-item-label">Português</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="ru" href="../ru/">
+                            <span class="nav-lang-item-flag">🇷🇺</span>
+                            <span class="nav-lang-item-label">Русский</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="ko" href="../ko/">
+                            <span class="nav-lang-item-flag">🇰🇷</span>
+                            <span class="nav-lang-item-label">한국어</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="id" href="../id/">
+                            <span class="nav-lang-item-flag">🇮🇩</span>
+                            <span class="nav-lang-item-label">Indonesia</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item active" data-lang="tr" href="#">
+                            <span class="nav-lang-item-flag">🇹🇷</span>
+                            <span class="nav-lang-item-label">Türkçe</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://github.com/OortCloudGroup" class="btn btn-ghost" target="_blank" rel="noopener">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    GitHub
+                </a>
+                <a href="#deploy" class="btn btn-primary">Başlayın</a>
+            </div>
+            <button class="mobile-toggle" aria-label="Menüyü aç/kapat">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-grid-bg"></div>
+        <div class="container">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                MIT Lisanslı &middot; %100 Açık Kaynak &middot; Gizli Bileşen Yok
+            </div>
+            <h1 class="hero-title">
+                Karar Odaklı AI<br>
+                <span class="gradient-text">Video İstihbarat Platformu</span>
+            </h1>
+            <p class="hero-subtitle">
+                Video IoT alanı için uçtan uca AI entegrasyonu. Veri silolarını, parçalı istihbaratı, 
+                zor özelleştirmeyi ve yüksek maliyetleri çözün — özel dağıtım, tam yığın kontrol edilebilirliği 
+                ve bulut-edge-cihaz işbirliği ile.
+            </p>
+            <div class="hero-actions">
+                <a href="#deploy" class="btn btn-primary btn-lg">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                    5 Dakikada Dağıtın
+                </a>
+                <a href="https://github.com/OortCloudGroup" class="btn btn-outline btn-lg" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    Kaynağı Görüntüle
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-value">&lt;1,2sn</span>
+                    <span class="stat-label">Uçtan Uca Gecikme</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">500+</span>
+                    <span class="stat-label">Eşzamanlı Akış</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">17</span>
+                    <span class="stat-label">Dışa Aktarma Formatı</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">80+</span>
+                    <span class="stat-label">Hedef Türü</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">%99,99</span>
+                    <span class="stat-label">Kullanılabilirlik</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section class="section painpoints-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Beş Sorun, <span class="gradient-text">Tek Çözüm</span></h2>
+                <p class="section-subtitle">Geleneksel video gözetim temel sınırlamalara sahiptir. VLStream hepsini çözer.</p>
+            </div>
+            <div class="painpoints-grid">
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+                    </div>
+                    <h4>Veri Siloları</h4>
+                    <p>Tüm protokollerde birleşik video toplama — GB28181, RTSP, ONVIF, GA/T1400. Tüm kaynaklar için tek platform.</p>
+                </div>
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    </div>
+                    <h4>Parçalı AI</h4>
+                    <p>Çift AI kapalı döngü — algılama için ayrımsal AI, yürütme için karar verme AI. Gör, değerlendir, harekete geç.</p>
+                </div>
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                    </div>
+                    <h4>Özelleştirmesi Zor</h4>
+                    <p>TensorFlow/PyTorch modellerini içe aktarın, özel algoritmalar eğitin ve sektöre özel çözümler dağıtın — sıfır tedarikçi bağımlılığı.</p>
+                </div>
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    </div>
+                    <h4>Güvenlik Riskleri</h4>
+                    <p>Özel dağıtım, veriler ağınızdan çıkmaz. GB35114 uyumlu, durağan ve transit şifreleme, tam denetim günlüğü.</p>
+                </div>
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    <h4>Yüksek Maliyetler</h4>
+                    <p>MIT lisanslı, lisans ücreti yok, düğüm başına ücret yok. Mevcut kameraları edge AI modülleriyle yeniden kullanın — donanım değişimi gerekmez.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dual AI Engine Section -->
+    <section id="features" class="section dualai-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Çift AI <span class="gradient-text">Kapalı Döngü</span></h2>
+                <p class="section-subtitle">Dünyayı algılamaktan karar vermeye ve harekete geçmeye — tam otomatik istihbarat hattı.</p>
+            </div>
+            <div class="dualai-grid">
+                <div class="dualai-card">
+                    <div class="dualai-header">
+                        <div class="dualai-dot discriminative"></div>
+                        <h3>Ayrımsal AI Motoru</h3>
+                        <span class="dualai-badge">Algılama</span>
+                    </div>
+                    <p class="dualai-desc">Görsel dünyayı endüstri düzeyinde doğrulukla görün ve anlayın.</p>
+                    <ul class="dualai-list">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            80+ hedef türü (insan, araç, nesne)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Davranış analizi (dolaşma, koşma, toplanma)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            320.000+ yüz veritabanı ile gerçek zamanlı eşleştirme
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            %99 plaka tanıma doğruluğu
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            10+ anomali türü (duman, izinsiz giriş, sınır ihlali)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Özellik çıkarma (yüz, plaka, giysi nitelikleri)
+                        </li>
+                    </ul>
+                </div>
+                <div class="dualai-card">
+                    <div class="dualai-header">
+                        <div class="dualai-dot decision"></div>
+                        <h3>Karar Verme AI Motoru</h3>
+                        <span class="dualai-badge">Yürütme</span>
+                    </div>
+                    <p class="dualai-desc">Durumları değerlendirin ve sistemler arası otomatik yanıtları koordine edin.</p>
+                    <ul class="dualai-list">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Olay seviyesi belirleme ve önceliklendirme
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Trend tahmini ve kaynak zamanlaması
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Çok kanallı alarm (PSTN, SMS, Uygulama, E-posta)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Bağlantı kontrolü (PTZ, ışıklar, geçiş kapıları)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Otomatik iş emri oluşturma ve dağıtım
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            1000+ eşzamanlı akış orkestrasyonu
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section id="architecture" class="section architecture-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Dört Katmanlı <span class="gradient-text">Tam Bağlantı Mimarisi</span></h2>
+                <p class="section-subtitle">Dinamik zamanlama ile bulut-edge-cihaz işbirliği. Bulutta küresel kararlar, edge'de gerçek zamanlı analiz, cihazda veri toplama.</p>
+            </div>
+            <div class="arch-diagram">
+                <!-- Layer 1: Cloud -->
+                <div class="arch-layer arch-cloud">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-dot cloud-dot"></div>
+                        <h4>Platform Katmanı — VLStream Cloud</h4>
+                        <span class="arch-layer-tag">Ana Merkez</span>
+                    </div>
+                    <div class="arch-items">
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                            Çalışma Alanı ve Gösterge Paneli
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                            Video Toplama Motoru
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33"/></svg>
+                            Entegre Eğitim ve Dağıtım
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                            Hesaplama Gücü Zamanlayıcı
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            Karar AI Motoru
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                            API Geçidi ve SDK'lar
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                            Çok Kiracılı Yalıtım
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                            IoT Nesne Modeli
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-label">VLS Protokolü / WebRTC P2P / MQTT / REST</div>
+                    <div class="connector-line"></div>
+                </div>
+
+                <!-- Layer 2: Edge -->
+                <div class="arch-layer arch-edge">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-dot edge-dot"></div>
+                        <h4>Edge Katmanı — VLStream Edge</h4>
+                        <span class="arch-layer-tag">Gerçek Zamanlı İstihbarat</span>
+                    </div>
+                    <div class="arch-items">
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/></svg>
+                            Edge AI Kutusu (2T/6T/20T)
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                            Gerçek Zamanlı AI Analizi
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/></svg>
+                            Yerel Alarm ve Önbellek
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            Ağ Kesintisinden Sonra Devam
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-label">4G / Ethernet / Wi-Fi</div>
+                    <div class="connector-line"></div>
+                </div>
+
+                <!-- Layer 3: Device -->
+                <div class="arch-layer arch-device">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-dot device-dot"></div>
+                        <h4>Cihaz Katmanı — Algılama ve Toplama</h4>
+                        <span class="arch-layer-tag">Uç Cihazlar</span>
+                    </div>
+                    <div class="arch-items">
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                            AI Yerleşik Kameralar
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/></svg>
+                            Çıkarımlı NVR
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                            IoT Sensörleri (Sıcaklık/Duman/Radar)
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                            3. Taraf (Hikvision/Dahua)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-label">GB28181 / RTSP / ONVIF / GA/T1400</div>
+                    <div class="connector-line"></div>
+                </div>
+
+                <!-- Layer 4: Application -->
+                <div class="arch-layer arch-app">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-dot app-dot"></div>
+                        <h4>Uygulama Katmanı — İstemci Yazılımı</h4>
+                        <span class="arch-layer-tag">Kullanıcı Arayüzü</span>
+                    </div>
+                    <div class="arch-items">
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                            VLStream CMS (Masaüstü)
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                            Mobil Uygulama (iOS/Android/HarmonyOS)
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10"/></svg>
+                            Web Konsolu
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                            API'ler ve SDK'lar
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hardware Section -->
+    <section id="hardware" class="section hardware-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Amaca Yönelik <span class="gradient-text">AI Donanımı</span></h2>
+                <p class="section-subtitle">Yerel AI kameralardan edge hesaplama kutularına — her altyapıda AI analitiği dağıtın.</p>
+            </div>
+
+            <!-- AI IPCamera Kategorisi -->
+            <div class="hardware-category">
+                <h3 class="hardware-category-title">AI IPCamera</h3>
+                <p class="hardware-category-desc">Cihaz içi AI ile tasarlanmış akıllı kameralar — giriş seviyesi gözetimden amiral gemisi çoklu model analitiğe.</p>
+            </div>
+            <div class="hardware-grid">
+                <div class="hardware-card">
+                    <div class="hardware-tier">Temel</div>
+                    <h4>OORT-IPC-4G-30M</h4>
+                    <div class="hardware-spec-highlight">Giriş Seviyesi</div>
+                    <ul class="hardware-specs">
+                        <li>4G/Kablolu çift ağ</li>
+                        <li>AIISP tam renkli gece görüş</li>
+                        <li>Otomatik yakınlaştırma</li>
+                        <li>IP66 hava koşullarına dayanıklı</li>
+                        <li>-30&#8451; ile +60&#8451; geniş sıcaklık</li>
+                    </ul>
+                </div>
+                <div class="hardware-card">
+                    <div class="hardware-tier">Pro</div>
+                    <h4>OORT-6600-2.5</h4>
+                    <div class="hardware-spec-highlight">1 TOPS AI</div>
+                    <ul class="hardware-specs">
+                        <li>2.5T edge hesaplama gücü</li>
+                        <li>Cihaz üzerinde nesne algılama</li>
+                        <li>Optik sis geçirme</li>
+                        <li>Akıllı hedef takibi</li>
+                        <li>Yerel çıkarım + bulut senkronizasyon</li>
+                    </ul>
+                </div>
+                <div class="hardware-card hardware-card-featured">
+                    <div class="hardware-tier">Gelişmiş</div>
+                    <h4>OORT-6600-6</h4>
+                    <div class="hardware-spec-highlight">6 TOPS AI</div>
+                    <ul class="hardware-specs">
+                        <li>6T edge hesaplama gücü</li>
+                        <li>Çok modelli eşzamanlı çıkarım</li>
+                        <li>80+ hedef tanıma</li>
+                        <li>Cihaz üzerinde davranış analizi</li>
+                        <li>Gerçek zamanlı yapılandırılmış veri çıktısı</li>
+                    </ul>
+                    <div class="hardware-popular">En Popüler</div>
+                </div>
+                <div class="hardware-card">
+                    <div class="hardware-tier">Amiral Gemisi</div>
+                    <h4>OORT-6600-20</h4>
+                    <div class="hardware-spec-highlight">20 TOPS AI</div>
+                    <ul class="hardware-specs">
+                        <li>20T edge hesaplama gücü</li>
+                        <li>Tam video yapılandırma</li>
+                        <li>Çok akışlı paralel analiz</li>
+                        <li>Karmaşık sahne akıl yürütme</li>
+                        <li>VLM'ye hazır mimari</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- AI-Box Kategorisi -->
+            <div class="hardware-category">
+                <h3 class="hardware-category-title">AI-Box <span class="hardware-category-badge">VLStream Edge</span></h3>
+                <p class="hardware-category-desc">Mevcut IP kameralarınızı modernize eden AI edge hesaplama terminalleri — kamera altyapınızı değiştirmeden RTSP aracılığıyla akıllı analitik ekleyin.</p>
+            </div>
+            <div class="hardware-grid hardware-grid-3col">
+                <div class="hardware-card">
+                    <div class="hardware-tier">Lite</div>
+                    <h4>OORT-BOX-AI-1</h4>
+                    <div class="hardware-spec-highlight">1 Kanal</div>
+                    <ul class="hardware-specs">
+                        <li>1 kanallı RTSP girişi</li>
+                        <li>Cihaz üzerinde nesne algılama</li>
+                        <li>Gerçek zamanlı uyarı bildirimi</li>
+                        <li>Kompakt fansız tasarım</li>
+                        <li>VLStream açık kaynak yazılım dahil</li>
+                    </ul>
+                </div>
+                <div class="hardware-card hardware-card-featured">
+                    <div class="hardware-tier">Standart</div>
+                    <h4>OORT-BOX-AI-8</h4>
+                    <div class="hardware-spec-highlight">8 Kanal</div>
+                    <ul class="hardware-specs">
+                        <li>8 kanallı RTSP girişi</li>
+                        <li>Çoklu model eşzamanlı çıkarım</li>
+                        <li>AI görsel davranış analizi</li>
+                        <li>Gerçek zamanlı yapılandırılmış veri çıktısı</li>
+                        <li>VLStream açık kaynak yazılım dahil</li>
+                    </ul>
+                    <div class="hardware-popular">En Popüler</div>
+                </div>
+                <div class="hardware-card">
+                    <div class="hardware-tier">Pro</div>
+                    <h4>OORT-BOX-AI-32</h4>
+                    <div class="hardware-spec-highlight">32 Kanal</div>
+                    <ul class="hardware-specs">
+                        <li>32 kanallı RTSP girişi</li>
+                        <li>Tam video yapılandırma</li>
+                        <li>AI görsel davranış analizi</li>
+                        <li>Karmaşık sahne akıl yürütme</li>
+                        <li>VLM hazır mimari</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- AI-vLLM-SERVER Category -->
+            <div class="hardware-category">
+                <h3 class="hardware-category-title">AI-vLLM-SERVER <span class="hardware-category-badge">vLLM Çıkarım</span></h3>
+                <p class="hardware-category-desc">Amaca özel vLLM çıkarım sunucuları — model eğitimi gerektirmez, doğrudan vLLM tanıma kullanıma hazır.</p>
+            </div>
+            <div class="hardware-grid hardware-grid-3col">
+                <div class="hardware-card">
+                    <div class="hardware-tier">Giriş</div>
+                    <h4>OORT-AI-vLLM-SVR-1</h4>
+                    <div class="hardware-spec-highlight">1 Kanal / 20 TOPS</div>
+                    <ul class="hardware-specs">
+                        <li>1 kanallı video girişi</li>
+                        <li>20T işlem gücü</li>
+                        <li>Model eğitimi gerektirmez</li>
+                        <li>Doğrudan vLLM çıkarımı</li>
+                        <li>Kullanıma hazır</li>
+                    </ul>
+                </div>
+                <div class="hardware-card hardware-card-featured">
+                    <div class="hardware-tier">Standart</div>
+                    <h4>OORT-AI-vLLM-SVR-8</h4>
+                    <div class="hardware-spec-highlight">8 Kanal / 160 TOPS</div>
+                    <ul class="hardware-specs">
+                        <li>8 kanallı video girişi</li>
+                        <li>160T işlem gücü</li>
+                        <li>Model eğitimi gerektirmez</li>
+                        <li>Doğrudan vLLM çıkarımı</li>
+                        <li>Kullanıma hazır</li>
+                    </ul>
+                    <div class="hardware-popular">En Popüler</div>
+                </div>
+                <div class="hardware-card">
+                    <div class="hardware-tier">Amiral Gemisi</div>
+                    <h4>OORT-AI-vLLM-SVR-64</h4>
+                    <div class="hardware-spec-highlight">64 Kanal / 1P</div>
+                    <ul class="hardware-specs">
+                        <li>64 kanallı video girişi</li>
+                        <li>1P işlem gücü</li>
+                        <li>Model eğitimi gerektirmez</li>
+                        <li>Doğrudan vLLM çıkarımı</li>
+                        <li>Kullanıma hazır</li>
+                        <li>Opsiyonel entegre kabin teslimatı
+                        Dahili sıvı soğutma teknolojisi
+                        Özel sunucu odası gerektirmeden uç noktada dağıtım</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="hardware-chips">
+                <p class="hardware-chips-label">Desteklenen Yonga Setleri</p>
+                <div class="chips-list">
+                    <span class="chip">HiSilicon HI3516</span>
+                    <span class="chip">Rockchip RK3588</span>
+                    <span class="chip">Rockchip RK1106</span>
+                    <span class="chip">Ingenic T31/T41</span>
+                    <span class="chip">Goke GK720x</span>
+                    <span class="chip">ESP32 (RTOS)</span>
+                    <span class="chip">BK7258 (RTOS)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VLM Streaming Section -->
+    <section id="vlm" class="section vlm-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Gerçek Zamanlı <span class="gradient-text">VLM Streaming</span></h2>
+                <p class="section-subtitle">Büyük görme-dil modellerinin video akışlarını gerçek zamanlı izlemesine izin verin — sahneleri kare kare anlayın, streaming çıktısıyla.</p>
+            </div>
+            <div class="vlm-content">
+                <div class="vlm-diagram">
+                    <div class="vlm-step">
+                        <div class="vlm-step-num">1</div>
+                        <div class="vlm-step-content">
+                            <h5>Video Akış Girişi</h5>
+                            <p>15-30 FPS'de RTSP / WebCam / Dosya. Sıfır kayıpla sürekli kare yakalama.</p>
+                        </div>
+                    </div>
+                    <div class="vlm-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                    <div class="vlm-step">
+                        <div class="vlm-step-num">2</div>
+                        <div class="vlm-step-content">
+                            <h5>Kare Zamanlayıcı</h5>
+                            <p>Akıllı kare atlama ve tekdüze örnekleme. AI aşırı yüklenmesini önlemek için akış kontrolü.</p>
+                        </div>
+                    </div>
+                    <div class="vlm-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                    <div class="vlm-step">
+                        <div class="vlm-step-num">3</div>
+                        <div class="vlm-step-content">
+                            <h5>VLM Çıkarımı</h5>
+                            <p>LLaVA, Qwen-VL, InternVL — herhangi bir açık kaynak görme modeli. Eğitim gerekmez.</p>
+                        </div>
+                    </div>
+                    <div class="vlm-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                    <div class="vlm-step">
+                        <div class="vlm-step-num">4</div>
+                        <div class="vlm-step-content">
+                            <h5>Streaming Çıktısı</h5>
+                            <p>Milisaniyeler içinde gerçek zamanlı yanıtlar. Video bitene kadar bekleme yok.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vlm-features">
+                    <div class="vlm-feature-card">
+                        <h5>Desteklenen Modeller</h5>
+                        <div class="vlm-models">
+                            <span>LLaVA</span>
+                            <span>Qwen-VL</span>
+                            <span>InternVL</span>
+                            <span>Qwen-VL-7B</span>
+                        </div>
+                    </div>
+                    <div class="vlm-feature-card">
+                        <h5>Kullanım Alanları</h5>
+                        <ul>
+                            <li>Gerçek zamanlı gözetim analizi</li>
+                            <li>Canlı yayın yorumlama</li>
+                            <li>Robot görme anlayışı</li>
+                            <li>AR/Akıllı gözlük algılama</li>
+                            <li>Belge ve fatura OCR</li>
+                            <li>Çok kanallı paralel analiz</li>
+                        </ul>
+                    </div>
+                    <div class="vlm-feature-card">
+                        <h5>Performans</h5>
+                        <div class="vlm-perf">
+                            <div class="vlm-perf-item">
+                                <span class="vlm-perf-value">~200ms</span>
+                                <span class="vlm-perf-label">Çıkarım Gecikmesi</span>
+                            </div>
+                            <div class="vlm-perf-item">
+                                <span class="vlm-perf-value">24GB</span>
+                                <span class="vlm-perf-label">Min GPU (Çok Kanallı)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pipeline Section -->
+    <section class="section pipeline-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Ham Veriden <span class="gradient-text">Üretim Modellerine</span></h2>
+                <p class="section-subtitle">Entegre eğitim ve dağıtım — tarayıcınızda çıkarımı doğrulayın, ardından edge cihazlara tek tıkla uzaktan dağıtın.</p>
+            </div>
+            <div class="pipeline-steps">
+                <div class="pipeline-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h4>Etiketleme</h4>
+                        <p>Algılama, segmentasyon ve sınıflandırma için yerleşik etiketleme. Kalite güvenceli işbirlikçi iş akışları.</p>
+                    </div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h4>Eğitim</h4>
+                        <p>AutoML veya tam manuel kontrol. Dinamik kaynak zamanlamasıyla dağıtık GPU eğitimi. TensorFlow/PyTorch modellerini içe aktarın.</p>
+                    </div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h4>Optimizasyon</h4>
+                        <p>17 formata dışa aktarma: ONNX, TensorRT, CoreML, TFLite, OpenVINO ve daha fazlası. Edge için kuantizasyon ve budama.</p>
+                    </div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h4>Dağıtım</h4>
+                        <p>Tarayıcıda doğrulayın, ardından tek tıkla uzaktan dağıtın. OTA güncellemeler, A/B testi, geri alma ve gerçek zamanlı performans izleme.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Section -->
+    <section class="section performance-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Kurumsal Düzey <span class="gradient-text">Performans</span></h2>
+                <p class="section-subtitle">Zorlu üretim ortamları için sektör lideri spesifikasyonlarla inşa edilmiştir.</p>
+            </div>
+            <div class="perf-grid">
+                <div class="perf-card">
+                    <div class="perf-value">&lt;1,2sn</div>
+                    <div class="perf-label">Uçtan Uca Gecikme</div>
+                    <div class="perf-detail">Kendi geliştirdiği VLS protokolü, TCP tabanlı, RTMP/RTSP'den üstün</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">%30</div>
+                    <div class="perf-label">Paket Kaybı Dayanıklılığı</div>
+                    <div class="perf-detail">%30 kayıpta takılma yok, %50 paket kaybında kurtarılabilir</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">&lt;200ms</div>
+                    <div class="perf-label">AI Analiz Gecikmesi</div>
+                    <div class="perf-detail">Donanım hızlandırmayla edge'de gerçek zamanlı çıkarım</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">%70</div>
+                    <div class="perf-label">Bant Genişliği Tasarrufu</div>
+                    <div class="perf-detail">WebRTC P2P relay sunucularını ortadan kaldırır, doğrudan kamera-istemci</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">500+</div>
+                    <div class="perf-label">Sunucu Başına Akış</div>
+                    <div class="perf-detail">Tek sunucu 500+ video akışı ve 100+ AI analizi işler</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">4K</div>
+                    <div class="perf-label">Maksimum Çözünürlük</div>
+                    <div class="perf-detail">H.265 donanım kodlama/çözme, 128kbps'den 8Mbps'e uyarlanabilir</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transmission Protocol Section -->
+    <section class="section protocol-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Kendi Geliştirdiği <span class="gradient-text">VLS Protokolü</span></h2>
+                <p class="section-subtitle">Video IoT için özel olarak tasarlandı. Düşük gecikme, aşırı paket kaybı dayanıklılığı ve evrensel uyumluluk.</p>
+            </div>
+            <div class="protocol-grid">
+                <div class="protocol-card">
+                    <h4>Video İletimi</h4>
+                    <ul>
+                        <li><strong>VLS Protokolü:</strong> TCP tabanlı, &lt;1,2sn gecikme, %30 kayıpta takılma yok</li>
+                        <li><strong>WebRTC P2P:</strong> Milisaniye bağlantı, %70 bant genişliği tasarrufu</li>
+                        <li><strong>Çok protokollü:</strong> HLS, FLV, RTSP, GB28181 — tüm terminaller</li>
+                        <li><strong>Kodlama:</strong> H.264/H.265, 4K/1080p/720p uyarlanabilir</li>
+                    </ul>
+                </div>
+                <div class="protocol-card">
+                    <h4>IoT ve Kontrol</h4>
+                    <ul>
+                        <li><strong>MQTT:</strong> Cihazlara şeffaf komut iletimi</li>
+                        <li><strong>IoT Merkezi:</strong> Çevre birimleri için TCP/IP 4G ağ yetenekleri</li>
+                        <li><strong>Nesne Modeli:</strong> Standartlaştırılmış cihaz açıklamaları ve senkronizasyon</li>
+                        <li><strong>Füzyon:</strong> Video akışı + sensör verisi birleşik uyarılar</li>
+                    </ul>
+                </div>
+                <div class="protocol-card">
+                    <h4>Güvenlik ve Uyumluluk</h4>
+                    <ul>
+                        <li><strong>GB28181:</strong> Ulusal gözetim standardı</li>
+                        <li><strong>GB35114:</strong> Gelişmiş güvenlik sertifikası</li>
+                        <li><strong>Şifreleme:</strong> Transit ve durağan veri koruması</li>
+                        <li><strong>Denetim:</strong> Tam işlem günlüğü ve erişim kontrolü</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deploy Section -->
+    <section id="deploy" class="section deploy-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Her Yere <span class="gradient-text">Dağıtın</span></h2>
+                <p class="section-subtitle">Özel bulut, hibrit veya air-gapped. Veriler ağınızdan çıkmaz. x86 ve ARM desteklenir.</p>
+            </div>
+            <div class="deploy-grid">
+                <div class="deploy-card">
+                    <div class="deploy-card-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+                            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                            <line x1="6" y1="6" x2="6.01" y2="6"/>
+                            <line x1="6" y1="18" x2="6.01" y2="18"/>
+                        </svg>
+                        <h4>Yerinde Dağıtım</h4>
+                    </div>
+                    <p>Hassas ortamlar için tam air-gap desteği. Kendi altyapınızda tam veri egemenliği.</p>
+                    <code class="deploy-code">curl -fsSL https://get.vlstream.dev | bash</code>
+                </div>
+                <div class="deploy-card">
+                    <div class="deploy-card-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+                        </svg>
+                        <h4>Docker</h4>
+                    </div>
+                    <p>Docker Compose ile tek tıkla dağıtım. GPU geçişiyle 5 dakikada tam yığın çalışır.</p>
+                    <code class="deploy-code">docker compose up -d</code>
+                </div>
+                <div class="deploy-card">
+                    <div class="deploy-card-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                        <h4>Kubernetes</h4>
+                    </div>
+                    <p>Otomatik ölçeklendirme, HA kümeleme, yük dengeleme ve otomatik yük devralma ile üretim Helm chart'ları.</p>
+                    <code class="deploy-code">helm install vlstream oort/vlstream</code>
+                </div>
+            </div>
+            <div class="deploy-compatibility">
+                <p class="compat-label">Platform Uyumluluğu</p>
+                <div class="compat-grid">
+                    <div class="compat-item">
+                        <span class="compat-icon">x86</span>
+                        <span>Sunucular ve Bilgisayarlar</span>
+                    </div>
+                    <div class="compat-item">
+                        <span class="compat-icon">ARM</span>
+                        <span>Edge ve Mobil</span>
+                    </div>
+                    <div class="compat-item">
+                        <span class="compat-icon">GPU</span>
+                        <span>NVIDIA / AMD</span>
+                    </div>
+                    <div class="compat-item">
+                        <span class="compat-icon">IPC</span>
+                        <span>Endüstriyel Kontrol</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="section usecases-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Gerçek Dünya <span class="gradient-text">Ölçeği İçin</span></h2>
+                <p class="section-subtitle">Akıllı video analizinin operasyonel kararları yönlendirdiği sektörlerde dağıtılmıştır.</p>
+            </div>
+            <div class="usecases-grid">
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <line x1="18" y1="20" x2="18" y2="10"/>
+                            <line x1="12" y1="20" x2="12" y2="4"/>
+                            <line x1="6" y1="20" x2="6" y2="14"/>
+                        </svg>
+                    </div>
+                    <h4>Akıllı Şehir</h4>
+                    <p>Entegre video gözetim, kentsel ihlal tespiti, kapalı döngü iş emri işleme ve acil durum komuta dağıtımı.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h4>Kamu Güvenliği</h4>
+                    <p>Kalabalık yoğunluğu izleme, anormal davranış erken uyarı, yüz tanıma ve büyük etkinlikler için acil kaynak dağıtımı.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                    </div>
+                    <h4>Akıllı Kampüs</h4>
+                    <p>Şüpheli dolaşma tespiti, yasa dışı parklama, kask uyumu, duman/yangın uyarıları ve çevre ihlal izleme.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                        </svg>
+                    </div>
+                    <h4>Dijital Devlet</h4>
+                    <p>Departmanlar arası video paylaşımı, birleşik zamanlama ve kamu güvenliği, acil durum ve ulaşım için akıllı analiz.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33"/></svg>
+                    </div>
+                    <h4>Endüstri ve Madencilik</h4>
+                    <p>Ekipman arıza tespiti, tehlikeli alan izinsiz giriş, KKD ihlal tespiti, çevre izleme ve uzaktan denetim.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M6.13 1L6 16a2 2 0 0 0 2 2h15"/><path d="M1 6.13L16 6a2 2 0 0 1 2 2v15"/></svg>
+                    </div>
+                    <h4>Akıllı Tarım</h4>
+                    <p>Orman yangını önleme, nehir sel kontrolü, elektrik hattı denetimi, büyüme izleme ve zayıf ağ alanlarında zararlı tanımlama.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Source Repos Section -->
+    <section id="open-source" class="section opensource-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">%100 <span class="gradient-text">Açık Kaynak</span></h2>
+                <p class="section-subtitle">MIT lisanslı. Gizli tescilli bileşen yok, kapalı kaynak modül yok. Temel kaynak kodu, VLS protokolü, AI motoru ve zamanlama motoru — hepsi açık.</p>
+            </div>
+            <div class="repos-grid">
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-Cloud</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>Bulut platformu çekirdeği — yönetim, AI motorları, zamanlama, video toplama ve karar verme.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-NVR</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>Ağ video kaydedici — depolama, oynatma, yönetim ve yerel çıkarım yetenekleri.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-CMS</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>Çapraz platform masaüstü istemci (Windows/macOS/Linux) — çoklu cihaz izleme, elektronik haritalar, alarm popup'ları.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-APP</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>Mobil uygulama (iOS/Android/HarmonyOS) — canlı önizleme, oynatma, uyarılar, çift yönlü ses, PTZ kontrolü.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-IPCamera</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>AI yerleşik kamera donanım yazılımı + SDK — HiSilicon, Rockchip, Ingenic ve Goke yonga setlerini destekler.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-Edge</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>Edge AI kutusu donanım yazılımı + algoritma paketleri — gerçek zamanlı analiz, yerel uyarılar, hesaplama gücü önbellekleme.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLS-Protocol</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>Kendi geliştirdiği VLS protokolü — düşük gecikme, paket kaybı dayanıklılığı, MQTT IoT kontrolü ve şeffaf cihaz komutları.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-Web</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>Ön/arka uç ayrılmış mimari — modern kod tabanı, temiz API arayüzleri, VLStream üzerine kendi ürününüzü oluşturmak ve özelleştirmek kolay.</p>
+                </div>
+            </div>
+            <div class="opensource-cta">
+                <a href="https://github.com/OortCloudGroup" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    Tüm Depoları Keşfedin
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="section comparison-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">VLStream Neden <span class="gradient-text">Kapalı Kaynak Yerine</span></h2>
+                <p class="section-subtitle">VLStream'i geleneksel kapalı kaynak video platformlarıyla karşılaştırın.</p>
+            </div>
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Boyut</th>
+                            <th class="highlight-col">VLStream (Açık Kaynak)</th>
+                            <th>Geleneksel Platformlar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Kaynak Kodu</td>
+                            <td class="highlight-col">%100 açık, gizli bileşen yok</td>
+                            <td>Kapalı kaynak, çekirdek görünmez</td>
+                        </tr>
+                        <tr>
+                            <td>Ticari Maliyet</td>
+                            <td class="highlight-col">Ticari kullanım ücretsiz, lisans ücreti yok</td>
+                            <td>Yüksek lisans, yıllık ve özelleştirme ücretleri</td>
+                        </tr>
+                        <tr>
+                            <td>Özelleştirme</td>
+                            <td class="highlight-col">Derin ikincil geliştirme, tam yeniden düzenleme</td>
+                            <td>Uzun döngü, yüksek maliyet, tedarikçi bağımlılığı</td>
+                        </tr>
+                        <tr>
+                            <td>Veri Güvenliği</td>
+                            <td class="highlight-col">Özel dağıtım, veriler ağdan çıkmaz</td>
+                            <td>Bulut yükleme, veri sızıntı riski</td>
+                        </tr>
+                        <tr>
+                            <td>Protokol</td>
+                            <td class="highlight-col">Ulusal standartlar + kendi geliştirme, %100 yeniden kullanım</td>
+                            <td>Tescilli protokoller, yeniden kullanım zor</td>
+                        </tr>
+                        <tr>
+                            <td>AI Kontrolü</td>
+                            <td class="highlight-col">Tam AI motor kontrolü, özel algoritmalar</td>
+                            <td>Kapalı algoritmalar, sınırlı yükseltmeler</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section class="section advantages-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Üç Temel <span class="gradient-text">Avantaj</span></h2>
+            </div>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-num">01</div>
+                    <h4>Mevcut Ekipmanı Yeniden Kullanın</h4>
+                    <p>Mevcut kameralar ve IP kameralar yerinde kalır. OortCloud edge AI modülleri onlara istihbarat kazandırır — donanım değişimi gerekmez. Mevcut altyapıdan maksimum ROI elde edin.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-num">02</div>
+                    <h4>İnsandan AI İzlemeye</h4>
+                    <p>Manuel gözetimi AI destekli izlemeye dönüştürün. Yerleşik uyarı sistemi, ilgili personele gerçek zamanlı bildirimler gönderir. İşgücü maliyetlerini azaltın ve algılayıcı akıllı ajanlar oluşturun.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-num">03</div>
+                    <h4>Yapılandırılabilir AI Algoritmaları</h4>
+                    <p>Algoritmaları isteğe göre eğitin ve dinamik olarak yükleyin. Farklı senaryolar, farklı zaman dilimleri, farklı uyarı öğeleri — hepsi kod değişikliği olmadan yapılandırılabilir.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-glow"></div>
+            <h2 class="cta-title"><span class="gradient-text">Vision AI</span> ile başlamaya hazır mısınız?</h2>
+            <p class="cta-subtitle">VLStream'i 5 dakikada dağıtın. Video altyapınızı karar odaklı AI ile dönüştürün. %100 açık kaynak, sıfır tedarikçi bağımlılığı.</p>
+            <div class="cta-actions">
+                <a href="#deploy" class="btn btn-primary btn-lg">
+                    Ücretsiz Başlayın
+                </a>
+                <a href="https://github.com/OortCloudGroup" class="btn btn-outline btn-lg" target="_blank" rel="noopener">
+                    Dokümanları Okuyun
+                </a>
+            </div>
+            <div class="cta-support">
+                <p>Ticari desteğe mi ihtiyacınız var? OortCloud ücretli teknik destek, özel geliştirme ve dağıtım hizmetleri sunmaktadır.</p>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo">
+                        <img src="https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png" alt="VLStream Logo" class="logo-icon" style="height:60px;width:auto;">
+                    </a>
+                    <p class="footer-desc">OortCloud (Shenzhen) Smart Technology Co., Ltd. tarafından karar odaklı AI video toplama ve zamanlama platformu. 2019 yılında kurulmuştur.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h5>Ürün</h5>
+                        <a href="#features">Çift AI Motoru</a>
+                        <a href="#architecture">Mimari</a>
+                        <a href="#hardware">Donanım</a>
+                        <a href="#vlm">VLM Streaming</a>
+                        <a href="#deploy">Dağıtım</a>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Kaynaklar</h5>
+                        <a href="https://github.com/OortCloudGroup/VLStream-Docs">Dokümantasyon</a>
+                        <a href="https://github.com/OortCloudGroup/VLStream-Docs">API Referansı</a>
+                        <a href="#">Değişiklik Günlüğü</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Discord Topluluğu</a>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Açık Kaynak</h5>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-Cloud</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-Edge</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-NVR</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLS-Protocol</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-APP</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-Web</a>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Şirket</h5>
+                        <a href="https://oortcloudsmart.com/es/about.html" target="_blank">OortCloud Hakkında</a>
+                        <a href="https://oortcloudsmart.com/es/contact.html" target="_blank">Satış İletişimi</a>
+                        <a href="#">Ticari Destek</a>
+                        <a href="#">İş Ortakları</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OortCloud (Shenzhen) Smart Technology Co., Ltd. Tüm hakları saklıdır.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Gizlilik Politikası</a>
+                    <a href="#">Kullanım Şartları</a>
+                    <a href="#">MIT Lisansı</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

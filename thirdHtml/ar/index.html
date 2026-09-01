@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0a0a">
+    <title>VLStream - منصة ذكاء الفيديو الاصطناعي القائمة على القرارات | مفتوح المصدر ١٠٠٪</title>
+    <meta name="description" content="VLStream منصة مفتوحة المصدر بالكامل لتجميع وجدولة الفيديو بالذكاء الاصطناعي القرارِي. دمج شامل للذكاء الاصطناعي في إنترنت الأشياء المرئي — من التعليق إلى التدريب إلى النشر على الحافة. رخصة MIT، نشر خاص، +٥٠٠ بث لكل خادم.">
+    <meta name="keywords" content="VLStream, منصة ذكاء فيديو, تحليل فيديو مفتوح المصدر, إنترنت أشياء مرئي, ذكاء اصطناعي على الحافة, بث VLM, مدينة ذكية, مراقبة بالفيديو, كشف الأجسام, RTSP, WebRTC, OortCloud">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://vlstream.dev/ar/">
+    
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://vlstream.dev/en/">
+    <link rel="alternate" hreflang="zh" href="https://vlstream.dev/">
+    <link rel="alternate" hreflang="es" href="https://vlstream.dev/es/">
+    <link rel="alternate" hreflang="ar" href="https://vlstream.dev/ar/">
+    <link rel="alternate" hreflang="de" href="https://vlstream.dev/de/">
+    <link rel="alternate" hreflang="fr" href="https://vlstream.dev/fr/">
+    <link rel="alternate" hreflang="ja" href="https://vlstream.dev/ja/">
+    <link rel="alternate" hreflang="pt" href="https://vlstream.dev/pt/">
+    <link rel="alternate" hreflang="ru" href="https://vlstream.dev/ru/">
+    <link rel="alternate" hreflang="ko" href="https://vlstream.dev/ko/">
+    <link rel="alternate" hreflang="id" href="https://vlstream.dev/id/">
+    <link rel="alternate" hreflang="tr" href="https://vlstream.dev/tr/">
+    <link rel="alternate" hreflang="x-default" href="https://vlstream.dev/en/">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="VLStream">
+    <meta property="og:title" content="VLStream - منصة ذكاء الفيديو الاصطناعي القائمة على القرارات">
+    <meta property="og:description" content="منصة مفتوحة المصدر بالكامل لتجميع وجدولة الفيديو بالذكاء الاصطناعي. دمج شامل للذكاء الاصطناعي في إنترنت الأشياء المرئي.">
+    <meta property="og:url" content="https://vlstream.dev/ar/">
+    <meta property="og:image" content="https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png">
+    <meta property="og:locale" content="ar_SA">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta property="og:locale:alternate" content="pt_BR">
+    <meta property="og:locale:alternate" content="ru_RU">
+    <meta property="og:locale:alternate" content="ko_KR">
+    <meta property="og:locale:alternate" content="id_ID">
+    <meta property="og:locale:alternate" content="tr_TR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VLStream - منصة ذكاء الفيديو الاصطناعي القائمة على القرارات">
+    <meta name="twitter:description" content="منصة مفتوحة المصدر بالكامل لتجميع وجدولة الفيديو بالذكاء الاصطناعي. دمج شامل للذكاء الاصطناعي في إنترنت الأشياء المرئي.">
+    <meta name="twitter:image" content="https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "VLStream",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Linux, Windows, macOS",
+      "description": "منصة مفتوحة المصدر بالكامل لتجميع وجدولة الفيديو بالذكاء الاصطناعي القرارِي مع دمج شامل للذكاء الاصطناعي في إنترنت الأشياء المرئي.",
+      "url": "https://vlstream.dev/ar/",
+      "inLanguage": "ar",
+      "license": "https://opensource.org/licenses/MIT",
+      "author": {
+        "@type": "Organization",
+        "name": "OortCloud (Shenzhen) Smart Technology Co., Ltd.",
+        "url": "https://oortcloudsmart.com"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "محرك ذكاء اصطناعي مزدوج",
+        "بروتوكول VLS مطور ذاتياً",
+        "بث VLM",
+        "نشر على الحافة",
+        "أجهزة AI IPCamera و AI-Box",
+        "AI-vLLM-SERVER خوادم الاستدلال",
+        "+٥٠٠ بث لكل خادم",
+        "دعم دقة 4K",
+        "نشر سحابي خاص",
+        "مفتوح المصدر ١٠٠٪ رخصة MIT"
+      ],
+      "datePublished": "2019-01-01",
+      "softwareVersion": "1.0"
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700&family=Cairo:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "OortCloud (Shenzhen) Smart Technology Co., Ltd.",
+      "alternateName": "OortCloud",
+      "url": "https://oortcloudsmart.com",
+      "logo": "https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png",
+      "foundingDate": "2019",
+      "description": "OortCloud شركة تكنولوجيا متخصصة في منصات ذكاء الفيديو الاصطناعي وإنترنت الأشياء.",
+      "sameAs": [
+        "https://github.com/OortCloudGroup"
+      ]
+    }
+    </script>
+    
+    <!-- FAQ Schema for LLM Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "ما هو VLStream؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VLStream منصة مفتوحة المصدر بالكامل لتجميع وجدولة الفيديو بالذكاء الاصطناعي القرارِي. توفر دمجاً شاملاً للذكاء الاصطناعي في إنترنت الأشياء المرئي، من التعليق إلى التدريب إلى النشر على الحافة. تتميز بمحرك ذكاء اصطناعي مزدوج وبروتوكول VLS مطور ذاتياً وقدرات بث VLM وتدعم أكثر من ٥٠٠ بث لكل خادم بدقة 4K."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل VLStream مفتوح المصدر بالكامل؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "نعم. VLStream مفتوح المصدر بالكامل تحت رخصة MIT. جميع المكونات الأساسية — VLStream-Cloud وVLStream-Edge وVLStream-NVR وVLS-Protocol وVLStream-APP — متاحة على GitHub. لا توجد مكونات مغلقة مخفية."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "كم عدد بثات الفيديو التي يمكن لـ VLStream التعامل معها؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "يدعم VLStream أكثر من ٥٠٠ بث متزامن لكل خادم مع زمن انتقال أقل من ١٫٢ ثانية وموثوقية تشغيل بنسبة ٩٩٫٩٩٪. المنصة مصممة لنشرات إنترنت الأشياء المرئي عالية الكثافة."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ما هو بث VLM في VLStream؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "بث VLM (نموذج الرؤية واللغة) هو قدرة الذكاء الاصطناعي متعددة الوسائط في الوقت الفعلي في VLStream. يتيح الإجابة على الأسئلة المرئية وكشف الشذوذ وفهم المشاهد والتفاعل باللغة الطبيعية مع بثات الفيديو المباشرة — كل ذلك يُعالج في الوقت الفعلي على الحافة."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "كيف أنشر VLStream؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "يدعم VLStream طرق نشر متعددة: تثبيت بسطر واحد عبر curl، وDocker Compose للنشر في حاويات، وHelm Charts لمجموعات Kubernetes. يعمل على Linux وWindows وmacOS، ويدعم النشر السحابي الخاص والبيئات المعزولة."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ما البروتوكولات التي يدعمها VLStream؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "يدعم VLStream بروتوكولات RTSP وRTMP وWebRTC وHLS وONVIF وبروتوكول VLS الخاص. يوفر بروتوكول VLS بثاً بزمن انتقال منخفض جداً مع تشفير من طرف إلى طرف ومعدل بتات تكيفي وجدولة إطارات ذكية محسنة لأعباء عمل الذكاء الاصطناعي."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ما الأجهزة التي يقدمها VLStream؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "يقدم VLStream ثلاث فئات من الأجهزة: (1) AI IPCamera — كاميرات ذكية بذكاء اصطناعي مدمج، من مستوى الدخول إلى الرائد بقوة ٢٠ TOPS؛ (2) AI-Box — سلسلة VLStream Edge، محطات حوسبة حافة تضيف تحليلات الذكاء الاصطناعي إلى كاميرات IP الموجودة عبر RTSP، متوفرة بتكوينات قناة واحدة/٢T و٨ قنوات/١٦T و٣٢ قناة؛ (3) AI-vLLM-SERVER — خوادم استدلال vLLM المخصصة (قناة واحدة/٢٠T، ٨ قنوات/١٦٠T، ٦٤ قناة/١P) لا تحتاج إلى تدريب نماذج، مع تعرف vLLM مباشر جاهز للاستخدام. الرائد SVR-64 يوفر تسليم خزنة متكاملة اختيارية مع تقنية تبريد سائل مدمجة للنشر الحافي بدون غرفة خوادم مخصصة. جميعها تتضمن برمجيات مفتوحة المصدر وتعمل على شرائح مثل HiSilicon HI3516 وRockchip RK3588 وغيرها."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ما هو AI-vLLM-SERVER؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI-vLLM-SERVER هو سلسلة خوادم استدلال vLLM المخصصة من VLStream. متوفر في ثلاثة طرازات — SVR-1 (قناة واحدة، قوة حوسبة ٢٠T)، SVR-8 (٨ قنوات، ١٦٠T)، وSVR-64 (٦٤ قناة، ١P) — لا تحتاج هذه الخوادم إلى تدريب نماذج وتوفر تعرف vLLM مباشر جاهز للاستخدام. يوفر الرائد SVR-64 تسليم خزنة متكاملة اختيارية مع تقنية تبريد سائل مدمجة، مما يتيح النشر الحافي بدون غرفة خوادم مخصصة."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- التنقل -->
+    <nav class="navbar" aria-label="التنقل الرئيسي">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png" alt="شعار VLStream" class="logo-icon" style="height:60px;width:auto;">
+                <span>VLStream</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features">الميزات</a>
+                <a href="#architecture">البنية</a>
+                <a href="#hardware">الأجهزة</a>
+                <a href="#vlm">بث VLM</a>
+                <a href="#deploy">النشر</a>
+                <a href="#open-source">مفتوح المصدر</a>
+            </div>
+            <div class="nav-actions">
+                <!-- محوّل اللغة -->
+                <div class="nav-lang" id="langSwitch" title="تبديل اللغة">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">AR</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item" data-lang="en" href="/en/">
+                            <span class="nav-lang-item-flag">🇺🇸</span>
+                            <span class="nav-lang-item-label">English</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="zh" href="/">
+                            <span class="nav-lang-item-flag">🇨🇳</span>
+                            <span class="nav-lang-item-label">中文</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="es" href="/es/">
+                            <span class="nav-lang-item-flag">🇪🇸</span>
+                            <span class="nav-lang-item-label">Español</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item active" data-lang="ar">
+                            <span class="nav-lang-item-flag">🇸🇦</span>
+                            <span class="nav-lang-item-label">العربية</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="de" href="../de/">
+                            <span class="nav-lang-item-flag">🇩🇪</span>
+                            <span class="nav-lang-item-label">Deutsch</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="fr" href="../fr/">
+                            <span class="nav-lang-item-flag">🇫🇷</span>
+                            <span class="nav-lang-item-label">Français</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="ja" href="../ja/">
+                            <span class="nav-lang-item-flag">🇯🇵</span>
+                            <span class="nav-lang-item-label">日本語</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="pt" href="../pt/">
+                            <span class="nav-lang-item-flag">🇧🇷</span>
+                            <span class="nav-lang-item-label">Português</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="ru" href="../ru/">
+                            <span class="nav-lang-item-flag">🇷🇺</span>
+                            <span class="nav-lang-item-label">Русский</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="ko" href="../ko/">
+                            <span class="nav-lang-item-flag">🇰🇷</span>
+                            <span class="nav-lang-item-label">한국어</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="id" href="../id/">
+                            <span class="nav-lang-item-flag">🇮🇩</span>
+                            <span class="nav-lang-item-label">Indonesia</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="tr" href="../tr/">
+                            <span class="nav-lang-item-flag">🇹🇷</span>
+                            <span class="nav-lang-item-label">Türkçe</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://github.com/OortCloudGroup" class="btn btn-ghost" target="_blank" rel="noopener">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    GitHub
+                </a>
+                <a href="#deploy" class="btn btn-primary">ابدأ الآن</a>
+            </div>
+            <button class="mobile-toggle" aria-label="تبديل القائمة">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+    <!-- القسم الرئيسي -->
+    <section class="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-grid-bg"></div>
+        <div class="container">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                رخصة MIT &middot; مفتوح المصدر ١٠٠٪ &middot; بدون مكونات مخفية
+            </div>
+            <h1 class="hero-title">
+                ذكاء اصطناعي قائم على القرارات<br>
+                <span class="gradient-text">منصة ذكاء الفيديو</span>
+            </h1>
+            <p class="hero-subtitle">
+                دمج شامل للذكاء الاصطناعي في مجال إنترنت الأشياء المرئي. حل مشكلات عزل البيانات والذكاء المجزأ
+                وصعوبة التخصيص والتكاليف العالية — مع نشر خاص وقابلية تحكم كاملة في المنظومة
+                وتعاون بين السحابة والحافة والأجهزة.
+            </p>
+            <div class="hero-actions">
+                <a href="#deploy" class="btn btn-primary btn-lg">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                    انشر في ٥ دقائق
+                </a>
+                <a href="https://github.com/OortCloudGroup" class="btn btn-outline btn-lg" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    عرض المصدر
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-value">&lt;١٫٢ ث</span>
+                    <span class="stat-label">زمن الاستجابة من طرف إلى طرف</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">+٥٠٠</span>
+                    <span class="stat-label">بث متزامن</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">١٧</span>
+                    <span class="stat-label">صيغة تصدير</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">+٨٠</span>
+                    <span class="stat-label">نوع هدف</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">٩٩٫٩٩٪</span>
+                    <span class="stat-label">جاهزية التشغيل</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم نقاط الألم -->
+    <section class="section painpoints-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">خمس مشكلات، <span class="gradient-text">حل واحد</span></h2>
+                <p class="section-subtitle">يعاني المراقبة التقليدية بالفيديو من قيود جوهرية. VLStream يعالجها جميعاً.</p>
+            </div>
+            <div class="painpoints-grid">
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+                    </div>
+                    <h4>عزل البيانات</h4>
+                    <p>تجميع فيديو موحّد عبر جميع البروتوكولات — GB28181، RTSP، ONVIF، GA/T1400. منصة واحدة لجميع المصادر.</p>
+                </div>
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    </div>
+                    <h4>ذكاء اصطناعي مجزّأ</h4>
+                    <p>حلقة ذكاء اصطناعي مغلقة مزدوجة — ذكاء تمييزي للإدراك plus ذكاء قرارِي للتنفيذ. يرصد، يحكم، يتصرف.</p>
+                </div>
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                    </div>
+                    <h4>صعوبة التخصيص</h4>
+                    <p>استيراد نماذج TensorFlow/PyTorch، تدريب خوارزميات مخصصة، ونشر حلول صناعية — بدون تقييد بمورّد.</p>
+                </div>
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    </div>
+                    <h4>مخاطر أمنية</h4>
+                    <p>نشر خاص، البيانات لا تغادر شبكتك أبداً. متوافق مع GB35114، تشفير أثناء النقل والتخزين، سجل تدقيق كامل.</p>
+                </div>
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    <h4>تكاليف مرتفعة</h4>
+                    <p>رخصة MIT، بدون رسوم ترخيص، بدون رسوم لكل عقدة. إعادة استخدام الكاميرات الموجودة مع وحدات ذكاء الحافة — بدون استبدال الأجهزة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم محرك الذكاء الاصطناعي المزدوج -->
+    <section id="features" class="section dualai-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">حلقة ذكاء اصطناعي <span class="gradient-text">مزدوجة مغلقة</span></h2>
+                <p class="section-subtitle">من إدراك العالم إلى اتخاذ القرارات والتنفيذ — خط ذكاء آلي متكامل.</p>
+            </div>
+            <div class="dualai-grid">
+                <div class="dualai-card">
+                    <div class="dualai-header">
+                        <div class="dualai-dot discriminative"></div>
+                        <h3>محرك الذكاء التمييزي</h3>
+                        <span class="dualai-badge">الإدراك</span>
+                    </div>
+                    <p class="dualai-desc">رؤية وفهم العالم المرئي بدقة صناعية عالية.</p>
+                    <ul class="dualai-list">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            +٨٠ نوع هدف (أشخاص، مركبات، أجسام)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            تحليل السلوك (التسكع، الجري، التجمهر)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            قاعدة بيانات +٣٢٠٬٠٠٠ وجه مع مطابقة فورية
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            دقة ٩٩٪ في التعرف على لوحات المركبات
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            +١٠ أنواع شذوذ (دخان، اقتحام، تجاوز حدود)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            استخراج السمات (وجوه، لوحات، خصائص الملابس)
+                        </li>
+                    </ul>
+                </div>
+                <div class="dualai-card">
+                    <div class="dualai-header">
+                        <div class="dualai-dot decision"></div>
+                        <h3>محرك الذكاء القرارِي</h3>
+                        <span class="dualai-badge">التنفيذ</span>
+                    </div>
+                    <p class="dualai-desc">تقييم المواقف وتنسيق الاستجابات الآلية عبر الأنظمة.</p>
+                    <ul class="dualai-list">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            تحديد مستوى الأحداث وترتيب الأولويات
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            التنبؤ بالاتجاهات وجدولة الموارد
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            إنذار متعدد القنوات (PSTN، SMS، تطبيق، بريد إلكتروني)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            تحكم مترابط (كاميرات PTZ، إضاءة، بوابات)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            إنشاء تذاكر تلقائي وتوزيع
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            تنسيق +١٠٠٠ بث متزامن
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم البنية -->
+    <section id="architecture" class="section architecture-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">بنية متكاملة <span class="gradient-text">أربع طبقات</span></h2>
+                <p class="section-subtitle">تعاون بين السحابة والحافة والأجهزة مع جدولة ديناميكية. قرارات عامة في السحابة، تحليل فوري على الحافة، جمع بيانات على الجهاز.</p>
+            </div>
+            <div class="arch-diagram">
+                <!-- الطبقة الأولى: السحابة -->
+                <div class="arch-layer arch-cloud">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-dot cloud-dot"></div>
+                        <h4>طبقة المنصة — VLStream Cloud</h4>
+                        <span class="arch-layer-tag">المركز الرئيسي</span>
+                    </div>
+                    <div class="arch-items">
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                            لوحة العمل ولوحة المعلومات
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                            محرك تجميع الفيديو
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33"/></svg>
+                            تدريب ونشر متكامل
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                            موزع قوة الحوسبة
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            محرك الذكاء القرارِي
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                            بوابة API وحزم SDK
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                            عزل متعدد المستأجرين
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                            نموذج كائن إنترنت الأشياء
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-label">بروتوكول VLS / WebRTC P2P / MQTT / REST</div>
+                    <div class="connector-line"></div>
+                </div>
+
+                <!-- الطبقة الثانية: الحافة -->
+                <div class="arch-layer arch-edge">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-dot edge-dot"></div>
+                        <h4>طبقة الحافة — VLStream Edge</h4>
+                        <span class="arch-layer-tag">ذكاء فوري</span>
+                    </div>
+                    <div class="arch-items">
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/></svg>
+                            صندوق ذكاء الحافة (2T/6T/20T)
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                            تحليل ذكاء اصطناعي فوري
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/></svg>
+                            إنذار محلي وتخزين مؤقت
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            استئناف بعد انقطاع الشبكة
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-label">4G / Ethernet / Wi-Fi</div>
+                    <div class="connector-line"></div>
+                </div>
+
+                <!-- الطبقة الثالثة: الأجهزة -->
+                <div class="arch-layer arch-device">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-dot device-dot"></div>
+                        <h4>طبقة الأجهزة — الاستشعار والاكتساب</h4>
+                        <span class="arch-layer-tag">الأجهزة الطرفية</span>
+                    </div>
+                    <div class="arch-items">
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                            كاميرات ذكية أصلية
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/></svg>
+                            NVR مع استدلال
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                            مستشعرات إنترنت الأشياء (حرارة/دخان/رادار)
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                            أطراف ثالثة (Hikvision/Dahua)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-label">GB28181 / RTSP / ONVIF / GA/T1400</div>
+                    <div class="connector-line"></div>
+                </div>
+
+                <!-- الطبقة الرابعة: التطبيقات -->
+                <div class="arch-layer arch-app">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-dot app-dot"></div>
+                        <h4>طبقة التطبيقات — برامج العميل</h4>
+                        <span class="arch-layer-tag">واجهة المستخدم</span>
+                    </div>
+                    <div class="arch-items">
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                            VLStream CMS (سطح المكتب)
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                            تطبيق الجوال (iOS/Android/HarmonyOS)
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10"/></svg>
+                            وحدة تحكم الويب
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                            واجهات API وحزم SDK
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الأجهزة -->
+    <section id="hardware" class="section hardware-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">أجهزة ذكاء اصطناعي <span class="gradient-text">مصممة خصيصاً</span></h2>
+                <p class="section-subtitle">من كاميرات الذكاء الاصطناعي الأصلية إلى صناديق حوسبة الحافة — انشر تحليلات الذكاء الاصطناعي على أي بنية تحتية.</p>
+            </div>
+
+            <!-- فئة AI IPCamera -->
+            <div class="hardware-category">
+                <h3 class="hardware-category-title">AI IPCamera</h3>
+                <p class="hardware-category-desc">كاميرات ذكية مصممة بذكاء اصطناعي مدمج — من المراقبة الأساسية إلى تحليلات متعددة النماذج الرائدة.</p>
+            </div>
+            <div class="hardware-grid">
+                <div class="hardware-card">
+                    <div class="hardware-tier">أساسي</div>
+                    <h4>OORT-IPC-4G-30M</h4>
+                    <div class="hardware-spec-highlight">مستوى الدخول</div>
+                    <ul class="hardware-specs">
+                        <li>شبكة مزدوجة 4G/سلكية</li>
+                        <li>رؤية ليلية ملونة AIISP</li>
+                        <li>تكبير تلقائي</li>
+                        <li>مقاومة الطقس IP66</li>
+                        <li>درجة حرارة واسعة −٣٠ إلى +٦٠°م</li>
+                    </ul>
+                </div>
+                <div class="hardware-card">
+                    <div class="hardware-tier">احترافي</div>
+                    <h4>OORT-6600-2.5</h4>
+                    <div class="hardware-spec-highlight">١ TOPS ذكاء</div>
+                    <ul class="hardware-specs">
+                        <li>قوة حوسبة حافة ٢.٥T</li>
+                        <li>كشف أجسام على الجهاز</li>
+                        <li>اختراق ضوئي للضباب</li>
+                        <li>تتبع ذكي للأهداف</li>
+                        <li>استدلال محلي + مزامنة سحابية</li>
+                    </ul>
+                </div>
+                <div class="hardware-card hardware-card-featured">
+                    <div class="hardware-tier">مُعزّز</div>
+                    <h4>OORT-6600-6</h4>
+                    <div class="hardware-spec-highlight">٦ TOPS ذكاء</div>
+                    <ul class="hardware-specs">
+                        <li>قوة حوسبة حافة ٦T</li>
+                        <li>استدلال متزامن متعدد النماذج</li>
+                        <li>التعرف على +٨٠ هدف</li>
+                        <li>تحليل السلوك على الجهاز</li>
+                        <li>إخراج بيانات مهيكلة فوري</li>
+                    </ul>
+                    <div class="hardware-popular">الأكثر شعبية</div>
+                </div>
+                <div class="hardware-card">
+                    <div class="hardware-tier">رائد</div>
+                    <h4>OORT-6600-20</h4>
+                    <div class="hardware-spec-highlight">٢٠ TOPS ذكاء</div>
+                    <ul class="hardware-specs">
+                        <li>قوة حوسبة حافة ٢٠T</li>
+                        <li>هيكلة فيديو كاملة</li>
+                        <li>تحليل متوازٍ متعدد البث</li>
+                        <li>تحليل مشاهد معقدة</li>
+                        <li>بنية جاهزة لـ VLM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- فئة AI-Box -->
+            <div class="hardware-category">
+                <h3 class="hardware-category-title">AI-Box <span class="hardware-category-badge">VLStream Edge</span></h3>
+                <p class="hardware-category-desc">محطات حوسبة حافة بالذكاء الاصطناعي تُحدّث كاميرات IP الموجودة — أضف تحليلات ذكية عبر RTSP دون استبدال بنية الكاميرات التحتية.</p>
+            </div>
+            <div class="hardware-grid hardware-grid-3col">
+                <div class="hardware-card">
+                    <div class="hardware-tier">Lite</div>
+                    <h4>OORT-BOX-AI-1</h4>
+                    <div class="hardware-spec-highlight">قناة واحدة</div>
+                    <ul class="hardware-specs">
+                        <li>مدخل RTSP قناة واحدة</li>
+                        <li>كشف أجسام على الجهاز</li>
+                        <li>تنبيهات فورية</li>
+                        <li>تصميم مضغوط بدون مروحة</li>
+                        <li>برمجيات VLStream مفتوحة المصدر مُضمّنة</li>
+                    </ul>
+                </div>
+                <div class="hardware-card hardware-card-featured">
+                    <div class="hardware-tier">قياسي</div>
+                    <h4>OORT-BOX-AI-8</h4>
+                    <div class="hardware-spec-highlight">٨ قنوات</div>
+                    <ul class="hardware-specs">
+                        <li>مدخل RTSP ثماني القنوات</li>
+                        <li>استدلال متزامن متعدد النماذج</li>
+                        <li>تحليل السلوك البصري بالذكاء الاصطناعي</li>
+                        <li>إخراج بيانات مهيكلة فوري</li>
+                        <li>برمجيات VLStream مفتوحة المصدر مُضمّنة</li>
+                    </ul>
+                    <div class="hardware-popular">الأكثر شعبية</div>
+                </div>
+                <div class="hardware-card">
+                    <div class="hardware-tier">Pro</div>
+                    <h4>OORT-BOX-AI-32</h4>
+                    <div class="hardware-spec-highlight">٣٢ قناة</div>
+                    <ul class="hardware-specs">
+                        <li>مدخل RTSP اثنتين وثلاثين قناة</li>
+                        <li>هيكلة فيديو كاملة</li>
+                        <li>تحليل السلوك البصري بالذكاء الاصطناعي</li>
+                        <li>تحليل مشاهد معقدة</li>
+                        <li>بنية جاهزة لـ VLM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- AI-vLLM-SERVER Category -->
+            <div class="hardware-category">
+                <h3 class="hardware-category-title">AI-vLLM-SERVER <span class="hardware-category-badge">استدلال vLLM</span></h3>
+                <p class="hardware-category-desc">خوادم استدلال vLLM المصممة خصيصًا — لا حاجة لتدريب النموذج، تعرف vLLM مباشر وجاهز للاستخدام.</p>
+            </div>
+            <div class="hardware-grid hardware-grid-3col">
+                <div class="hardware-card">
+                    <div class="hardware-tier">أساسي</div>
+                    <h4>OORT-AI-vLLM-SVR-1</h4>
+                    <div class="hardware-spec-highlight">1 قناة / 20 تيرا عملية</div>
+                    <ul class="hardware-specs">
+                        <li>إدخال فيديو بقناة واحدة</li>
+                        <li>قوة حوسبة 20 تيرا</li>
+                        <li>لا حاجة لتدريب النموذج</li>
+                        <li>استدلال vLLM مباشر</li>
+                        <li>نشر جاهز للاستخدام</li>
+                    </ul>
+                </div>
+                <div class="hardware-card hardware-card-featured">
+                    <div class="hardware-tier">قياسي</div>
+                    <h4>OORT-AI-vLLM-SVR-8</h4>
+                    <div class="hardware-spec-highlight">8 قنوات / 160 تيرا عملية</div>
+                    <ul class="hardware-specs">
+                        <li>إدخال فيديو بـ 8 قنوات</li>
+                        <li>قوة حوسبة 160 تيرا</li>
+                        <li>لا حاجة لتدريب النموذج</li>
+                        <li>استدلال vLLM مباشر</li>
+                        <li>نشر جاهز للاستخدام</li>
+                    </ul>
+                    <div class="hardware-popular">الأكثر شعبية</div>
+                </div>
+                <div class="hardware-card">
+                    <div class="hardware-tier">رائد</div>
+                    <h4>OORT-AI-vLLM-SVR-64</h4>
+                    <div class="hardware-spec-highlight">64 قناة / 1P</div>
+                    <ul class="hardware-specs">
+                        <li>إدخال فيديو بـ 64 قناة</li>
+                        <li>قوة حوسبة 1P</li>
+                        <li>لا حاجة لتدريب النموذج</li>
+                        <li>استدلال vLLM مباشر</li>
+                        <li>نشر جاهز للاستخدام</li>
+                        <li>تسليم خزنة متكاملة اختيارية
+                        تقنية تبريد سائل مدمجة
+                        نشر حافي بدون غرفة خوادم مخصصة</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="hardware-chips">
+                <p class="hardware-chips-label">الشرائح المدعومة</p>
+                <div class="chips-list">
+                    <span class="chip">HiSilicon HI3516</span>
+                    <span class="chip">Rockchip RK3588</span>
+                    <span class="chip">Rockchip RK1106</span>
+                    <span class="chip">Ingenic T31/T41</span>
+                    <span class="chip">Goke GK720x</span>
+                    <span class="chip">ESP32 (RTOS)</span>
+                    <span class="chip">BK7258 (RTOS)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم بث VLM -->
+    <section id="vlm" class="section vlm-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">بث VLM <span class="gradient-text">في الوقت الفعلي</span></h2>
+                <p class="section-subtitle">دع نماذج الرؤية واللغة الكبيرة تشاهد بث الفيديو مباشرة — تفهم المشاهد إطاراً بإطار مع إخراج متدفق.</p>
+            </div>
+            <div class="vlm-content">
+                <div class="vlm-diagram">
+                    <div class="vlm-step">
+                        <div class="vlm-step-num">١</div>
+                        <div class="vlm-step-content">
+                            <h5>إدخال بث الفيديو</h5>
+                            <p>RTSP/HLS/FLV متعدد البروتوكولات</p>
+                        </div>
+                    </div>
+                    <svg class="vlm-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    <div class="vlm-step">
+                        <div class="vlm-step-num">٢</div>
+                        <div class="vlm-step-content">
+                            <h5>استخراج الإطارات</h5>
+                            <p>أخذ عينات ذكي وتكييف</p>
+                        </div>
+                    </div>
+                    <svg class="vlm-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    <div class="vlm-step">
+                        <div class="vlm-step-num">٣</div>
+                        <div class="vlm-step-content">
+                            <h5>استدلال VLM</h5>
+                            <p>فهم المشهد وتوليده</p>
+                        </div>
+                    </div>
+                    <svg class="vlm-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    <div class="vlm-step">
+                        <div class="vlm-step-num">٤</div>
+                        <div class="vlm-step-content">
+                            <h5>إخراج القرارات</h5>
+                            <p>تنبيهات وتحليل منظم</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vlm-features">
+                    <div class="vlm-feature-card">
+                        <h5>النماذج المدعومة</h5>
+                        <div class="vlm-models">
+                            <span>LLaVA</span>
+                            <span>Qwen-VL</span>
+                            <span>InternVL</span>
+                            <span>Qwen-VL-7B</span>
+                        </div>
+                    </div>
+                    <div class="vlm-feature-card">
+                        <h5>حالات الاستخدام</h5>
+                        <ul>
+                            <li>تحليل مراقبة فوري</li>
+                            <li>تعليق على البث المباشر</li>
+                            <li>فهم رؤية الروبوتات</li>
+                            <li>إدراك النظارات الذكية/AR</li>
+                            <li>التعرف الضوئي على المستندات والفواتير</li>
+                            <li>تحليل متوازٍ متعدد القنوات</li>
+                        </ul>
+                    </div>
+                    <div class="vlm-feature-card">
+                        <h5>الأداء</h5>
+                        <div class="vlm-perf">
+                            <div class="vlm-perf-item">
+                                <span class="vlm-perf-value">~٢٠٠ مللي ث</span>
+                                <span class="vlm-perf-label">زمن الاستدلال</span>
+                            </div>
+                            <div class="vlm-perf-item">
+                                <span class="vlm-perf-value">٢٤ جيجابايت</span>
+                                <span class="vlm-perf-label">حد أدنى GPU (متعدد القنوات)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم خط الإنتاج -->
+    <section class="section pipeline-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">من البيانات الخام إلى <span class="gradient-text">نماذج الإنتاج</span></h2>
+                <p class="section-subtitle">تدريب ونشر متكامل — تحقق من الاستدلال في متصفحك، ثم انشر بنقرة واحدة على أجهزة الحافة عن بُعد.</p>
+            </div>
+            <div class="pipeline-steps">
+                <div class="pipeline-step">
+                    <div class="step-number">٠١</div>
+                    <div class="step-content">
+                        <h4>التعليق</h4>
+                        <p>تسمية مدمجة للكشف والتجزئة والتصنيف. سير عمل تعاوني مع ضمان الجودة.</p>
+                    </div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="step-number">٠٢</div>
+                    <div class="step-content">
+                        <h4>التدريب</h4>
+                        <p>AutoML أو تحكم يدوي كامل. تدريب GPU موزع مع جدولة موارد ديناميكية. استيراد نماذج TensorFlow/PyTorch.</p>
+                    </div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="step-number">٠٣</div>
+                    <div class="step-content">
+                        <h4>التحسين</h4>
+                        <p>تصدير إلى ١٧ صيغة: ONNX، TensorRT، CoreML، TFLite، OpenVINO والمزيد. تكميم وتشذيب للحافة.</p>
+                    </div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="step-number">٠٤</div>
+                    <div class="step-content">
+                        <h4>النشر</h4>
+                        <p>تحقق في المتصفح، ثم نشر عن بُعد بنقرة واحدة. تحديثات OTA، اختبارات A/B، تراجع، ومراقبة أداء فورية.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الأداء -->
+    <section class="section performance-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">أداء <span class="gradient-text">بدرجة المؤسسات</span></h2>
+                <p class="section-subtitle">مصمم لبيئات الإنتاج المتطلبة بمواصفات رائدة في الصناعة.</p>
+            </div>
+            <div class="perf-grid">
+                <div class="perf-card">
+                    <div class="perf-value">&lt;١٫٢ ث</div>
+                    <div class="perf-label">زمن الاستجابة من طرف إلى طرف</div>
+                    <div class="perf-detail">بروتوكول VLS مطور ذاتياً، قائم على TCP، يتفوق على RTMP/RTSP</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">٣٠٪</div>
+                    <div class="perf-label">مقاومة فقدان الحزم</div>
+                    <div class="perf-detail">بدون تقطيع عند ٣٠٪ فقدان، قابل للاستعادة عند ٥٠٪</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">&lt;٢٠٠ مللي ث</div>
+                    <div class="perf-label">زمن تحليل الذكاء الاصطناعي</div>
+                    <div class="perf-detail">استدلال فوري على الحافة مع تسريع بالأجهزة</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">٧٠٪</div>
+                    <div class="perf-label">توفير في عرض النطاق</div>
+                    <div class="perf-detail">WebRTC P2P يلغي خوادم الترحيل، مباشر من الكاميرا إلى العميل</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">+٥٠٠</div>
+                    <div class="perf-label">بث لكل خادم</div>
+                    <div class="perf-detail">خادم واحد يتعامل مع +٥٠٠ بث فيديو، +١٠٠ تحليل ذكاء</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">4K</div>
+                    <div class="perf-label">أقصى دقة</div>
+                    <div class="perf-detail">ترميز/فك ترميز H.265 بالأجهزة، تكيف من ١٢٨ كيلوبت/ث إلى ٨ ميجابت/ث</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم بروتوكول النقل -->
+    <section class="section protocol-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">بروتوكول VLS <span class="gradient-text">المطور ذاتياً</span></h2>
+                <p class="section-subtitle">مصمم لإنترنت الأشياء المرئي. زمن استجابة منخفض، مقاومة قصوى لفقدان الحزم، وتوافق شامل.</p>
+            </div>
+            <div class="protocol-grid">
+                <div class="protocol-card">
+                    <h4>نقل الفيديو</h4>
+                    <ul>
+                        <li><strong>بروتوكول VLS:</strong> قائم على TCP، &lt;١٫٢ ث زمن استجابة، بدون تقطيع عند ٣٠٪ فقدان</li>
+                        <li><strong>WebRTC P2P:</strong> اتصال بالملي ثانية، توفير ٧٠٪ في عرض النطاق</li>
+                        <li><strong>متعدد البروتوكولات:</strong> HLS، FLV، RTSP، GB28181 — جميع الأجهزة</li>
+                        <li><strong>الترميز:</strong> H.264/H.265، 4K/1080p/720p تكيفي</li>
+                    </ul>
+                </div>
+                <div class="protocol-card">
+                    <h4>إنترنت الأشياء والتحكم</h4>
+                    <ul>
+                        <li><strong>MQTT:</strong> نقل شفاف للأوامر إلى الأجهزة</li>
+                        <li><strong>مركز إنترنت الأشياء:</strong> قدرات شبكة TCP/IP 4G للأجهزة الطرفية</li>
+                        <li><strong>نموذج الكائن:</strong> أوصاف ومزامنة موحدة للأجهزة</li>
+                        <li><strong>الدمج:</strong> بث الفيديو + بيانات المستشعرات في تنبيهات مدمجة</li>
+                    </ul>
+                </div>
+                <div class="protocol-card">
+                    <h4>الأمان والامتثال</h4>
+                    <ul>
+                        <li><strong>GB28181:</strong> المعيار الوطني للمراقبة</li>
+                        <li><strong>GB35114:</strong> شهادة أمان محسنة</li>
+                        <li><strong>التشفير:</strong> حماية البيانات أثناء النقل والتخزين</li>
+                        <li><strong>التدقيق:</strong> تسجيل كامل للعمليات والتحكم في الوصول</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم النشر -->
+    <section id="deploy" class="section deploy-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">انشر <span class="gradient-text">في أي مكان</span></h2>
+                <p class="section-subtitle">سحابة خاصة أو هجينة أو معزولة. البيانات لا تغادر شبكتك أبداً. دعم x86 و ARM.</p>
+            </div>
+            <div class="deploy-grid">
+                <div class="deploy-card">
+                    <div class="deploy-card-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+                            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                            <line x1="6" y1="6" x2="6.01" y2="6"/>
+                            <line x1="6" y1="18" x2="6.01" y2="18"/>
+                        </svg>
+                        <h4>في الموقع</h4>
+                    </div>
+                    <p>دعم كامل للبيئات المعزولة الحساسة. سيادة بيانات كاملة على بنيتك التحتية.</p>
+                    <code class="deploy-code">curl -fsSL https://get.vlstream.dev | bash</code>
+                </div>
+                <div class="deploy-card">
+                    <div class="deploy-card-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+                        </svg>
+                        <h4>Docker</h4>
+                    </div>
+                    <p>نشر بنقرة واحدة باستخدام Docker Compose. المنظومة الكاملة تعمل في ٥ دقائق مع تمرير مباشر لـ GPU.</p>
+                    <code class="deploy-code">docker compose up -d</code>
+                </div>
+                <div class="deploy-card">
+                    <div class="deploy-card-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                        <h4>Kubernetes</h4>
+                    </div>
+                    <p>مخططات Helm للإنتاج مع تحجيم تلقائي، وعناقيد عالية التوفر، وتوازن أحمال، وفشل تلقائي.</p>
+                    <code class="deploy-code">helm install vlstream oort/vlstream</code>
+                </div>
+            </div>
+            <div class="deploy-compatibility">
+                <p class="compat-label">توافق المنصات</p>
+                <div class="compat-grid">
+                    <div class="compat-item">
+                        <span class="compat-icon">x86</span>
+                        <span>خوادم وأجهزة الكمبيوتر</span>
+                    </div>
+                    <div class="compat-item">
+                        <span class="compat-icon">ARM</span>
+                        <span>الحافة والأجهزة المحمولة</span>
+                    </div>
+                    <div class="compat-item">
+                        <span class="compat-icon">GPU</span>
+                        <span>NVIDIA / AMD</span>
+                    </div>
+                    <div class="compat-item">
+                        <span class="compat-icon">IPC</span>
+                        <span>التحكم الصناعي</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم حالات الاستخدام -->
+    <section class="section usecases-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">مصمم <span class="gradient-text">للنطاق الواقعي</span></h2>
+                <p class="section-subtitle">منشور في صناعات حيث يدفع تحليل الفيديو الذكي القرارات التشغيلية.</p>
+            </div>
+            <div class="usecases-grid">
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <line x1="18" y1="20" x2="18" y2="10"/>
+                            <line x1="12" y1="20" x2="12" y2="4"/>
+                            <line x1="6" y1="20" x2="6" y2="14"/>
+                        </svg>
+                    </div>
+                    <h4>المدينة الذكية</h4>
+                    <p>مراقبة فيديو متكاملة، كشف المخالفات الحضرية، معالجة أوامر العمل في حلقة مغلقة، وقيادة الطوارئ.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h4>الأمن العام</h4>
+                    <p>مراقبة كثافة الحشود، إنذار مبكر للسلوك غير الطبيعي، التعرف على الوجوه، وتوزيع موارد الطوارئ.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                    </div>
+                    <h4>الحرم الذكي</h4>
+                    <p>كشف التسكع المشبوه، ركن السيارات المخالف، الالتزام بالخوذة، تنبيهات الدخان/الحريق، ومراقبة اختراق المحيط.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                        </svg>
+                    </div>
+                    <h4>الحكومة الرقمية</h4>
+                    <p>مشاركة الفيديو بين الإدارات، جدولة موحدة، وتحليل ذكي للأمن العام والطوارئ والنقل.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33"/></svg>
+                    </div>
+                    <h4>الصناعة والتعدين</h4>
+                    <p>كشف أعطال المعدات، اقتحام المناطق الخطرة، كشف مخالفات معدات الحماية، مراقبة بيئية، وتفتيش عن بُعد.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M6.13 1L6 16a2 2 0 0 0 2 2h15"/><path d="M1 6.13L16 6a2 2 0 0 1 2 2v15"/></svg>
+                    </div>
+                    <h4>الزراعة الذكية</h4>
+                    <p>وقاية من حرائق الغابات، مكافحة فيضانات الأنهار، فحص خطوط الكهرباء، مراقبة النمو، وتحديد الآفات في مناطق الشبكة الضعيفة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم مفتوح المصدر -->
+    <section id="open-source" class="section opensource-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">مفتوح المصدر <span class="gradient-text">١٠٠٪</span></h2>
+                <p class="section-subtitle">رخصة MIT. بدون مكونات مملوكة مخفية، بدون وحدات مغلقة المصدر. الكود الأساسي، بروتوكول VLS، محرك الذكاء، ومحرك الجدولة — كلها مفتوحة.</p>
+            </div>
+            <div class="repos-grid">
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-Cloud</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>نواة المنصة السحابية — الإدارة، محركات الذكاء، الجدولة، تجميع الفيديو، واتخاذ القرارات.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-NVR</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>مسجل فيديو شبكي — تخزين، تشغيل، إدارة، وقدرات استدلال محلي.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-CMS</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>عميل سطح مكتب متعدد المنصات (Windows/macOS/Linux) — مراقبة متعددة الأجهزة، خرائط إلكترونية، نوافذ تنبيه منبثقة.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-APP</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>تطبيق جوال (iOS/Android/HarmonyOS) — معاينة مباشرة، تشغيل، تنبيهات، صوت ثنائي الاتجاه، تحكم PTZ.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-IPCamera</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>برنامج كاميرا ذكي أصلي + SDK — يدعم شرائح HiSilicon وRockchip وIngenic وGoke.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-Edge</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>برنامج صندوق ذكاء الحافة + حزم الخوارزميات — تحليل فوري، تنبيهات محلية، تخزين مؤقت لقوة الحوسبة.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLS-Protocol</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>بروتوكول VLS المطور ذاتياً — زمن استجابة منخفض، مقاومة فقدان الحزم، تحكم MQTT IoT، وأوامر أجهزة شفافة.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-Web</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>بنية مفصولة بين الواجهة الأمامية والخلفية — قاعدة كود حديثة، واجهات API نظيفة، سهلة التخصيص وبناء منتجك الخاص على أساس VLStream.</p>
+                </div>
+            </div>
+            <div class="opensource-cta">
+                <a href="https://github.com/OortCloudGroup" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    استكشف جميع المستودعات
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المقارنة -->
+    <section class="section comparison-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">لماذا VLStream <span class="gradient-text">مقابل المصدر المغلق</span>؟</h2>
+                <p class="section-subtitle">قارن VLStream بمنصات الفيديو التقليدية مغلقة المصدر.</p>
+            </div>
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>البُعد</th>
+                            <th class="highlight-col">VLStream (مفتوح المصدر)</th>
+                            <th>المنصات التقليدية</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>الكود المصدري</td>
+                            <td class="highlight-col">مفتوح ١٠٠٪، بدون مكونات مخفية</td>
+                            <td>مغلق المصدر، النواة غير مرئية</td>
+                        </tr>
+                        <tr>
+                            <td>التكلفة التجارية</td>
+                            <td class="highlight-col">استخدام تجاري مجاني، بدون رسوم ترخيص</td>
+                            <td>تراخيص مكلفة، رسوم سنوية وتخصيص</td>
+                        </tr>
+                        <tr>
+                            <td>التخصيص</td>
+                            <td class="highlight-col">تطوير ثانوي عميق، إعادة هيكلة كاملة</td>
+                            <td>دورة طويلة، تكلفة عالية، تقييد بالمورّد</td>
+                        </tr>
+                        <tr>
+                            <td>أمان البيانات</td>
+                            <td class="highlight-col">نشر خاص، البيانات لا تغادر الشبكة</td>
+                            <td>رفع سحابي، خطر تسرب البيانات</td>
+                        </tr>
+                        <tr>
+                            <td>البروتوكول</td>
+                            <td class="highlight-col">معايير وطنية + تطوير ذاتي، قابل لإعادة الاستخدام ١٠٠٪</td>
+                            <td>بروتوكولات مملوكة، يصعب إعادة استخدامها</td>
+                        </tr>
+                        <tr>
+                            <td>التحكم في الذكاء</td>
+                            <td class="highlight-col">تحكم كامل في محرك الذكاء، خوارزميات مخصصة</td>
+                            <td>خوارزميات مغلقة، تحديثات محدودة</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المزايا -->
+    <section class="section advantages-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">ثلاث مزايا <span class="gradient-text">أساسية</span></h2>
+            </div>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-num">٠١</div>
+                    <h4>إعادة استخدام المعدات الحالية</h4>
+                    <p>الكاميرات وأجهزة IPC الحالية تبقى في مكانها. وحدات ذكاء الحافة من OortCloud تمنحها الذكاء — بدون حاجة لاستبدال الأجهزة. تحقيق أقصى عائد على البنية التحتية القائمة.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-num">٠٢</div>
+                    <h4>من المراقبة البشرية إلى مراقبة الذكاء</h4>
+                    <p>تحويل المراقبة اليدوية إلى مراقبة مدعومة بالذكاء الاصطناعي. نظام تنبيه مدمج يرسل إشعارات فورية للمعنيين. تقليل تكاليف العمالة وإنشاء وكلاء ذكاء إدراكي.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-num">٠٣</div>
+                    <h4>خوارزميات ذكاء قابلة للتكوين</h4>
+                    <p>تدريب وتحميل ديناميكي للخوارزميات حسب الطلب. سيناريوهات مختلفة، فترات زمنية مختلفة، عناصر إنذار مختلفة — كلها قابلة للتكوين بدون تغيير في الكود.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الدعوة للعمل -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-glow"></div>
+            <h2 class="cta-title">مستعد لنشر <span class="gradient-text">ذكاء الرؤية</span>؟</h2>
+            <p class="cta-subtitle">انشر VLStream في ٥ دقائق. حوّل بنيتك المرئية بذكاء اصطناعي قائم على القرارات. مفتوح المصدر ١٠٠٪، بدون تقييد بمورّد.</p>
+            <div class="cta-actions">
+                <a href="#deploy" class="btn btn-primary btn-lg">
+                    ابدأ مجاناً
+                </a>
+                <a href="https://github.com/OortCloudGroup" class="btn btn-outline btn-lg" target="_blank" rel="noopener">
+                    اقرأ التوثيق
+                </a>
+            </div>
+            <div class="cta-support">
+                <p>هل تحتاج دعماً تجارياً؟ تقدم OortCloud دعماً تقنياً مدفوعاً وتطويراً مخصصاً وخدمات نشر.</p>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- التذييل -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo">
+                        <img src="https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png" alt="شعار VLStream" class="logo-icon" style="height:60px;width:auto;">
+                    </a>
+                    <p class="footer-desc">منصة تجميع وجدولة فيديو بالذكاء الاصطناعي القرارِي من OortCloud (شنجن) للتكنولوجيا الذكية المحدودة. تأسست عام ٢٠١٩.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h5>المنتج</h5>
+                        <a href="#features">محرك الذكاء المزدوج</a>
+                        <a href="#architecture">البنية</a>
+                        <a href="#hardware">الأجهزة</a>
+                        <a href="#vlm">بث VLM</a>
+                        <a href="#deploy">النشر</a>
+                    </div>
+                    <div class="footer-col">
+                        <h5>الموارد</h5>
+                        <a href="https://github.com/OortCloudGroup/VLStream-Docs">التوثيق</a>
+                        <a href="https://github.com/OortCloudGroup/VLStream-Docs">مرجع API</a>
+                        <a href="#">سجل التغييرات</a>
+                        <a href="#">المدونة</a>
+                        <a href="#">مجتمع Discord</a>
+                    </div>
+                    <div class="footer-col">
+                        <h5>مفتوح المصدر</h5>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-Cloud</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-Edge</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-NVR</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLS-Protocol</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-APP</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-Web</a>
+                    </div>
+                    <div class="footer-col">
+                        <h5>الشركة</h5>
+                        <a href="https://oortcloudsmart.com/en/about.html" target="_blank">عن OortCloud</a>
+                        <a href="https://oortcloudsmart.com/en/contact.html" target="_blank">تواصل مع المبيعات</a>
+                        <a href="#">الدعم التجاري</a>
+                        <a href="#">الشركاء</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; ٢٠٢٦ OortCloud (شنجن) للتكنولوجيا الذكية المحدودة. جميع الحقوق محفوظة.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">سياسة الخصوصية</a>
+                    <a href="#">شروط الخدمة</a>
+                    <a href="#">رخصة MIT</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

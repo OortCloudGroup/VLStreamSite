@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0a0a">
+    <title>VLStream - 의사결정형 AI 영상 인텔리전스 플랫폼 | 100% 오픈소스</title>
+    <meta name="description" content="VLStream은 100% 오픈소스 기반 의사결정형 AI 영상 수집 및 스케줄링 플랫폼입니다. 영상 IoT를 위한 엔드투엔드 AI 융합 — 주석부터 학습, 엣지 배포까지. MIT 라이선스, 프라이빗 배포, 서버당 500개 이상의 스트림.">
+    <meta name="keywords" content="VLStream, AI 영상 플랫폼, 오픈소스 영상 분석, 영상 IoT, 엣지 AI, VLM 스트리밍, 스마트 시티, 영상 감시, 객체 감지, RTSP, WebRTC, OortCloud">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://vlstream.dev/ko/">
+    
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://vlstream.dev/en/">
+    <link rel="alternate" hreflang="zh" href="https://vlstream.dev/">
+    <link rel="alternate" hreflang="es" href="https://vlstream.dev/es/">
+    <link rel="alternate" hreflang="ar" href="https://vlstream.dev/ar/">
+    <link rel="alternate" hreflang="de" href="https://vlstream.dev/de/">
+    <link rel="alternate" hreflang="fr" href="https://vlstream.dev/fr/">
+    <link rel="alternate" hreflang="ja" href="https://vlstream.dev/ja/">
+    <link rel="alternate" hreflang="pt" href="https://vlstream.dev/pt/">
+    <link rel="alternate" hreflang="ru" href="https://vlstream.dev/ru/">
+    <link rel="alternate" hreflang="ko" href="https://vlstream.dev/ko/">
+    <link rel="alternate" hreflang="id" href="https://vlstream.dev/id/">
+    <link rel="alternate" hreflang="tr" href="https://vlstream.dev/tr/">
+    <link rel="alternate" hreflang="x-default" href="https://vlstream.dev/en/">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="VLStream">
+    <meta property="og:title" content="VLStream - 의사결정형 AI 영상 인텔리전스 플랫폼">
+    <meta property="og:description" content="100% 오픈소스 기반 AI 영상 수집 및 스케줄링 플랫폼. 영상 IoT를 위한 엔드투엔드 AI 융합 — 주석부터 학습, 엣지 배포까지.">
+    <meta property="og:url" content="https://vlstream.dev/ko/">
+    <meta property="og:image" content="https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="ar_SA">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta property="og:locale:alternate" content="pt_BR">
+    <meta property="og:locale:alternate" content="ru_RU">
+    <meta property="og:locale:alternate" content="id_ID">
+    <meta property="og:locale:alternate" content="tr_TR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VLStream - 의사결정형 AI 영상 인텔리전스 플랫폼">
+    <meta name="twitter:description" content="100% 오픈소스 기반 AI 영상 수집 및 스케줄링 플랫폼. 영상 IoT를 위한 엔드투엔드 AI 융합.">
+    <meta name="twitter:image" content="https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "VLStream",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Linux, Windows, macOS",
+      "description": "100% 오픈소스 기반 의사결정형 AI 영상 수집 및 스케줄링 플랫폼. 영상 IoT를 위한 엔드투엔드 AI 융합을 제공합니다.",
+      "url": "https://vlstream.dev/ko/",
+      "inLanguage": "ko",
+      "license": "https://opensource.org/licenses/MIT",
+      "author": {
+        "@type": "Organization",
+        "name": "OortCloud (Shenzhen) Smart Technology Co., Ltd.",
+        "url": "https://oortcloudsmart.com"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "듀얼 AI 엔진",
+        "자체 개발 VLS 프로토콜",
+        "VLM 스트리밍",
+        "엣지 배포",
+        "AI IPCamera 및 AI-Box 하드웨어",
+        "AI-vLLM-SERVER 추론 어플라이언스",
+        "서버당 500개 이상의 스트림",
+        "4K 해상도 지원",
+        "프라이빗 클라우드 배포",
+        "100% 오픈소스 MIT 라이선스"
+      ],
+      "datePublished": "2019-01-01",
+      "softwareVersion": "1.0"
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>body { font-family: 'Inter', 'Noto Sans', 'Noto Sans KR', sans-serif; }</style>
+    
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "OortCloud (Shenzhen) Smart Technology Co., Ltd.",
+      "alternateName": "OortCloud",
+      "url": "https://oortcloudsmart.com",
+      "logo": "https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png",
+      "foundingDate": "2019",
+      "description": "OortCloud는 AI 기반 영상 인텔리전스 및 IoT 플랫폼을 전문으로 하는 기술 기업입니다.",
+      "sameAs": [
+        "https://github.com/OortCloudGroup"
+      ]
+    }
+    </script>
+    
+    <!-- FAQ Schema for LLM Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "VLStream이란 무엇입니까?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VLStream은 100% 오픈소스 기반 의사결정형 AI 영상 수집 및 스케줄링 플랫폼입니다. 영상 IoT를 위한 엔드투엔드 AI 융합을 제공하며, 주석, 학습, 엣지 배포를 포괄합니다. 듀얼 AI 엔진(판별 AI + 의사결정 AI), 자체 개발 VLS 프로토콜, VLM 스트리밍 기능을 갖추고 있으며, 서버당 500개 이상의 스트림을 4K 해상도로 지원합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "VLStream은 정말 100% 오픈소스입니까?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네. VLStream은 MIT 라이선스 하에 완전히 오픈소스로 제공됩니다. VLStream-Cloud, VLStream-Edge, VLStream-NVR, VLS-Protocol, VLStream-APP 등 모든 핵심 구성 요소가 GitHub의 github.com/OortCloudGroup에서 공개되어 있으며, 숨겨진 독점 구성 요소는 없습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "VLStream은 몇 개의 영상 스트림을 처리할 수 있습니까?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VLStream은 서버당 500개 이상의 동시 스트림을 지원하며, 엔드투엔드 지연 시간은 1.2초 미만, 가용성 99.99%를 보장합니다. 고밀도 영상 IoT 배포에 최적화되어 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "VLStream의 VLM 스트리밍이란 무엇입니까?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VLM(Vision-Language Model) 스트리밍은 VLStream의 실시간 멀티모달 AI 기능입니다. 시각적 질의응답, 이상 징후 감지, 장면 이해, 라이브 영상 스트림과의 자연어 상호작용을 지원하며, 모든 처리가 엣지에서 실시간으로 수행됩니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "VLStream은 어떻게 배포합니까?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VLStream은 다양한 배포 방식을 지원합니다. curl을 통한 원라인 설치, Docker Compose를 활용한 컨테이너 배포, Kubernetes 클러스터를 위한 Helm 차트를 제공합니다. Linux, Windows, macOS에서 실행 가능하며, 프라이빗 클라우드 및 에어갭 환경도 지원합니다. NVIDIA Jetson, Intel x86, ARM 플랫폼과 호환됩니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "VLStream은 어떤 프로토콜을 지원합니까?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VLStream은 RTSP, RTMP, WebRTC, HLS, ONVIF 및 자체 개발 VLS 프로토콜을 지원합니다. VLS 프로토콜은 초저지연 스트리밍을 제공하며, 엔드투엔드 암호화, 적응형 비트레이트, AI 워크로드에 최적화된 지능형 프레임 스케줄링을 갖추고 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "VLStream은 어떤 하드웨어를 제공합니까?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VLStream은 세 가지 하드웨어 카테고리를 제공합니다: (1) AI IPCamera — 디바이스 내장 AI를 탑재한 지능형 카메라, 엔트리 레벨부터 20 TOPS 플래그십까지; (2) AI-Box — VLStream Edge 시리즈, RTSP를 통해 기존 IP 카메라에 AI 분석을 추가하는 엣지 컴퓨팅 터미널, 1채널/2T, 8채널/16T, 32채널 구성으로 제공; (3) AI-vLLM-SERVER — 전용 vLLM 추론 서버(1채널/20T, 8채널/160T, 64채널/1P), 모델 학습 불필요, 직접 vLLM 인식으로 즉시 사용 가능. 플래그십 SVR-64는 옵션 일체형 캐비닛 납품과 내장 액체 냉각 기술로 전용 서버실 없는 엣지 배포가 가능합니다. 모두 오픈소스 소프트웨어를 포함하며 HiSilicon HI3516, Rockchip RK3588 등의 칩셋에서 작동합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "AI-vLLM-SERVER란 무엇입니까?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI-vLLM-SERVER는 VLStream의 전용 vLLM 추론 서버 시리즈입니다. SVR-1(1채널, 20T 연산 성능), SVR-8(8채널, 160T), SVR-64(64채널, 1P) 세 가지 모델이 있으며, 모델 학습 불필요하고 직접 vLLM 인식이 가능합니다. 플래그십 SVR-64는 옵션 일체형 캐비닛 납품과 내장 액체 냉각 기술을 갖추고 있어 전용 서버실 없이 엣지 배포가 가능합니다."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" aria-label="메인 내비게이션">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png" alt="VLStream 로고" class="logo-icon" style="height:60px;width:auto;">
+            </a>
+            <div class="nav-links">
+                <a href="#features">기능</a>
+                <a href="#architecture">아키텍처</a>
+                <a href="#hardware">하드웨어</a>
+                <a href="#vlm">VLM 스트리밍</a>
+                <a href="#deploy">배포</a>
+                <a href="#open-source">오픈소스</a>
+            </div>
+            <div class="nav-actions">
+                <!-- Language Switcher -->
+                <div class="nav-lang" id="langSwitch" title="언어 전환">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="nav-lang-current" id="langCurrent">KO</span>
+                    <svg class="nav-lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    <div class="nav-lang-dropdown" id="langDropdown">
+                        <div class="nav-lang-item" data-lang="en" href="../en/">
+                            <span class="nav-lang-item-flag">🇺🇸</span>
+                            <span class="nav-lang-item-label">English</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="zh" href="../">
+                            <span class="nav-lang-item-flag">🇨🇳</span>
+                            <span class="nav-lang-item-label">中文</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="es" href="../es/">
+                            <span class="nav-lang-item-flag">🇪🇸</span>
+                            <span class="nav-lang-item-label">Español</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="ar" href="../ar/">
+                            <span class="nav-lang-item-flag">🇸🇦</span>
+                            <span class="nav-lang-item-label">العربية</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="de" href="../de/">
+                            <span class="nav-lang-item-flag">🇩🇪</span>
+                            <span class="nav-lang-item-label">Deutsch</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="fr" href="../fr/">
+                            <span class="nav-lang-item-flag">🇫🇷</span>
+                            <span class="nav-lang-item-label">Français</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="ja" href="../ja/">
+                            <span class="nav-lang-item-flag">🇯🇵</span>
+                            <span class="nav-lang-item-label">日本語</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="pt" href="../pt/">
+                            <span class="nav-lang-item-flag">🇧🇷</span>
+                            <span class="nav-lang-item-label">Português</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="ru" href="../ru/">
+                            <span class="nav-lang-item-flag">🇷🇺</span>
+                            <span class="nav-lang-item-label">Русский</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item active" data-lang="ko" href="#">
+                            <span class="nav-lang-item-flag">🇰🇷</span>
+                            <span class="nav-lang-item-label">한국어</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="id" href="../id/">
+                            <span class="nav-lang-item-flag">🇮🇩</span>
+                            <span class="nav-lang-item-label">Indonesia</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="nav-lang-item" data-lang="tr" href="../tr/">
+                            <span class="nav-lang-item-flag">🇹🇷</span>
+                            <span class="nav-lang-item-label">Türkçe</span>
+                            <svg class="nav-lang-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://github.com/OortCloudGroup" class="btn btn-ghost" target="_blank" rel="noopener">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    GitHub
+                </a>
+                <a href="#deploy" class="btn btn-primary">시작하기</a>
+            </div>
+            <button class="mobile-toggle" aria-label="메뉴 토글">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-grid-bg"></div>
+        <div class="container">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                MIT 라이선스 &middot; 100% 오픈소스 &middot; 숨겨진 구성 요소 없음
+            </div>
+            <h1 class="hero-title">
+                의사결정형 AI<br>
+                <span class="gradient-text">영상 인텔리전스 플랫폼</span>
+            </h1>
+            <p class="hero-subtitle">
+                영상 IoT 분야를 위한 엔드투엔드 AI 융합. 데이터 사일로, 분절된 인텔리전스, 
+                어려운 커스터마이징, 높은 비용 문제를 해결합니다 — 프라이빗 배포, 풀스택 제어 가능성, 
+                클라우드-엣지-디바이스 협업을 제공합니다.
+            </p>
+            <div class="hero-actions">
+                <a href="#deploy" class="btn btn-primary btn-lg">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                    5분 만에 배포
+                </a>
+                <a href="https://github.com/OortCloudGroup" class="btn btn-outline btn-lg" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    소스 보기
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-value">&lt;1.2초</span>
+                    <span class="stat-label">엔드투엔드 지연 시간</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">500+</span>
+                    <span class="stat-label">동시 스트림</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">17</span>
+                    <span class="stat-label">내보내기 형식</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">80+</span>
+                    <span class="stat-label">객체 유형</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">99.99%</span>
+                    <span class="stat-label">가용성</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section class="section painpoints-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">다섯 가지 문제, <span class="gradient-text">하나의 해답</span></h2>
+                <p class="section-subtitle">기존 영상 감시는 근본적인 한계를 안고 있습니다. VLStream이 모든 문제를 해결합니다.</p>
+            </div>
+            <div class="painpoints-grid">
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+                    </div>
+                    <h4>데이터 사일로</h4>
+                    <p>모든 프로토콜을 아우르는 통합 영상 수집 — GB28181, RTSP, ONVIF, GA/T1400. 하나의 플랫폼에서 모든 소스를 관리합니다.</p>
+                </div>
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    </div>
+                    <h4>분절된 AI</h4>
+                    <p>듀얼 AI 폐쇄 루프 — 인식을 위한 판별 AI와 실행을 위한 의사결정 AI. 보고, 판단하고, 행동합니다.</p>
+                </div>
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                    </div>
+                    <h4>어려운 커스터마이징</h4>
+                    <p>TensorFlow/PyTorch 모델을 가져오고, 커스텀 알고리즘을 학습하고, 산업별 솔루션을 배포합니다 — 벤더 종속 없음.</p>
+                </div>
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    </div>
+                    <h4>보안 위험</h4>
+                    <p>프라이빗 배포, 데이터가 네트워크를 벗어나지 않습니다. GB35114 준수, 저장 및 전송 암호화, 전체 감사 로깅.</p>
+                </div>
+                <div class="painpoint-card">
+                    <div class="painpoint-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    <h4>높은 비용</h4>
+                    <p>MIT 라이선스, 라이선스 비용 없음, 노드당 요금 없음. 기존 카메라에 엣지 AI 모듈만 추가 — 하드웨어 교체 불필요.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dual AI Engine Section -->
+    <section id="features" class="section dualai-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">듀얼 AI <span class="gradient-text">폐쇄 루프</span></h2>
+                <p class="section-subtitle">세상을 인식하는 것부터 의사결정을 내리고 행동하기까지 — 완전 자동화된 인텔리전스 파이프라인.</p>
+            </div>
+            <div class="dualai-grid">
+                <div class="dualai-card">
+                    <div class="dualai-header">
+                        <div class="dualai-dot discriminative"></div>
+                        <h3>판별 AI 엔진</h3>
+                        <span class="dualai-badge">인식</span>
+                    </div>
+                    <p class="dualai-desc">산업 수준의 정확도로 시각적 세계를 보고 이해합니다.</p>
+                    <ul class="dualai-list">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            80개 이상의 객체 유형 (사람, 차량, 사물)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            행동 분석 (배회, 질주, 집결)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            32만 개 이상의 얼굴 DB 실시간 매칭
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            99% 차량 번호판 인식 정확도
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            10개 이상의 이상 유형 (연기, 침입, 경계 침범)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            특징 추출 (얼굴, 번호판, 의류 속성)
+                        </li>
+                    </ul>
+                </div>
+                <div class="dualai-card">
+                    <div class="dualai-header">
+                        <div class="dualai-dot decision"></div>
+                        <h3>의사결정 AI 엔진</h3>
+                        <span class="dualai-badge">실행</span>
+                    </div>
+                    <p class="dualai-desc">상황을 판단하고 시스템 전반에 걸쳐 자동화된 대응을 조율합니다.</p>
+                    <ul class="dualai-list">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            이벤트 레벨 판정 및 우선순위 정렬
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            추세 예측 및 리소스 스케줄링
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            다채널 알림 (PSTN, SMS, 앱, 이메일)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            연동 제어 (PTZ, 조명, 출입 게이트)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            자동 작업 티켓 생성 및 배정
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            1,000개 이상의 동시 스트림 오케스트레이션
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section id="architecture" class="section architecture-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">4계층 <span class="gradient-text">풀링크 아키텍처</span></h2>
+                <p class="section-subtitle">동적 스케줄링을 갖춘 클라우드-엣지-디바이스 협업. 클라우드에서 글로벌 의사결정, 엣지에서 실시간 분석, 디바이스에서 데이터 수집.</p>
+            </div>
+            <div class="arch-diagram">
+                <!-- Layer 1: Cloud -->
+                <div class="arch-layer arch-cloud">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-dot cloud-dot"></div>
+                        <h4>플랫폼 계층 — VLStream Cloud</h4>
+                        <span class="arch-layer-tag">핵심 허브</span>
+                    </div>
+                    <div class="arch-items">
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                            워크벤치 및 대시보드
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                            영상 수집 엔진
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33"/></svg>
+                            통합 학습 및 배포
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                            컴퓨팅 파워 스케줄러
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            의사결정 AI 엔진
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                            API 게이트웨이 및 SDK
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                            멀티 테넌트 격리
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                            IoT 객체 모델
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-label">VLS 프로토콜 / WebRTC P2P / MQTT / REST</div>
+                    <div class="connector-line"></div>
+                </div>
+
+                <!-- Layer 2: Edge -->
+                <div class="arch-layer arch-edge">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-dot edge-dot"></div>
+                        <h4>엣지 계층 — VLStream Edge</h4>
+                        <span class="arch-layer-tag">실시간 인텔리전스</span>
+                    </div>
+                    <div class="arch-items">
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/></svg>
+                            엣지 AI 박스 (2T/6T/20T)
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                            실시간 AI 분석
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/></svg>
+                            로컬 알림 및 캐시
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            네트워크 장애 후 재개
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-label">4G / 이더넷 / Wi-Fi</div>
+                    <div class="connector-line"></div>
+                </div>
+
+                <!-- Layer 3: Device -->
+                <div class="arch-layer arch-device">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-dot device-dot"></div>
+                        <h4>디바이스 계층 — 센싱 및 수집</h4>
+                        <span class="arch-layer-tag">단말 디바이스</span>
+                    </div>
+                    <div class="arch-items">
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                            AI 네이티브 카메라
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/></svg>
+                            추론 기능 내장 NVR
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                            IoT 센서 (온도/연기/레이더)
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                            서드파티 (Hikvision/Dahua)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-label">GB28181 / RTSP / ONVIF / GA/T1400</div>
+                    <div class="connector-line"></div>
+                </div>
+
+                <!-- Layer 4: Application -->
+                <div class="arch-layer arch-app">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-dot app-dot"></div>
+                        <h4>애플리케이션 계층 — 클라이언트 소프트웨어</h4>
+                        <span class="arch-layer-tag">사용자 인터페이스</span>
+                    </div>
+                    <div class="arch-items">
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                            VLStream CMS (데스크톱)
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                            모바일 앱 (iOS/Android/HarmonyOS)
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10"/></svg>
+                            웹 콘솔
+                        </div>
+                        <div class="arch-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                            API 및 SDK
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hardware Section -->
+    <section id="hardware" class="section hardware-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">전용 설계 <span class="gradient-text">AI 하드웨어</span></h2>
+                <p class="section-subtitle">네이티브 AI 카메라부터 엣지 컴퓨팅 박스까지 — 어떤 인프라에서든 AI 분석을 배포하십시오.</p>
+            </div>
+
+            <!-- AI IPCamera 카테고리 -->
+            <div class="hardware-category">
+                <h3 class="hardware-category-title">AI IPCamera</h3>
+                <p class="hardware-category-desc">디바이스 내장 AI를 탑재한 전용 설계 지능형 카메라 — 엔트리 레벨 감시부터 플래그십 멀티모델 분석까지.</p>
+            </div>
+            <div class="hardware-grid">
+                <div class="hardware-card">
+                    <div class="hardware-tier">Basic</div>
+                    <h4>OORT-IPC-4G-30M</h4>
+                    <div class="hardware-spec-highlight">엔트리 레벨</div>
+                    <ul class="hardware-specs">
+                        <li>4G/유선 듀얼 네트워크</li>
+                        <li>AIISP 풀컬러 야간 투시</li>
+                        <li>자동 줌</li>
+                        <li>IP66 방진방수</li>
+                        <li>-30&#8451; ~ +60&#8451; 광온도 대응</li>
+                    </ul>
+                </div>
+                <div class="hardware-card">
+                    <div class="hardware-tier">Pro</div>
+                    <h4>OORT-6600-2.5</h4>
+                    <div class="hardware-spec-highlight">1 TOPS AI</div>
+                    <ul class="hardware-specs">
+                        <li>2.5T 엣지 컴퓨팅 파워</li>
+                        <li>온디바이스 객체 감지</li>
+                        <li>광학 안개 투과</li>
+                        <li>스마트 타겟 추적</li>
+                        <li>로컬 추론 + 클라우드 동기화</li>
+                    </ul>
+                </div>
+                <div class="hardware-card hardware-card-featured">
+                    <div class="hardware-tier">Enhanced</div>
+                    <h4>OORT-6600-6</h4>
+                    <div class="hardware-spec-highlight">6 TOPS AI</div>
+                    <ul class="hardware-specs">
+                        <li>6T 엣지 컴퓨팅 파워</li>
+                        <li>멀티 모델 동시 추론</li>
+                        <li>80개 이상의 객체 인식</li>
+                        <li>온디바이스 행동 분석</li>
+                        <li>실시간 구조화 데이터 출력</li>
+                    </ul>
+                    <div class="hardware-popular">가장 인기</div>
+                </div>
+                <div class="hardware-card">
+                    <div class="hardware-tier">Flagship</div>
+                    <h4>OORT-6600-20</h4>
+                    <div class="hardware-spec-highlight">20 TOPS AI</div>
+                    <ul class="hardware-specs">
+                        <li>20T 엣지 컴퓨팅 파워</li>
+                        <li>전체 영상 구조화</li>
+                        <li>멀티 스트림 병렬 분석</li>
+                        <li>복잡한 장면 추론</li>
+                        <li>VLM 대응 아키텍처</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- AI-Box 카테고리 -->
+            <div class="hardware-category">
+                <h3 class="hardware-category-title">AI-Box <span class="hardware-category-badge">VLStream Edge</span></h3>
+                <p class="hardware-category-desc">기존 IP 카메라를 현대화하는 AI 엣지 컴퓨팅 터미널 — 카메라 인프라를 교체하지 않고 RTSP를 통해 지능형 분석을 추가합니다.</p>
+            </div>
+            <div class="hardware-grid hardware-grid-3col">
+                <div class="hardware-card">
+                    <div class="hardware-tier">Lite</div>
+                    <h4>OORT-BOX-AI-1</h4>
+                    <div class="hardware-spec-highlight">1채널</div>
+                    <ul class="hardware-specs">
+                        <li>1채널 RTSP 입력</li>
+                        <li>디바이스 상의 객체 감지</li>
+                        <li>실시간 알림 푸시</li>
+                        <li>컴팩트 팬리스 설계</li>
+                        <li>VLStream 오픈소스 소프트웨어 포함</li>
+                    </ul>
+                </div>
+                <div class="hardware-card hardware-card-featured">
+                    <div class="hardware-tier">표준</div>
+                    <h4>OORT-BOX-AI-8</h4>
+                    <div class="hardware-spec-highlight">8채널</div>
+                    <ul class="hardware-specs">
+                        <li>8채널 RTSP 입력</li>
+                        <li>멀티모델 동시 추론</li>
+                        <li>AI 시각적 행동 분석</li>
+                        <li>실시간 구조화 데이터 출력</li>
+                        <li>VLStream 오픈소스 소프트웨어 포함</li>
+                    </ul>
+                    <div class="hardware-popular">가장 인기</div>
+                </div>
+                <div class="hardware-card">
+                    <div class="hardware-tier">Pro</div>
+                    <h4>OORT-BOX-AI-32</h4>
+                    <div class="hardware-spec-highlight">32채널</div>
+                    <ul class="hardware-specs">
+                        <li>32채널 RTSP 입력</li>
+                        <li>풀 영상 구조화</li>
+                        <li>AI 시각적 행동 분석</li>
+                        <li>복잡한 장면 추론</li>
+                        <li>VLM 준비 아키텍처</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- AI-vLLM-SERVER Category -->
+            <div class="hardware-category">
+                <h3 class="hardware-category-title">AI-vLLM-SERVER <span class="hardware-category-badge">vLLM 추론</span></h3>
+                <p class="hardware-category-desc">vLLM 추론 전용 서버 — 모델 학습 불필요, vLLM 인식으로 즉시 사용 가능.</p>
+            </div>
+            <div class="hardware-grid hardware-grid-3col">
+                <div class="hardware-card">
+                    <div class="hardware-tier">엔트리</div>
+                    <h4>OORT-AI-vLLM-SVR-1</h4>
+                    <div class="hardware-spec-highlight">1채널 / 20 TOPS</div>
+                    <ul class="hardware-specs">
+                        <li>1채널 영상 입력</li>
+                        <li>20T 연산 성능</li>
+                        <li>모델 학습 불필요</li>
+                        <li>직접 vLLM 추론</li>
+                        <li>즉시 사용 가능한 배포</li>
+                    </ul>
+                </div>
+                <div class="hardware-card hardware-card-featured">
+                    <div class="hardware-tier">스탠다드</div>
+                    <h4>OORT-AI-vLLM-SVR-8</h4>
+                    <div class="hardware-spec-highlight">8채널 / 160 TOPS</div>
+                    <ul class="hardware-specs">
+                        <li>8채널 영상 입력</li>
+                        <li>160T 연산 성능</li>
+                        <li>모델 학습 불필요</li>
+                        <li>직접 vLLM 추론</li>
+                        <li>즉시 사용 가능한 배포</li>
+                    </ul>
+                    <div class="hardware-popular">가장 인기</div>
+                </div>
+                <div class="hardware-card">
+                    <div class="hardware-tier">플래그십</div>
+                    <h4>OORT-AI-vLLM-SVR-64</h4>
+                    <div class="hardware-spec-highlight">64채널 / 1P</div>
+                    <ul class="hardware-specs">
+                        <li>64채널 영상 입력</li>
+                        <li>1P 연산 성능</li>
+                        <li>모델 학습 불필요</li>
+                        <li>직접 vLLM 추론</li>
+                        <li>즉시 사용 가능한 배포</li>
+                        <li>일체형 캐비닛 납품 옵션
+                        액체 냉각 기술 내장
+                        전용 서버실 없는 엣지 배포</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="hardware-chips">
+                <p class="hardware-chips-label">지원 칩셋</p>
+                <div class="chips-list">
+                    <span class="chip">HiSilicon HI3516</span>
+                    <span class="chip">Rockchip RK3588</span>
+                    <span class="chip">Rockchip RK1106</span>
+                    <span class="chip">Ingenic T31/T41</span>
+                    <span class="chip">Goke GK720x</span>
+                    <span class="chip">ESP32 (RTOS)</span>
+                    <span class="chip">BK7258 (RTOS)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VLM Streaming Section -->
+    <section id="vlm" class="section vlm-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">실시간 <span class="gradient-text">VLM 스트리밍</span></h2>
+                <p class="section-subtitle">대규모 비전-언어 모델이 실시간으로 영상 스트림을 시청하고 — 스트리밍 출력으로 프레임 단위로 장면을 이해합니다.</p>
+            </div>
+            <div class="vlm-content">
+                <div class="vlm-diagram">
+                    <div class="vlm-step">
+                        <div class="vlm-step-num">1</div>
+                        <div class="vlm-step-content">
+                            <h5>영상 스트림 입력</h5>
+                            <p>RTSP / WebCam / 파일, 15~30 FPS. 프레임 드롭 없는 연속 캡처.</p>
+                        </div>
+                    </div>
+                    <div class="vlm-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                    <div class="vlm-step">
+                        <div class="vlm-step-num">2</div>
+                        <div class="vlm-step-content">
+                            <h5>프레임 스케줄러</h5>
+                            <p>지능형 프레임 스키핑 및 균일 샘플링. AI 과부하를 방지하는 흐름 제어.</p>
+                        </div>
+                    </div>
+                    <div class="vlm-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                    <div class="vlm-step">
+                        <div class="vlm-step-num">3</div>
+                        <div class="vlm-step-content">
+                            <h5>VLM 추론</h5>
+                            <p>LLaVA, Qwen-VL, InternVL — 모든 오픈소스 비전 모델. 추가 학습 불필요.</p>
+                        </div>
+                    </div>
+                    <div class="vlm-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                    <div class="vlm-step">
+                        <div class="vlm-step-num">4</div>
+                        <div class="vlm-step-content">
+                            <h5>스트리밍 출력</h5>
+                            <p>밀리초 단위의 실시간 응답. 영상이 끝날 때까지 기다리지 않습니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vlm-features">
+                    <div class="vlm-feature-card">
+                        <h5>지원 모델</h5>
+                        <div class="vlm-models">
+                            <span>LLaVA</span>
+                            <span>Qwen-VL</span>
+                            <span>InternVL</span>
+                            <span>Qwen-VL-7B</span>
+                        </div>
+                    </div>
+                    <div class="vlm-feature-card">
+                        <h5>활용 사례</h5>
+                        <ul>
+                            <li>실시간 감시 분석</li>
+                            <li>라이브 스트리밍 해설</li>
+                            <li>로봇 비전 이해</li>
+                            <li>AR/스마트 글래스 인지</li>
+                            <li>문서 및 송장 OCR</li>
+                            <li>다채널 병렬 분석</li>
+                        </ul>
+                    </div>
+                    <div class="vlm-feature-card">
+                        <h5>성능</h5>
+                        <div class="vlm-perf">
+                            <div class="vlm-perf-item">
+                                <span class="vlm-perf-value">~200ms</span>
+                                <span class="vlm-perf-label">추론 지연 시간</span>
+                            </div>
+                            <div class="vlm-perf-item">
+                                <span class="vlm-perf-value">24GB</span>
+                                <span class="vlm-perf-label">최소 GPU (다채널)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pipeline Section -->
+    <section class="section pipeline-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">원시 데이터에서 <span class="gradient-text">프로덕션 모델까지</span></h2>
+                <p class="section-subtitle">통합 학습 및 배포 — 브라우저에서 추론을 검증한 다음 엣지 디바이스로 원격 원클릭 배포.</p>
+            </div>
+            <div class="pipeline-steps">
+                <div class="pipeline-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h4>주석</h4>
+                        <p>검출, 세그멘테이션, 분류를 위한 내장 라벨링. 품질 보증이 포함된 협업 워크플로.</p>
+                    </div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h4>학습</h4>
+                        <p>AutoML 또는 완전 수동 제어. 동적 리소스 스케줄링을 통한 분산 GPU 학습. TensorFlow/PyTorch 모델 가져오기.</p>
+                    </div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h4>최적화</h4>
+                        <p>17가지 형식으로 내보내기: ONNX, TensorRT, CoreML, TFLite, OpenVINO 등. 엣지를 위한 양자화 및 가지치기.</p>
+                    </div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h4>배포</h4>
+                        <p>브라우저에서 검증 후 원클릭 원격 배포. OTA 업데이트, A/B 테스트, 롤백, 실시간 성능 모니터링.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Section -->
+    <section class="section performance-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">엔터프라이즈급 <span class="gradient-text">성능</span></h2>
+                <p class="section-subtitle">까다로운 프로덕션 환경을 위해 업계 최고 수준의 사양으로 구축되었습니다.</p>
+            </div>
+            <div class="perf-grid">
+                <div class="perf-card">
+                    <div class="perf-value">&lt;1.2초</div>
+                    <div class="perf-label">엔드투엔드 지연 시간</div>
+                    <div class="perf-detail">자체 개발 VLS 프로토콜, TCP 기반, RTMP/RTSP보다 우수</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">30%</div>
+                    <div class="perf-label">패킷 손실 내성</div>
+                    <div class="perf-detail">30% 손실에서도 끊김 없음, 50% 패킷 손실에서도 복구 가능</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">&lt;200ms</div>
+                    <div class="perf-label">AI 분석 지연 시간</div>
+                    <div class="perf-detail">하드웨어 가속을 통한 엣지 실시간 추론</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">70%</div>
+                    <div class="perf-label">대역폭 절감</div>
+                    <div class="perf-detail">WebRTC P2P로 중계 서버 제거, 카메라-클라이언트 직접 연결</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">500+</div>
+                    <div class="perf-label">서버당 스트림 수</div>
+                    <div class="perf-detail">단일 서버에서 500개 이상의 영상 스트림, 100개 이상의 AI 분석</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value">4K</div>
+                    <div class="perf-label">최대 해상도</div>
+                    <div class="perf-detail">H.265 하드웨어 인코딩/디코딩, 128kbps~8Mbps 적응형</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transmission Protocol Section -->
+    <section class="section protocol-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">자체 개발 <span class="gradient-text">VLS 프로토콜</span></h2>
+                <p class="section-subtitle">영상 IoT에 특화된 설계. 저지연, 극한의 패킷 손실 내성, 범용 호환성.</p>
+            </div>
+            <div class="protocol-grid">
+                <div class="protocol-card">
+                    <h4>영상 전송</h4>
+                    <ul>
+                        <li><strong>VLS 프로토콜:</strong> TCP 기반, &lt;1.2초 지연, 30% 손실에서도 끊김 없음</li>
+                        <li><strong>WebRTC P2P:</strong> 밀리초 단위 상호 연결, 70% 대역폭 절감</li>
+                        <li><strong>멀티 프로토콜:</strong> HLS, FLV, RTSP, GB28181 — 모든 단말기</li>
+                        <li><strong>인코딩:</strong> H.264/H.265, 4K/1080p/720p 적응형</li>
+                    </ul>
+                </div>
+                <div class="protocol-card">
+                    <h4>IoT 및 제어</h4>
+                    <ul>
+                        <li><strong>MQTT:</strong> 디바이스로의 투명한 명령 전송</li>
+                        <li><strong>IoT 센터:</strong> 주변장치를 위한 TCP/IP 4G 네트워크 기능</li>
+                        <li><strong>객체 모델:</strong> 표준화된 디바이스 설명 및 동기화</li>
+                        <li><strong>융합:</strong> 영상 스트림 + 센서 데이터 결합 알림</li>
+                    </ul>
+                </div>
+                <div class="protocol-card">
+                    <h4>보안 및 규정 준수</h4>
+                    <ul>
+                        <li><strong>GB28181:</strong> 국가 감시 표준</li>
+                        <li><strong>GB35114:</strong> 강화 보안 인증</li>
+                        <li><strong>암호화:</strong> 전송 중 및 저장 데이터 보호</li>
+                        <li><strong>감사:</strong> 전체 작업 로깅 및 접근 제어</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deploy Section -->
+    <section id="deploy" class="section deploy-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">어디든 <span class="gradient-text">배포 가능</span></h2>
+                <p class="section-subtitle">프라이빗 클라우드, 하이브리드, 에어갭 환경. 데이터가 네트워크를 벗어나지 않습니다. x86 및 ARM 지원.</p>
+            </div>
+            <div class="deploy-grid">
+                <div class="deploy-card">
+                    <div class="deploy-card-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+                            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                            <line x1="6" y1="6" x2="6.01" y2="6"/>
+                            <line x1="6" y1="18" x2="6.01" y2="18"/>
+                        </svg>
+                        <h4>온프레미스</h4>
+                    </div>
+                    <p>민감한 환경을 위한 완전한 에어갭 지원. 자체 인프라에서 완전한 데이터 주권을 확보합니다.</p>
+                    <code class="deploy-code">curl -fsSL https://get.vlstream.dev | bash</code>
+                </div>
+                <div class="deploy-card">
+                    <div class="deploy-card-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+                        </svg>
+                        <h4>Docker</h4>
+                    </div>
+                    <p>Docker Compose로 원클릭 배포. GPU 패스스루를 포함한 전체 스택을 5분 만에 실행합니다.</p>
+                    <code class="deploy-code">docker compose up -d</code>
+                </div>
+                <div class="deploy-card">
+                    <div class="deploy-card-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                        <h4>Kubernetes</h4>
+                    </div>
+                    <p>자동 스케일링, HA 클러스터링, 로드 밸런싱, 자동 장애 조치를 갖춘 프로덕션 Helm 차트.</p>
+                    <code class="deploy-code">helm install vlstream oort/vlstream</code>
+                </div>
+            </div>
+            <div class="deploy-compatibility">
+                <p class="compat-label">플랫폼 호환성</p>
+                <div class="compat-grid">
+                    <div class="compat-item">
+                        <span class="compat-icon">x86</span>
+                        <span>서버 및 PC</span>
+                    </div>
+                    <div class="compat-item">
+                        <span class="compat-icon">ARM</span>
+                        <span>엣지 및 모바일</span>
+                    </div>
+                    <div class="compat-item">
+                        <span class="compat-icon">GPU</span>
+                        <span>NVIDIA / AMD</span>
+                    </div>
+                    <div class="compat-item">
+                        <span class="compat-icon">IPC</span>
+                        <span>산업용 제어</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="section usecases-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">실제 규모의 <span class="gradient-text">현장 적용</span></h2>
+                <p class="section-subtitle">지능형 영상 분석이 운영 의사결정을 주도하는 다양한 산업 분야에서 배포되고 있습니다.</p>
+            </div>
+            <div class="usecases-grid">
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <line x1="18" y1="20" x2="18" y2="10"/>
+                            <line x1="12" y1="20" x2="12" y2="4"/>
+                            <line x1="6" y1="20" x2="6" y2="14"/>
+                        </svg>
+                    </div>
+                    <h4>스마트 시티</h4>
+                    <p>통합 영상 감시, 도시 위반 식별, 폐쇄형 작업 주문 처리, 비상 지휘 명령 시스템.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h4>공공 안전</h4>
+                    <p>군중 밀집도 모니터링, 이상 행동 조기 경보, 얼굴 인식, 대형 행사 비상 자원 배정.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                    </div>
+                    <h4>스마트 캠퍼스</h4>
+                    <p>의심 배회 감지, 불법 주차, 안전모 착용 준수, 화재 경보, 경계 침입 모니터링.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                        </svg>
+                    </div>
+                    <h4>디지털 행정</h4>
+                    <p>부서 간 영상 공유, 통합 스케줄링, 공공 안전·비상·교통을 위한 지능형 분석.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33"/></svg>
+                    </div>
+                    <h4>산업 및 광업</h4>
+                    <p>장비 고장 감지, 위험 구역 침입, 보호구 위반 감지, 환경 모니터링, 원격 점검.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M6.13 1L6 16a2 2 0 0 0 2 2h15"/><path d="M1 6.13L16 6a2 2 0 0 1 2 2v15"/></svg>
+                    </div>
+                    <h4>스마트 농업</h4>
+                    <p>산불 예방, 하천 홍수 대비, 전력선 점검, 생육 모니터링, 취약 네트워크 지역의 병해충 식별.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Source Repos Section -->
+    <section id="open-source" class="section opensource-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">100% <span class="gradient-text">오픈소스</span></h2>
+                <p class="section-subtitle">MIT 라이선스. 숨겨진 독점 구성 요소나 비공개 모듈이 없습니다. 핵심 소스 코드, VLS 프로토콜, AI 엔진, 스케줄링 엔진 — 모두 공개되어 있습니다.</p>
+            </div>
+            <div class="repos-grid">
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-Cloud</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>클라우드 플랫폼 핵심 — 관리, AI 엔진, 스케줄링, 영상 수집, 의사결정.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-NVR</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>네트워크 비디오 레코더 — 저장, 재생, 관리, 로컬 추론 기능.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-CMS</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>크로스 플랫폼 데스크톱 클라이언트 (Windows/macOS/Linux) — 다중 디바이스 모니터링, 전자 지도, 알림 팝업.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-APP</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>모바일 앱 (iOS/Android/HarmonyOS) — 라이브 미리보기, 재생, 알림, 양방향 음성, PTZ 제어.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-IPCamera</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>AI 네이티브 카메라 펌웨어 + SDK — HiSilicon, Rockchip, Ingenic, Goke 칩셋 지원.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-Edge</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>엣지 AI 박스 펌웨어 + 알고리즘 패키지 — 실시간 분석, 로컬 알림, 컴퓨팅 파워 캐싱.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLS-Protocol</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>자체 개발 VLS 프로토콜 — 저지연, 패킷 손실 내성, MQTT IoT 제어, 투명한 디바이스 명령.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        <span class="repo-name">VLStream-Web</span>
+                        <span class="repo-license">MIT</span>
+                    </div>
+                    <p>프론트엔드/백엔드 분리 아키텍처 — 최신 코드베이스, 깔끔한 API 인터페이스, VLStream 위에 자체 제품을 구축하기 쉬운 커스터마이징.</p>
+                </div>
+            </div>
+            <div class="opensource-cta">
+                <a href="https://github.com/OortCloudGroup" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    전체 저장소 탐색
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="section comparison-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">VLStream <span class="gradient-text">vs. 비공개 소스</span> 비교</h2>
+                <p class="section-subtitle">VLStream과 기존 비공개 소스 영상 플랫폼을 비교해 보십시오.</p>
+            </div>
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>항목</th>
+                            <th class="highlight-col">VLStream (오픈소스)</th>
+                            <th>기존 플랫폼</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>소스 코드</td>
+                            <td class="highlight-col">100% 공개, 숨겨진 구성 요소 없음</td>
+                            <td>비공개 소스, 핵심 코드 비공개</td>
+                        </tr>
+                        <tr>
+                            <td>상업적 비용</td>
+                            <td class="highlight-col">무료 상업적 사용, 라이선스 비용 없음</td>
+                            <td>높은 라이선스, 연간 구독, 커스터마이징 비용</td>
+                        </tr>
+                        <tr>
+                            <td>커스터마이징</td>
+                            <td class="highlight-col">깊은 이차 개발, 전체 리팩토링 가능</td>
+                            <td>긴 주기, 높은 비용, 벤더 종속</td>
+                        </tr>
+                        <tr>
+                            <td>데이터 보안</td>
+                            <td class="highlight-col">프라이빗 배포, 데이터 외부 유출 없음</td>
+                            <td>클라우드 업로드, 데이터 유출 위험</td>
+                        </tr>
+                        <tr>
+                            <td>프로토콜</td>
+                            <td class="highlight-col">국가 표준 + 자체 개발, 100% 재사용</td>
+                            <td>독점 프로토콜, 재사용 어려움</td>
+                        </tr>
+                        <tr>
+                            <td>AI 제어</td>
+                            <td class="highlight-col">AI 엔진 완전 제어, 커스텀 알고리즘</td>
+                            <td>비공개 알고리즘, 제한적 업그레이드</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section class="section advantages-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">세 가지 핵심 <span class="gradient-text">장점</span></h2>
+            </div>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-num">01</div>
+                    <h4>기존 장비 재사용</h4>
+                    <p>기존 카메라와 IPC를 그대로 유지합니다. OortCloud 엣지 AI 모듈이 지능을 부여합니다 — 하드웨어 교체가 필요 없습니다. 기존 인프라의 ROI를 극대화합니다.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-num">02</div>
+                    <h4>수동 감시에서 AI 모니터링으로</h4>
+                    <p>수동 감시를 AI 기반 모니터링으로 전환합니다. 내장 알림 푸시로 관련 담당자에게 실시간 알림을 전송합니다. 인건비를 절감하고 인지 가능한 지능형 에이전트를 구축합니다.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-num">03</div>
+                    <h4>설정 가능한 AI 알고리즘</h4>
+                    <p>요구에 따라 알고리즘을 학습하고 동적으로 로드합니다. 다양한 시나리오, 다양한 시간대, 다양한 경고 항목 — 코드 변경 없이 모두 설정 가능합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-glow"></div>
+            <h2 class="cta-title">비전 AI를 <span class="gradient-text">배포할 준비</span>가 되셨습니까?</h2>
+            <p class="cta-subtitle">5분 만에 VLStream을 배포하십시오. 의사결정형 AI로 영상 인프라를 혁신합니다. 100% 오픈소스, 벤더 종속 없음.</p>
+            <div class="cta-actions">
+                <a href="#deploy" class="btn btn-primary btn-lg">
+                    무료로 시작하기
+                </a>
+                <a href="https://github.com/OortCloudGroup" class="btn btn-outline btn-lg" target="_blank" rel="noopener">
+                    문서 읽기
+                </a>
+            </div>
+            <div class="cta-support">
+                <p>상업적 지원이 필요하십니까? OortCloud는 유료 기술 지원, 커스텀 개발, 배포 서비스를 제공합니다.</p>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo">
+                        <img src="https://vls.oortcloudsmart.com/asset/logo1.mtX1s_-A.png" alt="VLStream 로고" class="logo-icon" style="height:60px;width:auto;">
+                    </a>
+                    <p class="footer-desc">OortCloud (Shenzhen) Smart Technology Co., Ltd.의 의사결정형 AI 영상 수집 및 스케줄링 플랫폼. 2019년 설립.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h5>제품</h5>
+                        <a href="#features">듀얼 AI 엔진</a>
+                        <a href="#architecture">아키텍처</a>
+                        <a href="#hardware">하드웨어</a>
+                        <a href="#vlm">VLM 스트리밍</a>
+                        <a href="#deploy">배포</a>
+                    </div>
+                    <div class="footer-col">
+                        <h5>리소스</h5>
+                        <a href="https://github.com/OortCloudGroup/VLStream-Docs">문서</a>
+                        <a href="https://github.com/OortCloudGroup/VLStream-Docs">API 레퍼런스</a>
+                        <a href="#">변경 이력</a>
+                        <a href="#">블로그</a>
+                        <a href="#">Discord 커뮤니티</a>
+                    </div>
+                    <div class="footer-col">
+                        <h5>오픈소스</h5>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-Cloud</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-Edge</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-NVR</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLS-Protocol</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-APP</a>
+                        <a href="https://github.com/OortCloudGroup" target="_blank" rel="noopener">VLStream-Web</a>
+                    </div>
+                    <div class="footer-col">
+                        <h5>회사</h5>
+                        <a href="https://oortcloudsmart.com/es/about.html" target="_blank">OortCloud 소개</a>
+                        <a href="https://oortcloudsmart.com/es/contact.html" target="_blank">영업 문의</a>
+                        <a href="#">상업적 지원</a>
+                        <a href="#">파트너</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OortCloud (Shenzhen) Smart Technology Co., Ltd. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">개인정보 처리방침</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">MIT 라이선스</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
